@@ -25,11 +25,9 @@ function updateNavbar() {
     const nav = document.getElementById('navbar');
     if (nav) {
         if (lastScrollY > 20) {
-            nav.classList.add('shadow-sm');
-            nav.style.background = 'rgba(255, 255, 255, 0.95)';
+            nav.classList.add('glass-dark', 'shadow-sm');
         } else {
-            nav.classList.remove('shadow-sm');
-            nav.style.background = '';
+            nav.classList.remove('glass-dark', 'shadow-sm');
         }
     }
 
@@ -245,6 +243,7 @@ window.addEventListener('load', () => {
         track.addEventListener('mouseleave', () => {
             isDown = false;
             track.style.scrollSnapType = 'x mandatory';
+            
         });
 
         track.addEventListener('mouseup', () => {
@@ -259,6 +258,49 @@ window.addEventListener('load', () => {
             const walk = (x - startX) * 2;
             track.scrollLeft = scrollLeftPos - walk;
         });
+        // --- Bulletproof Auto Scroll ---
+        let autoScrollTimer;
+        
+        function playCarousel() {
+            clearInterval(autoScrollTimer);
+            autoScrollTimer = setInterval(() => {
+                if (!isDown) {
+                    const item = track.querySelector('.carousel-item');
+                    if(item) {
+                        const style = window.getComputedStyle(track);
+                        const gap = parseInt(style.gap) || 24;
+                        const scrollStep = item.offsetWidth + gap;
+                        
+                        // Use accurate scroll limit check
+                        const maxScrollLeft = track.scrollWidth - track.clientWidth;
+                        
+                        if (track.scrollLeft >= maxScrollLeft - 10) {
+                            track.scrollTo({ left: 0, behavior: 'smooth' });
+                        } else {
+                            track.scrollBy({ left: scrollStep, behavior: 'smooth' });
+                        }
+                    }
+                }
+            }, 2000);
+        }
+        
+        // Start automatically
+        setTimeout(playCarousel, 1000);
+        
+        track.addEventListener('mouseenter', () => clearInterval(autoScrollTimer));
+        track.addEventListener('mouseleave', () => {
+            isDown = false;
+            track.style.scrollSnapType = 'x mandatory';
+            playCarousel();
+        });
+        
+        track.addEventListener('touchstart', () => clearInterval(autoScrollTimer), {passive: true});
+        track.addEventListener('touchend', () => {
+            isDown = false;
+            track.style.scrollSnapType = 'x mandatory';
+            setTimeout(playCarousel, 1000);
+        }, {passive: true});
+
     }
 });
 

@@ -204,3 +204,10 @@ body {
 .animate-badge-shine {
     animation: badge-shine 3s infinite;
 }
+/* Dark Glassmorphism for Navbar */
+.glass-dark {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(30, 41, 59, 0.8);
+}

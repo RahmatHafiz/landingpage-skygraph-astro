@@ -165,7 +165,7 @@
 <body>
 
     <header>
-        <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
+        <nav class="fixed w-full z-50 transition-all duration-300 border-b border-transparent" id="navbar">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-16 md:h-20">
                     <a href="#" class="flex-shrink-0 flex items-center gap-3 group">
@@ -178,32 +178,31 @@
                             </svg>
                         </div>
                         <span
-                            class="font-display font-bold text-xl md:text-2xl tracking-tight text-slate-900">Skygraph.</span>
+                            class="font-display font-bold text-xl md:text-2xl tracking-tight text-white">Skygraph.</span>
                     </a>
 
                     <div class="hidden lg:flex items-center space-x-8">
                         <a href="#layanan"
-                            class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Layanan</a>
+                            class="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Layanan</a>
                         <a href="#armada"
-                            class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Armada</a>
+                            class="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Armada</a>
                         <a href="#tim"
-                            class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Tim</a>
+                            class="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Tim</a>
                         <a href="#paket"
-                            class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Paket &
+                            class="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Paket &
                             Sewa</a>
                         <a href="#portofolio"
-                            class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Portofolio</a>
+                            class="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Portofolio</a>
                         <a href="#faq"
-                            class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">FAQ</a>
+                            class="text-sm font-semibold text-slate-300 hover:text-white transition-colors">FAQ</a>
                         <a href="#kontak"
-                            class="px-5 py-2.5 rounded-full bg-slate-900 text-white font-semibold text-sm hover:bg-brand-500 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                            class="px-5 py-2.5 rounded-full bg-brand-500 text-white font-semibold text-sm shadow-md shadow-brand-500/20 hover:bg-brand-600 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
                             Konsultasi Gratis
                         </a>
                     </div>
 
                     <div class="lg:hidden flex items-center">
-                        <button id="mobile-menu-btn"
-                            class="text-slate-600 hover:text-brand-500 focus:outline-none p-2 rounded-lg bg-slate-50 border border-slate-200"
+                        <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none p-2 rounded-lg text-white hover:text-brand-400 bg-transparent border border-transparent hover:bg-white/10"
                             aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-menu">
                             <svg aria-hidden="true" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -215,27 +214,27 @@
             </div>
 
             <div id="mobile-menu"
-                class="absolute top-16 left-0 w-full bg-white/95 backdrop-blur-xl shadow-xl lg:hidden hidden border-t border-slate-100 transition-all">
+                  class="absolute top-16 left-0 w-full bg-slate-900/95 backdrop-blur-xl shadow-xl lg:hidden hidden border-t border-slate-800 transition-all">
                 <div class="flex flex-col px-6 py-6 space-y-4">
                     <a href="#layanan"
-                        class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Layanan Jasa</a>
+                        class="mobile-link text-base font-semibold text-slate-300 hover:text-white">Layanan Jasa</a>
                     <a href="#armada"
-                        class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Armada
+                        class="mobile-link text-base font-semibold text-slate-300 hover:text-white">Armada
                         Udara</a>
-                    <a href="#tim" class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Tim
+                    <a href="#tim" class="mobile-link text-base font-semibold text-slate-300 hover:text-white">Tim
                         Pilot</a>
                     <a href="#paket"
-                        class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Paket
+                        class="mobile-link text-base font-semibold text-slate-300 hover:text-white">Paket
                         Harga</a>
-                    <a href="#sewa" class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Sewa
+                    <a href="#sewa" class="mobile-link text-base font-semibold text-slate-300 hover:text-white">Sewa
                         Lepas Unit</a>
                     <a href="#portofolio"
-                        class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Galeri Karya</a>
-                    <a href="#faq" class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Tanya
+                        class="mobile-link text-base font-semibold text-slate-300 hover:text-white">Galeri Karya</a>
+                    <a href="#faq" class="mobile-link text-base font-semibold text-slate-300 hover:text-white">Tanya
                         Jawab (FAQ)</a>
-                    <div class="pt-4 border-t border-slate-100">
+                    <div class="pt-4 border-t border-slate-800">
                         <a href="#kontak"
-                            class="mobile-link flex items-center justify-center w-full px-6 py-3 rounded-xl bg-slate-900 text-white font-bold shadow-lg">Konsultasi
+                            class="mobile-link flex items-center justify-center w-full px-6 py-3 rounded-xl bg-brand-500 text-white font-bold shadow-lg hover:bg-brand-600 transition-colors">Konsultasi
                             Gratis</a>
                     </div>
                 </div>
@@ -348,8 +347,7 @@
                             </svg>
                         </div>
                         <h4 class="text-lg font-bold mb-2 text-slate-900">Efisiensi Waktu</h4>
-                        <p class="text-slate-600 text-sm">Menyelesaikan akuisisi data lahan luas atau dokumentasi event
-                            hanya dalam hitungan hari kerja.</p>
+                        <p class="text-slate-600 text-sm">Akuisisi lahan luas dan dokumentasi event selesai tepat waktu dengan workflow yang terukur.</p>
                     </div>
                     <!-- Card 2 -->
                     <div
@@ -363,9 +361,7 @@
                             </svg>
                         </div>
                         <h4 class="text-lg font-bold mb-2 text-slate-900">Akurasi & Presisi</h4>
-                        <p class="text-slate-600 text-sm">Hasil resolusi hingga 4K HDR untuk video, dan margin error
-                            tingkat
-                            sentimeter untuk topografi.</p>
+                        <p class="text-slate-600 text-sm">Resolusi 4K HDR untuk visual, serta tingkat margin error level sentimeter untuk kebutuhan pemetaan.</p>
                     </div>
                     <!-- Card 3 -->
                     <div
@@ -378,10 +374,8 @@
                                 </path>
                             </svg>
                         </div>
-                        <h4 class="text-lg font-bold mb-2 text-slate-900">Solusi Terima Beres</h4>
-                        <p class="text-slate-600 text-sm">Anda cukup terima hasil akhir. Eksekusi, perizinan, hingga
-                            editing
-                            kami tangani semuanya.</p>
+                        <h4 class="text-lg font-bold mb-2 text-slate-900">Layanan Terpadu</h4>
+                        <p class="text-slate-600 text-sm">Mulai dari perizinan, eksekusi lapangan, hingga pasca-produksi, seluruhnya kami tangani secara penuh.</p>
                     </div>
                     <!-- Card 4 -->
                     <div
@@ -394,9 +388,7 @@
                             </svg>
                         </div>
                         <h4 class="text-lg font-bold mb-2 text-slate-900">Armada Spesifik</h4>
-                        <p class="text-slate-600 text-sm">Unit drone disesuaikan. Sub-250g untuk dalam ruangan, atau
-                            unit
-                            stabil untuk area ekstrem.</p>
+                        <p class="text-slate-600 text-sm">Armada dioptimasi sesuai medan—dari unit sub-250g untuk indoor hingga drone operasional tahan cuaca ekstrem.</p>
                     </div>
                     <!-- Card 5 -->
                     <div
@@ -410,8 +402,7 @@
                             </svg>
                         </div>
                         <h4 class="text-lg font-bold mb-2 text-slate-900">Seni Visual Estetik</h4>
-                        <p class="text-slate-600 text-sm">Pilot dilatih dengan sense videografi mumpuni untuk menangkap
-                            scene dramatis dari udara.</p>
+                        <p class="text-slate-600 text-sm">Pilot komersial dengan insting sinematik tinggi untuk merekam momen dan sudut pandang paling dramatis.</p>
                     </div>
                     <!-- Card 6 -->
                     <div
@@ -425,8 +416,7 @@
                             </svg>
                         </div>
                         <h4 class="text-lg font-bold mb-2 text-slate-900">Keamanan Data (NDA)</h4>
-                        <p class="text-slate-600 text-sm">Protokol privasi ketat untuk menjaga kerahasiaan data proyek
-                            instansi & perusahaan.</p>
+                        <p class="text-slate-600 text-sm">Penerapan standar privasi ketat demi menjaga kerahasiaan absolut data operasional instansi Anda.</p>
                     </div>
                 </div>
             </div>
@@ -660,7 +650,7 @@
 
                     <!-- On mobile, this will act as a swipeable row that JS auto-scrolls -->
                     <div id="steps-container"
-                        class="flex overflow-x-auto md:overflow-visible md:grid md:grid-cols-5 snap-x snap-mandatory hide-scrollbar pt-6 pb-8 md:py-0 gap-4 md:gap-8 relative z-10 scroll-smooth">
+                        class="flex overflow-x-auto md:overflow-visible md:grid md:grid-cols-5 snap-x snap-mandatory hide-scrollbar pt-6 pb-8 md:py-0 gap-4 md:gap-8 relative z-10 scroll-smooth px-6 md:px-0 after:content-[''] after:shrink-0 after:w-6 md:after:hidden">
                         <div
                             class="step-item shrink-0 w-[75vw] sm:w-[45vw] md:w-auto snap-center flex flex-col items-center text-center transition-all duration-300 p-4 rounded-2xl bg-transparent border border-transparent">
                             <div
@@ -928,146 +918,124 @@
                         waktu operasional armada di lapangan.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch pt-4">
-                    <!-- Paket 1 -->
-                    <div
-                        class="bento-card bg-white border border-slate-200 p-6 md:p-8 flex flex-col h-full reveal group hover:border-brand-500 transition-all">
-                        <h4 class="text-lg font-bold text-slate-900 mb-1">Paket Per Baterai</h4>
-                        <p class="text-slate-600 text-xs mb-6">Paket dokumentasi ringan.</p>
-                        <div class="mb-6 pb-6 border-b border-slate-200">
-                            <span class="text-2xl font-display font-bold text-slate-900">Hubungi Kami</span>
-                        </div>
-                        <ul class="space-y-3 mb-8 flex-grow">
-                            <li class="flex gap-3 text-sm text-slate-600"><svg aria-hidden="true" class="w-5 h-5 text-brand-600 shrink-0"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg> Durasi Terbang Maksimal ±25 Menit</li>
-                            <li class="flex gap-3 text-sm text-slate-600"><svg aria-hidden="true" class="w-5 h-5 text-brand-600 shrink-0"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg> Pengambilan Foto & Video Resolusi 4K</li>
-                            <li class="flex gap-3 text-sm text-slate-600"><svg aria-hidden="true" class="w-5 h-5 text-brand-600 shrink-0"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg> Penyerahan File Mentah (Raw File)</li>
-                        </ul>
-                        <a href="#kontak"
-                            class="w-full mt-auto py-3 rounded-xl bg-brand-50 text-white font-bold text-sm text-center hover:bg-brand-500 transition-colors border border-slate-600">
-                            Pilih Paket
-                        </a>
-                    </div>
-
-                    <!-- Paket 2 (Favorit) -->
-                    <div
-                        class="bento-card bg-gradient-to-b from-slate-800 to-slate-900 border-2 border-brand-500 p-6 md:p-8 flex flex-col h-full reveal delay-100 relative lg:scale-105 shadow-2xl z-10 group">
-                        <div
-                            class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-500 text-white text-[10px] font-bold uppercase tracking-wider px-5 py-2 rounded-full shadow-lg z-20 whitespace-nowrap border border-brand-400">
-                            Paling Favorit
-                        </div>
-                        <h4 class="text-lg font-bold text-slate-900 mb-1 mt-2">Paket Harian</h4>
-                        <p class="text-slate-600 text-xs mb-6">Half-Day & Full-Day Event.</p>
-                        <div class="mb-6 pb-6 border-b border-slate-200">
-                            <span class="text-2xl font-display font-bold text-slate-900">Atur Jadwal</span>
-                        </div>
-                        <ul class="space-y-3 mb-8 flex-grow">
-                            <li class="flex gap-3 text-sm text-slate-200 font-medium"><svg aria-hidden="true"
-                                    class="w-5 h-5 text-brand-600 shrink-0" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg> 4 Jam s/d 8 Jam Kerja</li>
-                            <li class="flex gap-3 text-sm text-slate-600"><svg aria-hidden="true" class="w-5 h-5 text-brand-600 shrink-0"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg> Unlimited Baterai Swap</li>
-                            <li class="flex gap-3 text-sm text-slate-600"><svg aria-hidden="true" class="w-5 h-5 text-brand-600 shrink-0"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg> Termasuk Basic Editing</li>
-                            <li class="flex gap-3 text-sm text-slate-600"><svg aria-hidden="true" class="w-5 h-5 text-brand-600 shrink-0"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg> Bebas Pilih Armada</li>
-                        </ul>
-                        <a href="#kontak"
-                            class="w-full mt-auto py-3.5 rounded-xl bg-brand-500 text-white font-bold text-sm text-center hover:bg-brand-600 transition-all shadow-lg shadow-brand-500/30 animate-pulse-slow">
-                            Konsultasi Gratis
-                        </a>
-                    </div>
-
-                    <!-- Paket 3 -->
-                    <div
-                        class="bento-card bg-white border border-slate-200 p-6 md:p-8 flex flex-col h-full reveal delay-200 group hover:border-brand-500 transition-all">
-                        <h4 class="text-lg font-bold text-slate-900 mb-1">Paket Custom</h4>
-                        <p class="text-slate-600 text-xs mb-6">Tugas inspeksi & pemetaan.</p>
-                        <div class="mb-6 pb-6 border-b border-slate-200">
-                            <span class="text-2xl font-display font-bold text-slate-900">By Quotation</span>
-                        </div>
-                        <ul class="space-y-3 mb-8 flex-grow">
-                            <li class="flex gap-3 text-sm text-slate-600"><svg aria-hidden="true" class="w-5 h-5 text-brand-600 shrink-0"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg> Volume / Luasan Hektar</li>
-                            <li class="flex gap-3 text-sm text-slate-600"><svg aria-hidden="true" class="w-5 h-5 text-brand-600 shrink-0"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg> Render Peta 3D (Orthomosaic)</li>
-                            <li class="flex gap-3 text-sm text-slate-600"><svg aria-hidden="true" class="w-5 h-5 text-brand-600 shrink-0"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg> Pengecekan Lokasi Terpencil</li>
-                        </ul>
-                        <a href="#kontak"
-                            class="w-full mt-auto py-3 rounded-xl bg-brand-50 text-white font-bold text-sm text-center hover:bg-brand-500 transition-colors border border-slate-600">
-                            Minta Penawaran
-                        </a>
-                    </div>
-
-                    <!-- Paket 4 -->
-                    <div
-                        class="bento-card bg-slate-50 border border-slate-200 p-6 md:p-8 flex flex-col h-full reveal delay-300 group hover:border-slate-500 hover:shadow-xl transition-all">
-                        <div
-                            class="inline-block px-2 py-1 bg-white text-slate-600 text-[10px] font-bold rounded mb-2 w-max border border-slate-200">
-                            B2B Solutions</div>
-                        <h4 class="text-lg font-bold text-slate-900 mb-1">Paket Korporat</h4>
-                        <p class="text-slate-600 text-xs mb-6">Kontrak jangka panjang.</p>
-                        <div class="mb-6 pb-6 border-b border-slate-200">
-                            <span class="text-2xl font-display font-bold text-slate-900">SLA Contract</span>
-                        </div>
-                        <ul class="space-y-3 mb-8 flex-grow">
-                            <li class="flex gap-3 text-sm text-slate-600"><svg aria-hidden="true" class="w-5 h-5 text-slate-500 shrink-0"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg> Retainer Bulanan</li>
-                            <li class="flex gap-3 text-sm text-slate-600"><svg aria-hidden="true" class="w-5 h-5 text-slate-500 shrink-0"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg> Prioritas Eksekusi</li>
-                            <li class="flex gap-3 text-sm text-slate-600"><svg aria-hidden="true" class="w-5 h-5 text-slate-500 shrink-0"
-                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M5 13l4 4L19 7"></path>
-                                </svg> Pembayaran Termin (TOP)</li>
-                        </ul>
-                        <a href="#kontak"
-                            class="w-full mt-auto py-3 rounded-xl bg-white text-slate-600 font-bold text-sm text-center hover:bg-brand-50 transition-colors border border-slate-200">
-                            Hubungi Sales
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 items-stretch pt-4">
+                      <!-- Paket 1 -->
+                      <div class="bento-card bg-white border border-slate-200 p-4 sm:p-5 md:p-8 flex flex-col h-full reveal group hover:border-brand-500 hover:shadow-xl transition-all rounded-2xl">
+                          <h4 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 mb-1">Paket Per Baterai</h4>
+                          <p class="text-slate-500 text-[10px] sm:text-xs mb-3 sm:mb-6">Paket dokumentasi ringan.</p>
+                          <div class="mb-3 pb-3 sm:mb-6 sm:pb-6 border-b border-slate-200">
+                              <span class="text-base sm:text-xl md:text-2xl font-display font-bold text-slate-900">Hubungi Kami</span>
+                          </div>
+                          <ul class="space-y-3 mb-4 sm:mb-8 flex-grow">
+                              <li class="flex gap-1.5 sm:gap-3 text-[10px] sm:text-sm text-slate-700">
+                                  <svg class="w-3.5 h-3.5 sm:w-5 sm:h-5 mt-0.5 sm:mt-0 text-brand-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                  Terbang ± 25 Menit
+                              </li>
+                              <li class="flex gap-1.5 sm:gap-3 text-[10px] sm:text-sm text-slate-700">
+                                  <svg class="w-3.5 h-3.5 sm:w-5 sm:h-5 mt-0.5 sm:mt-0 text-brand-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                  Resolusi 4K HDR
+                              </li>
+                              <li class="flex gap-1.5 sm:gap-3 text-[10px] sm:text-sm text-slate-700">
+                                  <svg class="w-3.5 h-3.5 sm:w-5 sm:h-5 mt-0.5 sm:mt-0 text-brand-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                  File Mentah (Raw)
+                              </li>
+                          </ul>
+                          <a href="#kontak" class="w-full mt-auto py-2.5 sm:py-3 rounded-xl text-[10px] sm:text-sm bg-slate-50 text-slate-700 font-bold text-center hover:bg-slate-100 transition-colors border border-slate-200">
+                              Pilih Paket
+                          </a>
+                      </div>
+  
+                      <!-- Paket 2 (Favorit) -->
+                      <div class="bento-card bg-white border-2 border-brand-500 p-4 sm:p-5 md:p-8 flex flex-col h-full reveal delay-100 relative lg:scale-105 shadow-2xl z-10 group rounded-2xl">
+                          <div class="absolute -top-3.5 sm:-top-4 left-1/2 -translate-x-1/2 bg-brand-500 text-white text-[9px] sm:text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 sm:px-5 sm:py-2 rounded-full shadow-lg z-20 whitespace-nowrap">
+                              Paling Favorit
+                          </div>
+                          <h4 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 mb-1 mt-2">Paket Harian</h4>
+                          <p class="text-slate-500 text-[10px] sm:text-xs mb-3 sm:mb-6">Half-Day & Full-Day Event.</p>
+                          <div class="mb-3 pb-3 sm:mb-6 sm:pb-6 border-b border-slate-200">
+                              <span class="text-base sm:text-xl md:text-2xl font-display font-bold text-slate-900">Atur Jadwal</span>
+                          </div>
+                          <ul class="space-y-3 mb-4 sm:mb-8 flex-grow">
+                              <li class="flex gap-1.5 sm:gap-3 text-[10px] sm:text-sm text-slate-900 font-semibold">
+                                  <svg class="w-3.5 h-3.5 sm:w-5 sm:h-5 mt-0.5 sm:mt-0 text-brand-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                  4 Jam s/d 8 Jam Kerja
+                              </li>
+                              <li class="flex gap-1.5 sm:gap-3 text-[10px] sm:text-sm text-slate-700">
+                                  <svg class="w-3.5 h-3.5 sm:w-5 sm:h-5 mt-0.5 sm:mt-0 text-brand-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                  Unlimited Baterai Swap
+                              </li>
+                              <li class="flex gap-1.5 sm:gap-3 text-[10px] sm:text-sm text-slate-700">
+                                  <svg class="w-3.5 h-3.5 sm:w-5 sm:h-5 mt-0.5 sm:mt-0 text-brand-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                  Termasuk Basic Editing
+                              </li>
+                              <li class="flex gap-1.5 sm:gap-3 text-[10px] sm:text-sm text-slate-700">
+                                  <svg class="w-3.5 h-3.5 sm:w-5 sm:h-5 mt-0.5 sm:mt-0 text-brand-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                  Bebas Pilih Armada
+                              </li>
+                          </ul>
+                          <a href="#kontak" class="w-full mt-auto py-2.5 sm:py-3.5 rounded-xl text-[10px] sm:text-sm bg-brand-500 text-white font-bold text-center hover:bg-brand-600 transition-all shadow-lg shadow-brand-500/30 animate-pulse-slow">
+                              Konsultasi Gratis
+                          </a>
+                      </div>
+  
+                      <!-- Paket 3 -->
+                      <div class="bento-card bg-white border border-slate-200 p-4 sm:p-5 md:p-8 flex flex-col h-full reveal delay-200 group hover:border-brand-500 hover:shadow-xl transition-all rounded-2xl">
+                          <h4 class="text-sm sm:text-base md:text-lg font-bold text-slate-900 mb-1">Paket Custom</h4>
+                          <p class="text-slate-500 text-[10px] sm:text-xs mb-3 sm:mb-6">Tugas inspeksi & pemetaan.</p>
+                          <div class="mb-3 pb-3 sm:mb-6 sm:pb-6 border-b border-slate-200">
+                              <span class="text-base sm:text-xl md:text-2xl font-display font-bold text-slate-900">By Quotation</span>
+                          </div>
+                          <ul class="space-y-3 mb-4 sm:mb-8 flex-grow">
+                              <li class="flex gap-1.5 sm:gap-3 text-[10px] sm:text-sm text-slate-700">
+                                  <svg class="w-3.5 h-3.5 sm:w-5 sm:h-5 mt-0.5 sm:mt-0 text-brand-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                  Volume / Luasan Hektar
+                              </li>
+                              <li class="flex gap-1.5 sm:gap-3 text-[10px] sm:text-sm text-slate-700">
+                                  <svg class="w-3.5 h-3.5 sm:w-5 sm:h-5 mt-0.5 sm:mt-0 text-brand-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                  Render Peta 3D / Ortho
+                              </li>
+                              <li class="flex gap-1.5 sm:gap-3 text-[10px] sm:text-sm text-slate-700">
+                                  <svg class="w-3.5 h-3.5 sm:w-5 sm:h-5 mt-0.5 sm:mt-0 text-brand-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                  Cek Lokasi Ekstrem
+                              </li>
+                          </ul>
+                          <a href="#kontak" class="w-full mt-auto py-2.5 sm:py-3 rounded-xl text-[10px] sm:text-sm bg-slate-50 text-slate-700 font-bold text-center hover:bg-slate-100 transition-colors border border-slate-200">
+                              Minta Penawaran
+                          </a>
+                      </div>
+  
+                      <!-- Paket 4 -->
+                      <div class="bento-card bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 p-4 sm:p-5 md:p-8 flex flex-col h-full reveal delay-300 group hover:border-slate-500 hover:shadow-2xl shadow-xl transition-all rounded-2xl relative overflow-hidden">
+                          <div class="absolute -top-12 -right-12 w-32 h-32 bg-brand-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 pointer-events-none group-hover:opacity-40 transition-opacity"></div>
+                          <div class="inline-block px-2.5 py-1 bg-slate-800/80 backdrop-blur-sm text-brand-400 text-[8px] sm:text-[10px] font-bold rounded-lg mb-2 sm:mb-3 w-max border border-brand-500/30">
+                              B2B Enterprise
+                          </div>
+                          <h4 class="text-sm sm:text-base md:text-lg font-bold text-white mb-1">Paket Korporat</h4>
+                          <p class="text-slate-400 text-[10px] sm:text-xs mb-3 sm:mb-6">Kontrak jangka panjang.</p>
+                          <div class="mb-3 pb-3 sm:mb-6 sm:pb-6 border-b border-slate-700/80">
+                              <span class="text-base sm:text-xl md:text-2xl font-display font-bold text-white">Custom SLA</span>
+                          </div>
+                          <ul class="space-y-3 mb-4 sm:mb-8 flex-grow relative z-10">
+                              <li class="flex gap-1.5 sm:gap-3 text-[10px] sm:text-sm text-slate-300">
+                                  <svg class="w-3.5 h-3.5 sm:w-5 sm:h-5 mt-0.5 sm:mt-0 text-brand-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                  Retainer Bulanan
+                              </li>
+                              <li class="flex gap-1.5 sm:gap-3 text-[10px] sm:text-sm text-slate-300">
+                                  <svg class="w-3.5 h-3.5 sm:w-5 sm:h-5 mt-0.5 sm:mt-0 text-brand-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                  Prioritas Eksekusi Utama
+                              </li>
+                              <li class="flex gap-1.5 sm:gap-3 text-[10px] sm:text-sm text-slate-300">
+                                  <svg class="w-3.5 h-3.5 sm:w-5 sm:h-5 mt-0.5 sm:mt-0 text-brand-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                  Term Of Payment (TOP)
+                              </li>
+                          </ul>
+                          <a href="#kontak" class="relative z-10 w-full mt-auto py-2.5 sm:py-3.5 rounded-xl text-[10px] sm:text-sm bg-brand-500 text-white font-bold text-center hover:bg-brand-600 transition-all shadow-md">
+                              Hubungi Tim Sales
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </section>
 
         <section id="sewa" class="py-16 md:py-24 bg-slate-900 border-b border-slate-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1084,7 +1052,7 @@
                     <div
                         class="lg:col-span-5 bento-card bg-slate-900 border border-slate-800 p-6 pt-20 sm:p-8 reveal flex flex-col justify-center items-center relative group rounded-3xl overflow-hidden lg:sticky lg:top-28 h-max">
                         <div
-                            class="absolute top-5 right-5 sm:top-6 sm:right-6 bg-emerald-100 text-emerald-700 text-[10px] sm:text-xs font-bold px-3 sm:px-4 py-1.5 rounded-full border border-emerald-200 z-10 shadow-sm flex items-center gap-1.5">
+                            class="absolute top-5 right-5 sm:top-6 sm:right-6 bg-emerald-500/10 text-emerald-400 text-[10px] sm:text-xs font-bold px-3 sm:px-4 py-1.5 rounded-full border border-emerald-500/20 z-10 shadow-sm flex items-center gap-1.5">
                             <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Unit Tersedia
                         </div>
                         <!-- decorative background blob -->
@@ -1114,7 +1082,7 @@
 
                     <!-- Kelengkapan & Aturan Sewa -->
                     <div class="lg:col-span-7 flex flex-col gap-6 reveal delay-100">
-                        <div class="bg-slate-800 border border-slate-800 rounded-3xl p-6 md:p-8 shadow-sm">
+                        <div class="bg-slate-800 border border-slate-700 rounded-3xl p-6 md:p-8 shadow-sm">
                             <h5 class="text-base font-bold text-white mb-5 flex items-center gap-2.5">
                                 <div
                                     class="w-8 h-8 rounded-lg bg-slate-700 flex items-center justify-center text-brand-400 shrink-0">
@@ -1125,7 +1093,7 @@
                                 </div>
                                 Kelengkapan Unit Sewa
                             </h5>
-                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4 text-sm text-slate-500">
+                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4 text-sm text-slate-300">
                                 <li class="flex items-center gap-2.5"><span
                                         class="w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0"></span> Unit Potensic
                                     Atom 1
@@ -1154,7 +1122,7 @@
                         <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 md:p-8 flex-grow">
                             <h5 class="text-base font-bold text-white mb-5 flex items-center gap-2.5">
                                 <div
-                                    class="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-amber-600 shrink-0">
+                                    class="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 border border-amber-500/20 shrink-0">
                                     <svg aria-hidden="true" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
@@ -1163,37 +1131,37 @@
                                 </div>
                                 Syarat & Ketentuan Sewa Unit
                             </h5>
-                            <ul class="space-y-4 text-sm text-slate-500">
+                            <ul class="space-y-4 text-sm text-slate-400">
                                 <li class="flex items-start gap-3">
-                                    <span class="font-bold text-slate-500 mt-0.5">01.</span>
+                                    <span class="font-bold text-slate-300 mt-0.5">01.</span>
                                     <span><b>Identitas Asli:</b> Wajib menitipkan 2 (dua) ID Card Asli yang masih
                                         berlaku
                                         (E-KTP & SIM/Paspor).</span>
                                 </li>
                                 <li class="flex items-start gap-3">
-                                    <span class="font-bold text-slate-500 mt-0.5">02.</span>
+                                    <span class="font-bold text-slate-300 mt-0.5">02.</span>
                                     <span><b>Deposit Tunai:</b> Uang jaminan dibayarkan di awal (dikembalikan 100% jika
                                         unit
                                         kembali aman tanpa cacat).</span>
                                 </li>
                                 <li class="flex items-start gap-3">
-                                    <span class="font-bold text-slate-500 mt-0.5">03.</span>
+                                    <span class="font-bold text-slate-300 mt-0.5">03.</span>
                                     <span><b>Surat Perjanjian:</b> Tanda tangan MoU di atas materai yang mengikat secara
                                         hukum.</span>
                                 </li>
 
                                 <li class="flex items-start gap-3">
-                                    <span class="font-bold text-slate-500 mt-0.5">04.</span>
+                                    <span class="font-bold text-slate-300 mt-0.5">04.</span>
                                     <span><b>Batas Cuaca:</b> Sangat dilarang terbang saat hujan atau angin
                                         kencang.</span>
                                 </li>
                                 <li class="flex items-start gap-3">
-                                    <span class="font-bold text-slate-500 mt-0.5">05.</span>
+                                    <span class="font-bold text-slate-300 mt-0.5">05.</span>
                                     <span><b>Area Terlarang:</b> Dilarang keras menerbangkan unit di area objek vital,
                                         bandara, atau pangkalan militer (*No-Fly Zone*).</span>
                                 </li>
                                 <li class="flex items-start gap-3">
-                                    <span class="font-bold text-slate-500 mt-0.5">06.</span>
+                                    <span class="font-bold text-slate-300 mt-0.5">06.</span>
                                     <span><b>Serah Terima & Denda:</b> Kondisi unit dicek bersama sebelum dibawa.
                                         Keterlambatan pengembalian dikenakan denda harian proporsional.</span>
                                 </li>
@@ -1206,7 +1174,7 @@
                             </ul>
                             <div class="mt-7 pt-6 border-t border-slate-800">
                                 <a href="#kontak"
-                                    class="inline-flex w-full items-center justify-center gap-2 px-6 py-3.5 bg-slate-900 text-white font-bold rounded-xl hover:bg-brand-600 transition-colors shadow-md">
+                                    class="inline-flex w-full items-center justify-center gap-2 px-6 py-3.5 bg-brand-500 text-white font-bold rounded-xl hover:bg-brand-600 transition-colors shadow-md">
                                     Ajukan Sewa Sekarang
                                     <svg aria-hidden="true" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -1235,10 +1203,10 @@
             <div class="relative w-full z-10 reveal delay-100">
                 <!-- Fade gradients mapped to dark theme -->
                 <div
-                    class="absolute left-0 top-0 bottom-0 w-8 md:w-24 bg-gradient-to-r from-slate-900 to-transparent z-20 pointer-events-none">
+                    class="absolute left-0 top-0 bottom-0 w-8 md:w-24 bg-gradient-to-r from-slate-50 to-transparent z-20 pointer-events-none">
                 </div>
                 <div
-                    class="absolute right-0 top-0 bottom-0 w-8 md:w-24 bg-gradient-to-l from-slate-900 to-transparent z-20 pointer-events-none">
+                    class="absolute right-0 top-0 bottom-0 w-8 md:w-24 bg-gradient-to-l from-slate-50 to-transparent z-20 pointer-events-none">
                 </div>
 
                 <div id="carousel" class="carousel-track hide-scrollbar px-4 md:px-8">
@@ -1250,13 +1218,13 @@
                             alt="Fotografi Udara"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 pointer-events-none">
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent opacity-90 transition-opacity">
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent opacity-90 transition-opacity">
                         </div>
                         <div
                             class="absolute bottom-0 left-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                            <div class="text-[10px] font-bold uppercase tracking-wider text-brand-600 mb-1">Fotografi &
+                            <div class="text-[10px] font-bold uppercase tracking-wider text-brand-400 mb-1">Fotografi &
                                 Videografi</div>
-                            <h4 class="text-lg font-bold text-slate-900">Cinematic Cityscape</h4>
+                            <h4 class="text-lg font-bold text-white shadow-sm">Cinematic Cityscape</h4>
                         </div>
                     </div>
                     <div
@@ -1266,14 +1234,14 @@
                             alt="Mapping"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 pointer-events-none">
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent opacity-90 transition-opacity">
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent opacity-90 transition-opacity">
                         </div>
                         <div
                             class="absolute bottom-0 left-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                            <div class="text-[10px] font-bold uppercase tracking-wider text-brand-600 mb-1">Pemetaan
+                            <div class="text-[10px] font-bold uppercase tracking-wider text-brand-400 mb-1">Pemetaan
                                 Lahan
                             </div>
-                            <h4 class="text-lg font-bold text-slate-900">Orthomosaic Tambang</h4>
+                            <h4 class="text-lg font-bold text-white shadow-sm">Orthomosaic Tambang</h4>
                         </div>
                     </div>
                     <div
@@ -1283,14 +1251,14 @@
                             alt="Wedding"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 pointer-events-none">
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent opacity-90 transition-opacity">
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent opacity-90 transition-opacity">
                         </div>
                         <div
                             class="absolute bottom-0 left-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                            <div class="text-[10px] font-bold uppercase tracking-wider text-brand-600 mb-1">Wedding &
+                            <div class="text-[10px] font-bold uppercase tracking-wider text-brand-400 mb-1">Wedding &
                                 Event
                             </div>
-                            <h4 class="text-lg font-bold text-slate-900">Pernikahan Megah Outdoor</h4>
+                            <h4 class="text-lg font-bold text-white shadow-sm">Pernikahan Megah Outdoor</h4>
                         </div>
                     </div>
                     <div
@@ -1300,13 +1268,13 @@
                             alt="Konstruksi"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 pointer-events-none">
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent opacity-90 transition-opacity">
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent opacity-90 transition-opacity">
                         </div>
                         <div
                             class="absolute bottom-0 left-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                            <div class="text-[10px] font-bold uppercase tracking-wider text-brand-600 mb-1">Monitoring
+                            <div class="text-[10px] font-bold uppercase tracking-wider text-brand-400 mb-1">Monitoring
                                 Konstruksi</div>
-                            <h4 class="text-lg font-bold text-slate-900">Progres Infrastruktur Sipil</h4>
+                            <h4 class="text-lg font-bold text-white shadow-sm">Progres Infrastruktur Sipil</h4>
                         </div>
                     </div>
                     <div
@@ -1316,13 +1284,13 @@
                             alt="Real Estate"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 pointer-events-none">
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent opacity-90 transition-opacity">
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent opacity-90 transition-opacity">
                         </div>
                         <div
                             class="absolute bottom-0 left-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                            <div class="text-[10px] font-bold uppercase tracking-wider text-brand-600 mb-1">Real Estate
+                            <div class="text-[10px] font-bold uppercase tracking-wider text-brand-400 mb-1">Real Estate
                             </div>
-                            <h4 class="text-lg font-bold text-slate-900">Profil Masterplan Perumahan</h4>
+                            <h4 class="text-lg font-bold text-white shadow-sm">Profil Masterplan Perumahan</h4>
                         </div>
                     </div>
                     <div
@@ -1332,14 +1300,14 @@
                             alt="Inspeksi"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 pointer-events-none">
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent opacity-90 transition-opacity">
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent opacity-90 transition-opacity">
                         </div>
                         <div
                             class="absolute bottom-0 left-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                            <div class="text-[10px] font-bold uppercase tracking-wider text-brand-600 mb-1">Inspeksi
+                            <div class="text-[10px] font-bold uppercase tracking-wider text-brand-400 mb-1">Inspeksi
                                 Aset
                             </div>
-                            <h4 class="text-lg font-bold text-slate-900">Pemantauan Atap Pabrik</h4>
+                            <h4 class="text-lg font-bold text-white shadow-sm">Pemantauan Atap Pabrik</h4>
                         </div>
                     </div>
                     <div
@@ -1349,13 +1317,13 @@
                             alt="Pariwisata"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 pointer-events-none">
                         <div
-                            class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/30 to-transparent opacity-90 transition-opacity">
+                            class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent opacity-90 transition-opacity">
                         </div>
                         <div
                             class="absolute bottom-0 left-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                            <div class="text-[10px] font-bold uppercase tracking-wider text-brand-600 mb-1">Promosi
+                            <div class="text-[10px] font-bold uppercase tracking-wider text-brand-400 mb-1">Promosi
                                 Pariwisata</div>
-                            <h4 class="text-lg font-bold text-slate-900">Video Alam Estetik</h4>
+                            <h4 class="text-lg font-bold text-white shadow-sm">Video Alam Estetik</h4>
                         </div>
                     </div>
                 </div>
@@ -1363,7 +1331,7 @@
 
             <div class="text-center mt-12 relative z-10 reveal">
                 <a href="https://www.instagram.com/skygraph.idn/" target="_blank" rel="noopener noreferrer"
-                    class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-800 text-white font-bold border border-slate-700 hover:bg-slate-700 hover:text-brand-400 transition-all shadow-md">
+                    class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-900 text-white font-bold border border-slate-800 hover:bg-gradient-to-tr hover:from-orange-500 hover:via-pink-500 hover:to-purple-600 hover:border-transparent hover:text-white transition-all shadow-md">
                     <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path
                             d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
@@ -1382,10 +1350,10 @@
                     <p class="mt-3 text-slate-500 text-sm">Menjawab keraguan Anda sebelum menggunakan jasa kami.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 reveal delay-100 items-stretch">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 reveal delay-100 items-start">
                     <!-- FAQ 1 -->
                     <div
-                        class="faq-item h-full flex flex-col bg-slate-800 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
+                        class="faq-item flex flex-col bg-slate-800 border border-slate-700 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
                         <button
                             class="w-full px-5 py-5 text-left flex justify-between items-center font-bold text-[14px] md:text-[15px] text-white group-hover:text-brand-400 focus:outline-none"
                             onclick="toggleFaq(this)">
@@ -1397,7 +1365,7 @@
                             </svg>
                         </button>
                         <div class="faq-answer px-5">
-                            <p class="pb-5 text-[14px] text-slate-500 border-t border-slate-700 pt-4 leading-relaxed">
+                            <p class="pb-5 text-[14px] text-slate-300 border-t border-slate-700 pt-4 leading-relaxed">
                                 <b>Tidak perlu. Anda cukup terima beres.</b> Segala perizinan operasional (SIDOPI,
                                 AirNav) akan kami tangani sepenuhnya sebelum eksekusi, terutama untuk penerbangan di
                                 area <i>Red Zone</i> atau objek vital.
@@ -1406,7 +1374,7 @@
                     </div>
                     <!-- FAQ 2 -->
                     <div
-                        class="faq-item h-full flex flex-col bg-slate-800 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
+                        class="faq-item flex flex-col bg-slate-800 border border-slate-700 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
                         <button
                             class="w-full px-5 py-5 text-left flex justify-between items-center font-bold text-[14px] md:text-[15px] text-white group-hover:text-brand-400 focus:outline-none"
                             onclick="toggleFaq(this)">
@@ -1418,14 +1386,14 @@
                             </svg>
                         </button>
                         <div class="faq-answer px-5">
-                            <p class="pb-5 text-[14px] text-slate-500 border-t border-slate-700 pt-4 leading-relaxed">
+                            <p class="pb-5 text-[14px] text-slate-300 border-t border-slate-700 pt-4 leading-relaxed">
                                 Kami menerapkan protokol Zero Accident. Jika cuaca ekstrem, pilot berhak menunda operasi
                                 demi keselamatan. Kami menjamin <b>Reschedule tanpa biaya tambahan</b>.</p>
                         </div>
                     </div>
                     <!-- FAQ 3 -->
                     <div
-                        class="faq-item h-full flex flex-col bg-slate-800 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
+                        class="faq-item flex flex-col bg-slate-800 border border-slate-700 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
                         <button
                             class="w-full px-5 py-5 text-left flex justify-between items-center font-bold text-[14px] md:text-[15px] text-white group-hover:text-brand-400 focus:outline-none"
                             onclick="toggleFaq(this)">
@@ -1437,7 +1405,7 @@
                             </svg>
                         </button>
                         <div class="faq-answer px-5">
-                            <p class="pb-5 text-[14px] text-slate-500 border-t border-slate-700 pt-4 leading-relaxed">
+                            <p class="pb-5 text-[14px] text-slate-300 border-t border-slate-700 pt-4 leading-relaxed">
                                 Sangat aman. Untuk <i>indoor</i>, kami secara spesifik menggunakan armada <b>Potensic
                                     Atom</b> (ringan, stabil, manuver gesit) sehingga sangat ideal bermanuver di ruang
                                 tertutup tanpa resiko besar.</p>
@@ -1445,7 +1413,7 @@
                     </div>
                     <!-- FAQ 4 -->
                     <div
-                        class="faq-item h-full flex flex-col bg-slate-800 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
+                        class="faq-item flex flex-col bg-slate-800 border border-slate-700 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
                         <button
                             class="w-full px-5 py-5 text-left flex justify-between items-center font-bold text-[14px] md:text-[15px] text-white group-hover:text-brand-400 focus:outline-none"
                             onclick="toggleFaq(this)">
@@ -1457,14 +1425,14 @@
                             </svg>
                         </button>
                         <div class="faq-answer px-5">
-                            <p class="pb-5 text-[14px] text-slate-500 border-t border-slate-700 pt-4 leading-relaxed">
+                            <p class="pb-5 text-[14px] text-slate-300 border-t border-slate-700 pt-4 leading-relaxed">
                                 Kami mencegah "Downtime". Tim di lapangan diwajibkan membawa <b>Backup Unit</b> (drone
                                 cadangan). Alur kerja Anda tidak akan terhenti karena kendala teknis satu alat.</p>
                         </div>
                     </div>
                     <!-- FAQ 5 -->
                     <div
-                        class="faq-item h-full flex flex-col bg-slate-800 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
+                        class="faq-item flex flex-col bg-slate-800 border border-slate-700 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
                         <button
                             class="w-full px-5 py-5 text-left flex justify-between items-center font-bold text-[14px] md:text-[15px] text-white group-hover:text-brand-400 focus:outline-none"
                             onclick="toggleFaq(this)">
@@ -1476,7 +1444,7 @@
                             </svg>
                         </button>
                         <div class="faq-answer px-5">
-                            <p class="pb-5 text-[14px] text-slate-500 border-t border-slate-700 pt-4 leading-relaxed">
+                            <p class="pb-5 text-[14px] text-slate-300 border-t border-slate-700 pt-4 leading-relaxed">
                                 Terjamin 100%. Kami siap menandatangani kontrak <b>NDA (Non-Disclosure Agreement)</b>.
                                 Seluruh data mentah (<i>raw</i>) akan dihapus dari server kami segera setelah proyek
                                 selesai.</p>
@@ -1484,7 +1452,7 @@
                     </div>
                     <!-- FAQ 6 -->
                     <div
-                        class="faq-item h-full flex flex-col bg-slate-800 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
+                        class="faq-item flex flex-col bg-slate-800 border border-slate-700 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
                         <button
                             class="w-full px-5 py-5 text-left flex justify-between items-center font-bold text-[14px] md:text-[15px] text-white group-hover:text-brand-400 focus:outline-none"
                             onclick="toggleFaq(this)">
@@ -1496,14 +1464,14 @@
                             </svg>
                         </button>
                         <div class="faq-answer px-5">
-                            <p class="pb-5 text-[14px] text-slate-500 border-t border-slate-700 pt-4 leading-relaxed">
+                            <p class="pb-5 text-[14px] text-slate-300 border-t border-slate-700 pt-4 leading-relaxed">
                                 Sangat bisa. Biaya transportasi dan akomodasi akan ditambahkan secara transparan (<i>at
                                     cost</i>) ke dalam invoice, atau bisa diakomodasi langsung oleh pihak klien.</p>
                         </div>
                     </div>
                     <!-- FAQ 7 -->
                     <div
-                        class="faq-item h-full flex flex-col bg-slate-800 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
+                        class="faq-item flex flex-col bg-slate-800 border border-slate-700 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
                         <button
                             class="w-full px-5 py-5 text-left flex justify-between items-center font-bold text-[14px] md:text-[15px] text-white group-hover:text-brand-400 focus:outline-none"
                             onclick="toggleFaq(this)">
@@ -1515,14 +1483,14 @@
                             </svg>
                         </button>
                         <div class="faq-answer px-5">
-                            <p class="pb-5 text-[14px] text-slate-500 border-t border-slate-700 pt-4 leading-relaxed">
+                            <p class="pb-5 text-[14px] text-slate-300 border-t border-slate-700 pt-4 leading-relaxed">
                                 Tergantung volume pekerjaan. Video event memakan waktu 1-3 hari. Render pemetaan
                                 topografi/3D skala besar butuh waktu 3-5 hari kerja.</p>
                         </div>
                     </div>
                     <!-- FAQ 8 -->
                     <div
-                        class="faq-item h-full flex flex-col bg-slate-800 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
+                        class="faq-item flex flex-col bg-slate-800 border border-slate-700 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
                         <button
                             class="w-full px-5 py-5 text-left flex justify-between items-center font-bold text-[14px] md:text-[15px] text-white group-hover:text-brand-400 focus:outline-none"
                             onclick="toggleFaq(this)">
@@ -1534,14 +1502,14 @@
                             </svg>
                         </button>
                         <div class="faq-answer px-5">
-                            <p class="pb-5 text-[14px] text-slate-500 border-t border-slate-700 pt-4 leading-relaxed">
+                            <p class="pb-5 text-[14px] text-slate-300 border-t border-slate-700 pt-4 leading-relaxed">
                                 Video: MP4/MOV resolusi tinggi (4K). Data Geospasial: GeoTIFF (Orthomosaic, DEM), format
                                 DWG/DXF untuk AutoCAD, serta Laporan PDF.</p>
                         </div>
                     </div>
                     <!-- FAQ 9 -->
                     <div
-                        class="faq-item h-full flex flex-col bg-slate-800 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
+                        class="faq-item flex flex-col bg-slate-800 border border-slate-700 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
                         <button
                             class="w-full px-5 py-5 text-left flex justify-between items-center font-bold text-[14px] md:text-[15px] text-white group-hover:text-brand-400 focus:outline-none"
                             onclick="toggleFaq(this)">
@@ -1553,14 +1521,14 @@
                             </svg>
                         </button>
                         <div class="faq-answer px-5">
-                            <p class="pb-5 text-[14px] text-slate-500 border-t border-slate-700 pt-4 leading-relaxed">
+                            <p class="pb-5 text-[14px] text-slate-300 border-t border-slate-700 pt-4 leading-relaxed">
                                 Kami memberikan <b>2x kuota revisi minor gratis</b> (seperti ganti lagu/potong durasi).
                                 Revisi mayor yang merubah struktur akan dikenakan biaya ringan.</p>
                         </div>
                     </div>
                     <!-- FAQ 10 -->
                     <div
-                        class="faq-item h-full flex flex-col bg-slate-800 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
+                        class="faq-item flex flex-col bg-slate-800 border border-slate-700 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
                         <button
                             class="w-full px-5 py-5 text-left flex justify-between items-center font-bold text-[14px] md:text-[15px] text-white group-hover:text-brand-400 focus:outline-none"
                             onclick="toggleFaq(this)">
@@ -1572,7 +1540,7 @@
                             </svg>
                         </button>
                         <div class="faq-answer px-5">
-                            <p class="pb-5 text-[14px] text-slate-500 border-t border-slate-700 pt-4 leading-relaxed">
+                            <p class="pb-5 text-[14px] text-slate-300 border-t border-slate-700 pt-4 leading-relaxed">
                                 Reguler: <b>50% DP</b> untuk <i>booking</i> jadwal, dan <b>50% Pelunasan</b> sebelum
                                 penyerahan <i>file master</i>. Untuk paket korporat B2B, sistem <i>Term of Payment</i>
                                 (TOP) dapat dinegosiasikan.</p>
@@ -1580,7 +1548,7 @@
                     </div>
                     <!-- FAQ 11 -->
                     <div
-                        class="faq-item h-full flex flex-col bg-slate-800 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
+                        class="faq-item flex flex-col bg-slate-800 border border-slate-700 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
                         <button
                             class="w-full px-5 py-5 text-left flex justify-between items-center font-bold text-[14px] md:text-[15px] text-white group-hover:text-brand-400 focus:outline-none"
                             onclick="toggleFaq(this)">
@@ -1592,7 +1560,7 @@
                             </svg>
                         </button>
                         <div class="faq-answer px-5">
-                            <p class="pb-5 text-[14px] text-slate-500 border-t border-slate-700 pt-4 leading-relaxed">
+                            <p class="pb-5 text-[14px] text-slate-300 border-t border-slate-700 pt-4 leading-relaxed">
                                 Minimal penyewaan adalah 1 hari penuh (24 jam). Untuk penyewaan lebih dari 3 hari
                                 berturut-turut, kami akan memberikan potongan harga khusus (<i>corporate rate</i>).</p>
                         </div>
@@ -1600,7 +1568,7 @@
 
                     <!-- FAQ 14 -->
                     <div
-                        class="faq-item h-full flex flex-col bg-slate-800 border border-slate-800 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
+                        class="faq-item flex flex-col bg-slate-800 border border-slate-700 rounded-2xl transition-all duration-300 hover:border-brand-500 hover:shadow-md shadow-sm group">
                         <button
                             class="w-full px-5 py-5 text-left flex justify-between items-center font-bold text-[14px] md:text-[15px] text-white group-hover:text-brand-400 focus:outline-none"
                             onclick="toggleFaq(this)">
@@ -1612,7 +1580,7 @@
                             </svg>
                         </button>
                         <div class="faq-answer px-5">
-                            <p class="pb-5 text-[14px] text-slate-500 border-t border-slate-700 pt-4 leading-relaxed">
+                            <p class="pb-5 text-[14px] text-slate-300 border-t border-slate-700 pt-4 leading-relaxed">
                                 Penyewa wajib melampirkan identitas diri resmi (KTP), mengisi formulir tanggung jawab
                                 unit, dan bersedia menitipkan dokumen penjamin selama masa sewa berlangsung.</p>
                         </div>
@@ -1627,7 +1595,7 @@
                     <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
                         <div class="lg:col-span-2 flex flex-col justify-center">
                             <div
-                                class="inline-block px-3 py-1 bg-brand-900/40 text-brand-600 text-xs font-bold rounded-full mb-4 w-max border border-brand-500/30">
+                                class="inline-block px-3 py-1 bg-brand-50 text-brand-600 text-xs font-bold rounded-full mb-4 w-max border border-brand-200">
                                 Mari Berkolaborasi</div>
                             <h2 class="text-3xl md:text-4xl font-display font-bold mb-4 text-slate-900">
                                 Diskusikan Proyek Anda.
@@ -1725,7 +1693,7 @@
                                         placeholder="Tuliskan estimasi lokasi dan deskripsi pekerjaan..."></textarea>
                                 </div>
                                 <button type="submit"
-                                    class="w-full bg-brand-500 text-white font-bold rounded-xl py-4 mt-2 hover:bg-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 focus:ring-offset-slate-800 transition-all shadow-lg group flex items-center justify-center gap-2">
+                                    class="w-full bg-brand-500 text-white font-bold rounded-xl py-4 mt-2 hover:bg-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 focus:ring-offset-white transition-all shadow-lg group flex items-center justify-center gap-2">
                                     <span>Kirim Permintaan</span>
                                     <svg aria-hidden="true" class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none"
                                         viewBox="0 0 24 24" stroke="currentColor">
@@ -1734,7 +1702,7 @@
                                     </svg>
                                 </button>
                                 <div id="success-msg"
-                                    class="hidden bg-emerald-900/50 text-emerald-400 border border-emerald-800 rounded-xl p-4 text-sm text-center font-medium">
+                                    class="hidden bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-xl p-4 text-sm text-center font-medium">
                                     ✓ Pesan terkirim. Tim kami akan segera menghubungi Anda.
                                 </div>
                             </form>
@@ -1747,9 +1715,9 @@
     </main>
 
     </main>
-    <footer class="bg-white text-slate-600 py-16 border-t border-slate-200">
+    <footer class="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 border-b border-slate-200 pb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 border-b border-slate-800 pb-12">
                 <div class="lg:col-span-1">
                     <a href="#" class="flex items-center gap-2 mb-6">
                         <div class="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center">
@@ -1758,26 +1726,26 @@
                                     d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
                             </svg>
                         </div>
-                        <span class="font-display font-bold text-xl text-slate-900">Skygraph.</span>
+                        <span class="font-display font-bold text-xl text-white">Skygraph.</span>
                     </a>
-                    <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                    <p class="text-sm text-slate-400 leading-relaxed mb-6">
                         Menghadirkan solusi visual udara dan akuisisi data presisi tinggi secara efisien untuk bisnis
                         Anda.
                     </p>
                     <div class="flex gap-4">
-                        <a href="https://www.instagram.com/skygraph.idn/" target="_blank" aria-label="Kunjungi Instagram Skygraph" class="w-10 h-10 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 hover:text-white transition-all shadow-sm">
+                        <a href="https://www.instagram.com/skygraph.idn/" target="_blank" aria-label="Kunjungi Instagram Skygraph" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-600 hover:text-white transition-all shadow-sm">
                             <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                             </svg>
                         </a>
-                        <a href="https://www.threads.net/@skygraph.idn" target="_blank" aria-label="Kunjungi Threads Skygraph" class="w-10 h-10 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-black hover:text-white transition-all shadow-sm">
+                        <a href="https://www.threads.net/@skygraph.idn" target="_blank" aria-label="Kunjungi Threads Skygraph" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:bg-black hover:text-white transition-all shadow-sm">
                             <svg aria-hidden="true" class="w-4 h-4" fill="currentColor" viewBox="0 0 192 192">
                                 <path
                                     d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.775 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.0135 175.059C74.2042 174.89 56.9538 167.575 45.7381 153.317C35.2355 139.966 29.8077 120.682 29.6052 96C29.8077 71.3178 35.2355 52.0336 45.7381 38.6827C56.9538 24.4249 74.2039 17.11 97.0132 16.9405C119.988 17.1113 137.539 24.4614 149.184 38.788C154.894 45.8136 159.199 54.6488 162.037 64.9503L178.184 60.6422C174.744 47.9622 169.331 37.0357 161.965 27.974C147.036 9.60668 125.202 0.195148 97.0695 0H96.9569C68.8816 0.194473 47.2921 9.6418 32.7883 28.0793C19.8819 44.4864 13.2244 67.3157 13.0007 95.9325L13 96L13.0007 96.0675C13.2244 124.684 19.8819 147.514 32.7883 163.921C47.2921 182.358 68.8816 191.806 96.9569 192H97.0695C122.03 191.827 139.624 185.292 154.118 170.811C173.081 151.866 172.51 128.119 166.26 113.541C161.776 103.087 153.227 94.5962 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z" />
                             </svg>
                         </a>
-                        <a href="mailto:info@skygraph.web.id" aria-label="Kirim Email ke Skygraph" class="w-10 h-10 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-brand-500 hover:text-white transition-all shadow-sm">
+                        <a href="mailto:info@skygraph.web.id" aria-label="Kirim Email ke Skygraph" class="w-10 h-10 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center text-slate-400 hover:bg-brand-500 hover:text-white transition-all shadow-sm">
                             <svg aria-hidden="true" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
@@ -1788,7 +1756,7 @@
                 </div>
 
                 <div class="lg:col-span-1">
-                    <h4 class="text-slate-900 font-bold mb-4">Layanan Inti</h4>
+                    <h4 class="text-white font-bold mb-4">Layanan Inti</h4>
                     <ul class="space-y-3 text-sm">
                         <li><a href="#" class="hover:text-brand-500 transition-colors">Fotografi / Videografi</a></li>
                         <li><a href="#" class="hover:text-brand-500 transition-colors">Event & Wedding</a></li>
@@ -1798,7 +1766,7 @@
                 </div>
 
                 <div class="lg:col-span-1">
-                    <h4 class="text-slate-900 font-bold mb-4">Informasi</h4>
+                    <h4 class="text-white font-bold mb-4">Informasi</h4>
                     <ul class="space-y-3 text-sm">
                         <li><a href="#armada" class="hover:text-brand-500 transition-colors">Armada Udara</a></li>
                         <li><a href="#paket" class="hover:text-brand-500 transition-colors">Paket Penggunaan</a></li>
@@ -1808,10 +1776,10 @@
                 </div>
 
                 <div class="lg:col-span-1">
-                    <h4 class="text-slate-900 font-bold mb-4">Butuh Bantuan?</h4>
+                    <h4 class="text-white font-bold mb-4">Butuh Bantuan?</h4>
                     <p class="text-sm text-slate-500 mb-4">Tim lapangan kami siap mengeksekusi proyek Anda.</p>
                     <a href="#kontak"
-                        class="inline-block w-full text-center py-3 rounded-xl bg-slate-900 text-white font-bold hover:bg-brand-500 transition-all duration-300">
+                        class="inline-block w-full text-center py-3 rounded-xl bg-brand-500 text-white font-bold hover:bg-brand-600 shadow-lg shadow-brand-500/20 transition-all duration-300">
                         Chat Sekarang
                     </a>
                 </div>
@@ -1821,8 +1789,8 @@
                 class="flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-medium text-slate-500">
                 <p>&copy; <span id="year"></span> Skygraph Aerial Solutions Pekanbaru. Hak Cipta Dilindungi.</p>
                 <div class="flex gap-4">
-                    <a href="#" class="hover:text-slate-900 transition-colors">Syarat & Ketentuan</a>
-                    <a href="#" class="hover:text-slate-900 transition-colors">Kebijakan Privasi</a>
+                    <a href="#" class="hover:text-white transition-colors">Syarat & Ketentuan</a>
+                    <a href="#" class="hover:text-white transition-colors">Kebijakan Privasi</a>
                 </div>
             </div>
         </div>
