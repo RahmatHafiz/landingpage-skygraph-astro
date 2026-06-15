@@ -1,0 +1,21 @@
+{
+  "name": "Skygraph Aerial Solutions",
+  "short_name": "Skygraph",
+  "description": "Layanan jasa drone komersial profesional di Pekanbaru, Riau. Spesialis pemetaan topografi, videografi udara 4K, inspeksi aset, dan dokumentasi.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "https://api.dicebear.com/9.x/shapes/svg?seed=Skygraph",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "https://api.dicebear.com/9.x/shapes/svg?seed=Skygraph",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
