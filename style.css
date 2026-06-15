@@ -1,0 +1,213 @@
+body {
+    background-color: #ffffff;
+    color: #334155;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism for Navbar */
+.glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+/* Video Background Fixes for Mobile */
+.video-bg-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.video-bg-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures video fills screen perfectly */
+    opacity: 0.15;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 0%, rgba(248, 250, 252, 1) 100%);
+    z-index: 1;
+}
+
+/* Modern SaaS Cards */
+.bento-card {
+    border-radius: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+/* Hero Typing Animation */
+.dynamic-text::after {
+    content: 'Lebih Cepat.';
+    animation: textCycle 9s infinite;
+    color: #0ea5e9;
+}
+
+@keyframes textCycle {
+
+    0%,
+    25% {
+        content: 'Lebih Cepat.';
+    }
+
+    33%,
+    58% {
+        content: 'Lebih Akurat.';
+    }
+
+    66%,
+    91% {
+        content: 'Lebih Aman.';
+    }
+
+    100% {
+        content: 'Lebih Cepat.';
+    }
+}
+
+/* Scroll Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-100 {
+    transition-delay: 100ms;
+}
+
+.delay-200 {
+    transition-delay: 200ms;
+}
+
+.delay-300 {
+    transition-delay: 300ms;
+}
+
+/* Carousel Scroll/Drag */
+.carousel-track {
+    display: flex;
+    gap: 1.5rem;
+    cursor: grab;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1.5rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+.carousel-track:active {
+    cursor: grabbing;
+    scroll-snap-type: none;
+}
+
+.carousel-item {
+    scroll-snap-align: center;
+}
+
+/* HIDDEN SCROLLBAR TRICKS */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* FAQ Accordion */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+    color: #0ea5e9;
+}
+
+/* Chatbot Pop-up UI */
+#chatbot-ui {
+    transform-origin: bottom right;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#chatbot-ui.hidden-chat {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+    pointer-events: none;
+}
+
+/* 3D Flip Card Minimalist */
+.flip-container {
+    perspective: 1000px;
+}
+
+.flip-inner {
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.flip-container.active-flip .flip-inner {
+    transform: rotateY(180deg);
+}
+
+/* Lock coordinates for perfect in-place rotation */
+.flip-front,
+.flip-back {
+    position: absolute;
+    inset: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.flip-back {
+    transform: rotateY(180deg);
+}
+
+/* Badge Shine Animation */
+@keyframes badge-shine {
+    0% {
+        left: -100%;
+    }
+
+    20% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+.animate-badge-shine {
+    animation: badge-shine 3s infinite;
+}
