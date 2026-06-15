@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    
+
+
     <!-- Performance & Preconnects -->
+    <link rel="preload"
+        href="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=1200&q=80" as="image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
@@ -64,7 +67,7 @@
       "description": "Layanan jasa drone profesional, pemetaan topografi, videografi udara 4K, inspeksi aset, dan penyewaan drone lepas unit di Pekanbaru, Riau.",
       "url": "https://skygraph.id",
       "telephone": "+6281234567890",
-      "email": "hello@skygraph.id",
+      "email": "info@skygraph.web.id",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
@@ -162,79 +165,82 @@
 <body>
 
     <header>
-    <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16 md:h-20">
-                <a href="#" class="flex-shrink-0 flex items-center gap-3 group">
-                    <div
-                        class="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-brand-500 flex items-center justify-center shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform duration-300">
-                        <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
-                        </svg>
-                    </div>
-                    <span
-                        class="font-display font-bold text-xl md:text-2xl tracking-tight text-slate-900">Skygraph.</span>
-                </a>
-
-                <div class="hidden lg:flex items-center space-x-8">
-                    <a href="#layanan"
-                        class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Layanan</a>
-                    <a href="#armada"
-                        class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Armada</a>
-                    <a href="#tim"
-                        class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Tim</a>
-                    <a href="#paket"
-                        class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Paket &
-                        Sewa</a>
-                    <a href="#portofolio"
-                        class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Portofolio</a>
-                    <a href="#faq"
-                        class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">FAQ</a>
-                    <a href="#kontak"
-                        class="px-5 py-2.5 rounded-full bg-slate-900 text-white font-semibold text-sm hover:bg-brand-500 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
-                        Konsultasi Gratis
+        <nav class="fixed w-full z-50 glass transition-all duration-300" id="navbar">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16 md:h-20">
+                    <a href="#" class="flex-shrink-0 flex items-center gap-3 group">
+                        <div
+                            class="w-9 h-9 md:w-10 md:h-10 rounded-xl bg-brand-500 flex items-center justify-center shadow-lg shadow-brand-500/30 group-hover:scale-105 transition-transform duration-300">
+                            <svg class="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+                            </svg>
+                        </div>
+                        <span
+                            class="font-display font-bold text-xl md:text-2xl tracking-tight text-slate-900">Skygraph.</span>
                     </a>
-                </div>
 
-                <div class="lg:hidden flex items-center">
-                    <button id="mobile-menu-btn"
-                        class="text-slate-600 hover:text-brand-500 focus:outline-none p-2 rounded-lg bg-slate-50 border border-slate-200" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-menu">
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
+                    <div class="hidden lg:flex items-center space-x-8">
+                        <a href="#layanan"
+                            class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Layanan</a>
+                        <a href="#armada"
+                            class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Armada</a>
+                        <a href="#tim"
+                            class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Tim</a>
+                        <a href="#paket"
+                            class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Paket &
+                            Sewa</a>
+                        <a href="#portofolio"
+                            class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">Portofolio</a>
+                        <a href="#faq"
+                            class="text-sm font-semibold text-slate-600 hover:text-brand-500 transition-colors">FAQ</a>
+                        <a href="#kontak"
+                            class="px-5 py-2.5 rounded-full bg-slate-900 text-white font-semibold text-sm hover:bg-brand-500 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                            Konsultasi Gratis
+                        </a>
+                    </div>
+
+                    <div class="lg:hidden flex items-center">
+                        <button id="mobile-menu-btn"
+                            class="text-slate-600 hover:text-brand-500 focus:outline-none p-2 rounded-lg bg-slate-50 border border-slate-200"
+                            aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobile-menu">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div id="mobile-menu"
-            class="absolute top-16 left-0 w-full bg-white/95 backdrop-blur-xl shadow-xl lg:hidden hidden border-t border-slate-100 transition-all">
-            <div class="flex flex-col px-6 py-6 space-y-4">
-                <a href="#layanan"
-                    class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Layanan Jasa</a>
-                <a href="#armada" class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Armada
-                    Udara</a>
-                <a href="#tim" class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Tim
-                    Pilot</a>
-                <a href="#paket" class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Paket
-                    Harga</a>
-                <a href="#sewa" class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Sewa
-                    Lepas Unit</a>
-                <a href="#portofolio"
-                    class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Galeri Karya</a>
-                <a href="#faq" class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Tanya
-                    Jawab (FAQ)</a>
-                <div class="pt-4 border-t border-slate-100">
-                    <a href="#kontak"
-                        class="mobile-link flex items-center justify-center w-full px-6 py-3 rounded-xl bg-slate-900 text-white font-bold shadow-lg">Konsultasi
-                        Gratis</a>
+            <div id="mobile-menu"
+                class="absolute top-16 left-0 w-full bg-white/95 backdrop-blur-xl shadow-xl lg:hidden hidden border-t border-slate-100 transition-all">
+                <div class="flex flex-col px-6 py-6 space-y-4">
+                    <a href="#layanan"
+                        class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Layanan Jasa</a>
+                    <a href="#armada"
+                        class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Armada
+                        Udara</a>
+                    <a href="#tim" class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Tim
+                        Pilot</a>
+                    <a href="#paket"
+                        class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Paket
+                        Harga</a>
+                    <a href="#sewa" class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Sewa
+                        Lepas Unit</a>
+                    <a href="#portofolio"
+                        class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Galeri Karya</a>
+                    <a href="#faq" class="mobile-link text-base font-semibold text-slate-700 hover:text-brand-500">Tanya
+                        Jawab (FAQ)</a>
+                    <div class="pt-4 border-t border-slate-100">
+                        <a href="#kontak"
+                            class="mobile-link flex items-center justify-center w-full px-6 py-3 rounded-xl bg-slate-900 text-white font-bold shadow-lg">Konsultasi
+                            Gratis</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
     </header>
 
     <main>
@@ -829,7 +835,7 @@
                 </div>
 
                 <!-- Highly efficient 280px height for flip cards on mobile -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-3xl mx-auto">
 
                     <!-- Card Pilot 1 -->
                     <div class="h-[320px] w-full flip-container reveal group cursor-pointer">
@@ -876,7 +882,7 @@
                                             d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
                                         </path>
                                     </svg>
-                                    <span>Putar Profil</span>
+                                    <span>Flip Profil</span>
                                 </div>
                             </div>
                             <!-- BACK -->
@@ -943,7 +949,7 @@
                                             d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
                                         </path>
                                     </svg>
-                                    <span>Putar Profil</span>
+                                    <span>Flip Profil</span>
                                 </div>
                             </div>
                             <!-- BACK -->
@@ -965,7 +971,7 @@
                         </div>
                     </div>
 
-                    
+
 
                 </div>
             </div>
@@ -1204,7 +1210,7 @@
                             </ul>
                         </div>
 
-                        <!-- Persyaratan Ketat -->
+                        <!-- Persyaratan -->
                         <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 md:p-8 flex-grow">
                             <h5 class="text-base font-bold text-slate-900 mb-5 flex items-center gap-2.5">
                                 <div
@@ -1215,7 +1221,7 @@
                                         </path>
                                     </svg>
                                 </div>
-                                Syarat & Ketentuan Ketat
+                                Syarat & Ketentuan Sewa Unit
                             </h5>
                             <ul class="space-y-4 text-sm text-slate-600">
                                 <li class="flex items-start gap-3">
@@ -1235,26 +1241,27 @@
                                     <span><b>Surat Perjanjian:</b> Tanda tangan MoU di atas materai yang mengikat secara
                                         hukum.</span>
                                 </li>
-                                <li class="flex items-start gap-3 text-rose-700">
-                                    <span class="font-bold text-rose-400 mt-0.5">04.</span>
-                                    <span><b>Tanggung Jawab Penuh:</b> Kerusakan (*crash*/masuk air) atau hilang
-                                        (*flyaway*)
-                                        wajib diganti sesuai harga komponen/unit baru.</span>
-                                </li>
+
                                 <li class="flex items-start gap-3">
-                                    <span class="font-bold text-slate-400 mt-0.5">05.</span>
+                                    <span class="font-bold text-slate-400 mt-0.5">04.</span>
                                     <span><b>Batas Cuaca:</b> Sangat dilarang terbang saat hujan atau angin
                                         kencang.</span>
                                 </li>
                                 <li class="flex items-start gap-3">
-                                    <span class="font-bold text-slate-400 mt-0.5">06.</span>
+                                    <span class="font-bold text-slate-400 mt-0.5">05.</span>
                                     <span><b>Area Terlarang:</b> Dilarang keras menerbangkan unit di area objek vital,
                                         bandara, atau pangkalan militer (*No-Fly Zone*).</span>
                                 </li>
                                 <li class="flex items-start gap-3">
-                                    <span class="font-bold text-slate-400 mt-0.5">07.</span>
+                                    <span class="font-bold text-slate-400 mt-0.5">06.</span>
                                     <span><b>Serah Terima & Denda:</b> Kondisi unit dicek bersama sebelum dibawa.
                                         Keterlambatan pengembalian dikenakan denda harian proporsional.</span>
+                                </li>
+                                <li class="flex items-start gap-3 text-rose-700">
+                                    <span class="font-bold text-rose-400 mt-0.5">07.</span>
+                                    <span><b>Tanggung Jawab Penuh:</b> Kerusakan (*crash*/masuk air) atau hilang
+                                        (*flyaway*)
+                                        wajib diganti sesuai harga komponen/unit baru.</span>
                                 </li>
                             </ul>
                             <div class="mt-7 pt-6 border-t border-slate-200">
@@ -1718,7 +1725,8 @@
                                     </div>
                                     <div>
                                         <p class="text-xs text-slate-400 font-semibold mb-1">Email Korporasi</p>
-                                        <p class="font-bold text-sm text-white"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c3aaada5ac83b0a8baa4b1a2b3abedb4a6a1edaaa7">[email&#160;protected]</a></p>
+                                        <p class="font-bold text-sm text-white"><a
+                                                href="mailto:info@skygraph.web.id">info@skygraph.web.id</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -1831,7 +1839,8 @@
                                     d="M141.537 88.9883C140.71 88.5919 139.87 88.2104 139.019 87.8451C137.537 60.5382 122.616 44.905 97.5619 44.745C97.4484 44.7443 97.3355 44.7443 97.222 44.7443C82.2364 44.7443 69.7731 51.1409 62.102 62.7807L75.881 72.2328C81.6116 63.5383 90.6052 61.6848 97.2286 61.6848C97.3051 61.6848 97.3819 61.6848 97.4576 61.6855C105.707 61.7381 111.932 64.1366 115.961 68.814C118.893 72.2193 120.854 76.925 121.825 82.8638C114.511 81.6207 106.601 81.2385 98.145 81.7233C74.3247 83.0954 59.0111 96.9879 60.0396 116.292C60.5615 126.084 65.4397 134.508 73.775 140.011C80.8224 144.663 89.899 146.938 99.3323 146.423C111.79 145.74 121.563 140.987 128.381 132.296C133.559 125.696 136.834 117.143 138.28 106.366C144.217 109.949 148.617 114.664 151.047 120.332C155.179 129.967 155.42 145.8 142.501 158.708C131.182 170.016 117.576 174.908 97.0135 175.059C74.2042 174.89 56.9538 167.575 45.7381 153.317C35.2355 139.966 29.8077 120.682 29.6052 96C29.8077 71.3178 35.2355 52.0336 45.7381 38.6827C56.9538 24.4249 74.2039 17.11 97.0132 16.9405C119.988 17.1113 137.539 24.4614 149.184 38.788C154.894 45.8136 159.199 54.6488 162.037 64.9503L178.184 60.6422C174.744 47.9622 169.331 37.0357 161.965 27.974C147.036 9.60668 125.202 0.195148 97.0695 0H96.9569C68.8816 0.194473 47.2921 9.6418 32.7883 28.0793C19.8819 44.4864 13.2244 67.3157 13.0007 95.9325L13 96L13.0007 96.0675C13.2244 124.684 19.8819 147.514 32.7883 163.921C47.2921 182.358 68.8816 191.806 96.9569 192H97.0695C122.03 191.827 139.624 185.292 154.118 170.811C173.081 151.866 172.51 128.119 166.26 113.541C161.776 103.087 153.227 94.5962 141.537 88.9883ZM98.4405 129.507C88.0005 130.095 77.1544 125.409 76.6196 115.372C76.2232 107.93 81.9158 99.626 99.0812 98.6368C101.047 98.5234 102.976 98.468 104.871 98.468C111.106 98.468 116.939 99.0737 122.242 100.233C120.264 124.935 108.662 128.946 98.4405 129.507Z" />
                             </svg>
                         </a>
-                        <a href="/cdn-cgi/l/email-protection#6900070f06291a02100e1b081901471e0c0b47000d" class="w-10 h-10 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-brand-500 hover:text-white transition-all shadow-sm">
+                        <a href="mailto:info@skygraph.web.id"
+                            class="w-10 h-10 rounded-full bg-slate-50 border border-slate-200 flex items-center justify-center text-slate-500 hover:bg-brand-500 hover:text-white transition-all shadow-sm">
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
@@ -1936,8 +1945,8 @@
         </button>
     </div>
 
-    <script src="main.js"></script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"ee923b02f7fb4a3095959640b3456f3d","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+    <script defer src="main.js"></script>
+
 </body>
 
 </html>
