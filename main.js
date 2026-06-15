@@ -70,19 +70,19 @@ function animateSteps() {
 
     stepCircles.forEach(circle => {
         circle.classList.remove('bg-brand-500', 'text-white', 'border-brand-400', 'scale-110', 'shadow-md');
-        circle.classList.add('bg-white', 'text-slate-400', 'border-slate-200');
+        circle.classList.add('bg-slate-800', 'text-slate-500', 'border-slate-700');
     });
     steps.forEach(step => {
-        step.classList.remove('scale-105', 'bg-slate-50', 'border-brand-100');
+        step.classList.remove('scale-105', 'bg-slate-800', 'border-brand-500');
         step.classList.add('bg-transparent', 'border-transparent');
     });
 
     if (stepCircles[currentStep]) {
-        stepCircles[currentStep].classList.remove('bg-white', 'text-slate-400', 'border-slate-200');
+        stepCircles[currentStep].classList.remove('bg-slate-800', 'text-slate-500', 'border-slate-700');
         stepCircles[currentStep].classList.add('bg-brand-500', 'text-white', 'border-brand-400', 'scale-110', 'shadow-md');
 
         steps[currentStep].classList.remove('bg-transparent', 'border-transparent');
-        steps[currentStep].classList.add('scale-105', 'bg-slate-50', 'border-brand-100');
+        steps[currentStep].classList.add('scale-105', 'bg-slate-800', 'border-brand-500');
 
         // Mobile auto-scroll to current step
         if (window.innerWidth < 768) {
@@ -288,3 +288,36 @@ window.sendChat = function() {
         }
     }
 }
+
+
+// Hero Background Video Rotation
+document.addEventListener('DOMContentLoaded', () => {
+    const heroVideo = document.getElementById('hero-video');
+    if (heroVideo) {
+        const playlist = [
+            'assets/walikota-pekanbaru.webm',
+            'assets/sea.webm',
+            'assets/sunset.webm'
+        ];
+        let currentVideoIndex = 0;
+        
+        // Ensure initial transition is set
+        heroVideo.style.transition = 'opacity 0.8s ease-in-out';
+
+        heroVideo.addEventListener('ended', () => {
+            // Fade out
+            heroVideo.style.opacity = '0';
+            
+            setTimeout(() => {
+                currentVideoIndex = (currentVideoIndex + 1) % playlist.length;
+                heroVideo.src = playlist[currentVideoIndex];
+                heroVideo.load();
+                
+                heroVideo.play().then(() => {
+                    // Fade in once playing
+                    heroVideo.style.opacity = '0.6';
+                }).catch(e => console.log('Auto-play failed:', e));
+            }, 800); // Wait for fade out to complete before switching
+        });
+    }
+});
