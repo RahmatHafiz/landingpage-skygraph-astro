@@ -337,8 +337,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroVideo = document.getElementById('hero-video');
     if (heroVideo) {
         const playlist = [
-            'assets/walikota-pekanbaru.webm',
-            'assets/sea.webm',
+            'assets/tugu-songket.webm',
+            'assets/pacu-jalur.webm',
+            'assets/istana-siak.webm',
             'assets/sunset.webm'
         ];
         let currentVideoIndex = 0;
