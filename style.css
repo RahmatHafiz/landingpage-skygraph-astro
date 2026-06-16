@@ -39,31 +39,17 @@ body {
 
 /* Hero Typing Animation */
 .dynamic-text::after {
-    content: 'Lebih Cepat.';
-    animation: textCycle 9s infinite;
+    content: 'Pemetaan Udara.';
+    animation: textCycle 12s infinite;
     color: #0ea5e9;
 }
 
 @keyframes textCycle {
-
-    0%,
-    25% {
-        content: 'Lebih Cepat.';
-    }
-
-    33%,
-    58% {
-        content: 'Lebih Akurat.';
-    }
-
-    66%,
-    91% {
-        content: 'Lebih Aman.';
-    }
-
-    100% {
-        content: 'Lebih Cepat.';
-    }
+    0%, 15% { content: 'Pemetaan Udara.'; }
+    25%, 40% { content: 'Dokumentasi Event.'; }
+    50%, 65% { content: 'Inspeksi Aset.'; }
+    75%, 90% { content: 'Sewa Lepas Unit.'; }
+    100% { content: 'Pemetaan Udara.'; }
 }
 
 /* Scroll Reveal Animations */
