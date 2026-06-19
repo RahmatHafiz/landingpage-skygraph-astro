@@ -45,11 +45,30 @@ body {
 }
 
 @keyframes textCycle {
-    0%, 15% { content: 'Pemetaan Udara.'; }
-    25%, 40% { content: 'Dokumentasi Event.'; }
-    50%, 65% { content: 'Inspeksi Aset.'; }
-    75%, 90% { content: 'Sewa Lepas Unit.'; }
-    100% { content: 'Pemetaan Udara.'; }
+
+    0%,
+    15% {
+        content: 'Pemetaan Udara.';
+    }
+
+    25%,
+    40% {
+        content: 'Dokumentasi Event.';
+    }
+
+    50%,
+    65% {
+        content: 'Inspeksi Aset.';
+    }
+
+    75%,
+    90% {
+        content: 'Sewa Unit Drone.';
+    }
+
+    100% {
+        content: 'Pemetaan Udara.';
+    }
 }
 
 /* Scroll Reveal Animations */
@@ -190,6 +209,7 @@ body {
 .animate-badge-shine {
     animation: badge-shine 3s infinite;
 }
+
 /* Dark Glassmorphism for Navbar */
 .glass-dark {
     background: rgba(15, 23, 42, 0.85);

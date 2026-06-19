@@ -281,11 +281,11 @@ window.addEventListener('load', () => {
                         }
                     }
                 }
-            }, 2000);
+            }, 1500);
         }
         
         // Start automatically
-        setTimeout(playCarousel, 1000);
+        setTimeout(playCarousel, 1500);
         
         track.addEventListener('mouseenter', () => clearInterval(autoScrollTimer));
         track.addEventListener('mouseleave', () => {
@@ -298,7 +298,7 @@ window.addEventListener('load', () => {
         track.addEventListener('touchend', () => {
             isDown = false;
             track.style.scrollSnapType = 'x mandatory';
-            setTimeout(playCarousel, 1000);
+            setTimeout(playCarousel, 1500);
         }, {passive: true});
 
     }
