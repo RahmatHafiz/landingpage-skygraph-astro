@@ -332,6 +332,17 @@ window.sendChat = function() {
 }
 
 
+// Auto-clone Marquee Content for Infinite Loop
+document.addEventListener('DOMContentLoaded', () => {
+    const marquee = document.getElementById('client-marquee');
+    if (marquee) {
+        const content = marquee.firstElementChild;
+        if (content) {
+            marquee.appendChild(content.cloneNode(true));
+        }
+    }
+});
+
 // Hero Background Video Rotation
 document.addEventListener('DOMContentLoaded', () => {
     const heroVideo = document.getElementById('hero-video');
