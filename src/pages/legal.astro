@@ -1,0 +1,397 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Legal & Kebijakan - SKYGRAPH" description="Informasi legal, syarat & ketentuan, serta kebijakan privasi layanan SKYGRAPH Aerial Solutions." navStyle="solid">
+    <Fragment slot="head">
+        
+    </Fragment>
+    
+    <section class="pt-32 pb-20 md:pt-40 md:pb-32 bg-slate-50 min-h-screen">
+        <div class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 perspective-1000">
+
+            <div class="text-center mb-8">
+                <h1 class="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-6">Pusat Informasi Legal</h1>
+
+                <!-- Toggle Switch -->
+                <div class="inline-flex bg-white rounded-full p-1.5 shadow-md border border-slate-200 relative mb-4">
+                    <div id="active-bg"
+                        class="absolute left-1.5 top-1.5 bottom-1.5 w-[calc(50%-6px)] bg-brand-500 rounded-full transition-transform duration-500 ease-in-out shadow-sm z-0">
+                    </div>
+
+                    <button id="btn-privacy"
+                        class="relative z-10 px-4 py-2 sm:px-6 sm:py-3 text-sm md:text-base font-bold text-white transition-colors duration-500 rounded-full w-44 md:w-56 text-center focus:outline-none flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-95">
+                        <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                            </path>
+                        </svg>
+                        Kebijakan Privasi
+                    </button>
+                    <button id="btn-terms"
+                        class="relative z-10 px-4 py-2 sm:px-6 sm:py-3 text-sm md:text-base font-bold text-slate-500 hover:text-slate-800 transition-colors duration-500 rounded-full w-44 md:w-56 text-center focus:outline-none flex items-center justify-center gap-2 hover:scale-[1.02] active:scale-95">
+                        <svg class="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                            </path>
+                        </svg>
+                        Syarat & Ketentuan
+                    </button>
+                </div>
+            </div>
+
+            <!-- Flip Container -->
+            <div id="flip-container" class="flip-container relative w-full h-[600px] max-h-[75vh]">
+                <div class="flip-inner absolute w-full h-full">
+
+                    <!-- Front Face (Privacy Policy) -->
+                    <div
+                        class="absolute w-full h-full backface-hidden bg-white rounded-3xl shadow-xl border border-slate-200 flex flex-col overflow-hidden">
+                        <div
+                            class="bg-gradient-to-r from-slate-900 to-slate-800 px-6 py-6 md:px-10 md:py-8 border-b border-slate-800 shrink-0 flex items-center gap-4 relative overflow-hidden">
+                            <div
+                                class="absolute top-0 right-0 w-32 h-32 bg-brand-500 rounded-full mix-blend-overlay filter blur-[40px] opacity-20 pointer-events-none">
+                            </div>
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brand-500/20 border border-brand-500/30 flex items-center justify-center shrink-0 relative z-10">
+                                <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="relative z-10">
+                                <h2 class="text-2xl font-display font-bold text-white">Kebijakan Privasi</h2>
+                                <p class="text-slate-400 text-xs md:text-sm mt-1">Pembaruan Terakhir: Juni 2026</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="p-6 md:p-10 card-content overflow-y-auto grow bg-white/50 backdrop-blur-sm text-slate-600 text-sm md:text-base leading-relaxed">
+                            <p class="mb-6"><strong class="text-slate-800">Skygraph Aerial Solutions</strong> ("kami",
+                                "milik kami", atau "Skygraph") sangat menghargai privasi Anda ("Klien", "Penyewa", atau
+                                "Pengunjung Website"). Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan,
+                                menggunakan, melindungi, dan dalam kondisi tertentu membagikan informasi pribadi Anda
+                                saat menggunakan layanan jasa kami atau mengakses website ini.</p>
+
+                            <h3
+                                class="text-lg md:text-xl font-bold text-slate-800 border-b border-slate-200 pb-2 mb-4 mt-8">
+                                1. Informasi Apa yang Kami Kumpulkan?</h3>
+                            <p class="mb-4">Kami dapat mengumpulkan informasi pribadi Anda dalam beberapa cara, terutama
+                                ketika Anda mengisi formulir penawaran (form kontak), berkomunikasi via WhatsApp, atau
+                                menyepakati kontrak kerja dengan kami. Informasi ini dapat meliputi:</p>
+                            <ul class="list-disc pl-5 space-y-2 mb-6">
+                                <li><strong class="text-slate-800">Data Identitas:</strong> Nama lengkap, nama
+                                    perusahaan/instansi, salinan KTP/SIM/Paspor (khusus untuk layanan Sewa Unit Drone).
+                                </li>
+                                <li><strong class="text-slate-800">Data Kontak:</strong> Nomor telepon/WhatsApp, alamat
+                                    email, dan alamat kantor/rumah.</li>
+                                <li><strong class="text-slate-800">Data Proyek:</strong> Titik kordinat lokasi
+                                    penerbangan, rincian acara, serta informasi sensitif lainnya yang diperlukan untuk
+                                    survei udara.</li>
+                            </ul>
+
+                            <h3
+                                class="text-lg md:text-xl font-bold text-slate-800 border-b border-slate-200 pb-2 mb-4 mt-8">
+                                2. Bagaimana Kami Menggunakan Informasi Anda?</h3>
+                            <p class="mb-4">Data dan informasi yang kami kumpulkan semata-mata digunakan untuk tujuan
+                                berikut:</p>
+                            <ul class="list-disc pl-5 space-y-2 mb-6">
+                                <li><strong class="text-slate-800">Penyediaan Layanan:</strong> Untuk merespon
+                                    permintaan harga (quotation), memproses pemesanan, dan berkoordinasi selama
+                                    pelaksanaan proyek di lapangan.</li>
+                                <li><strong class="text-slate-800">Administrasi Legal & Penagihan:</strong> Untuk
+                                    keperluan penyusunan kontrak kerja, faktur (invoice), dan dokumen legal penjaminan
+                                    (pada kasus sewa drone).</li>
+                                <li><strong class="text-slate-800">Perizinan Terbang:</strong> Untuk mengurus izin
+                                    terbang ke instansi berwenang (SIDOPI, AirNav, Kepolisian) apabila diperlukan oleh
+                                    regulasi lokasi tersebut.</li>
+                            </ul>
+
+                            <h3
+                                class="text-lg md:text-xl font-bold text-slate-800 border-b border-slate-200 pb-2 mb-4 mt-8">
+                                3. Perlindungan & Kerahasiaan Data (Non-Disclosure Agreement)</h3>
+                            <p class="mb-4">Kami berkomitmen penuh untuk menjaga kerahasiaan data operasional Anda.
+                                Semua hasil tangkapan udara (foto, video 4K, model 3D, peta orthomosaic, topografi) dari
+                                proyek industri atau korporasi akan diperlakukan sebagai <strong
+                                    class="text-slate-800">Rahasia Klien</strong>.</p>
+                            <ul class="list-disc pl-5 space-y-2 mb-6">
+                                <li>Kami bersedia menandatangani dan tunduk pada <strong
+                                        class="text-slate-800">Non-Disclosure Agreement (NDA)</strong> resmi dari pihak
+                                    perusahaan Anda.</li>
+                                <li>Tanpa izin eksplisit atau ketiadaan NDA, kami tidak akan memperjualbelikan,
+                                    memberikan, atau menyebarkan data aset internal Anda kepada pihak ketiga manapun.
+                                </li>
+                            </ul>
+
+                            <h3
+                                class="text-lg md:text-xl font-bold text-slate-800 border-b border-slate-200 pb-2 mb-4 mt-8">
+                                4. Penggunaan Media untuk Portofolio</h3>
+                            <p class="mb-4">Sebagai penyedia jasa kreatif, kami mengandalkan portofolio visual untuk
+                                menunjukkan kualitas kerja kami. Kecuali terikat oleh NDA atau Klien secara tertulis
+                                meminta sebaliknya, Skygraph berhak untuk:</p>
+                            <ul class="list-disc pl-5 space-y-2 mb-6">
+                                <li>Menggunakan sebagian kecil klip/foto dari proyek (umumnya untuk acara Wedding,
+                                    Pariwisata, atau Public Event) sebagai bahan promosi di kanal media sosial Skygraph
+                                    (Instagram, TikTok) dan Website ini.</li>
+                                <li>Kami menjamin bahwa penggunaan media ini tidak akan mengekspos rahasia dapur
+                                    perusahaan, wajah yang tidak pantas, atau data konfidensial teknis milik Klien.</li>
+                            </ul>
+
+                            <h3
+                                class="text-lg md:text-xl font-bold text-slate-800 border-b border-slate-200 pb-2 mb-4 mt-8">
+                                5. Keamanan Data Pelanggan</h3>
+                            <p class="mb-6">Kami menerapkan prosedur keamanan fisik dan elektronik untuk melindungi data
+                                KTP/SIM serta file mentah proyek Anda. Salinan ID Card fisik/digital yang diserahkan
+                                sebagai jaminan sewa akan dikembalikan sepenuhnya (atau dihapus dari sistem kami)
+                                setelah unit drone kembali dalam kondisi baik. Raw file proyek akan disimpan di
+                                hard-drive internal kami sebagai <em class="italic text-slate-500">backup</em> selama
+                                maksimal 30 hari pasca-proyek sebelum dihapus (kecuali Klien meminta penghapusan
+                                instan).</p>
+
+                            <h3
+                                class="text-lg md:text-xl font-bold text-slate-800 border-b border-slate-200 pb-2 mb-4 mt-8">
+                                6. Hubungi Kami</h3>
+                            <p class="mb-4">Apabila Anda memiliki pertanyaan lebih lanjut mengenai perlindungan data
+                                Klien atau ingin mengajukan penghapusan data Anda dari sistem kami, silakan hubungi tim
+                                kami di:</p>
+                            <ul class="list-disc pl-5 space-y-2 mb-8">
+                                <li><strong class="text-slate-800">Email:</strong> <a href="mailto:info@skygraph.web.id"
+                                        class="text-brand-500 hover:text-brand-600 font-medium transition-colors">info@skygraph.web.id</a>
+                                </li>
+                                <li><strong class="text-slate-800">WhatsApp:</strong> <a
+                                        href="https://wa.me/6285155377210" target="_blank"
+                                        class="text-brand-500 hover:text-brand-600 font-medium transition-colors">+62
+                                        851 5537 7210</a></li>
+                            </ul>
+
+                            <div class="mt-8 pt-6 border-t border-slate-200">
+                                <p class="text-sm text-slate-500 italic">Dengan melanjutkan penggunaan jasa Skygraph,
+                                    Anda dianggap telah membaca, memahami, dan menyetujui Kebijakan Privasi ini.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Back Face (Terms & Conditions) -->
+                    <div
+                        class="absolute w-full h-full backface-hidden rotate-y-180 bg-white rounded-3xl shadow-xl border border-slate-200 flex flex-col overflow-hidden">
+                        <div
+                            class="bg-gradient-to-r from-slate-900 to-slate-800 px-6 py-6 md:px-10 md:py-8 border-b border-slate-800 shrink-0 flex items-center gap-4 relative overflow-hidden">
+                            <div
+                                class="absolute top-0 right-0 w-32 h-32 bg-brand-500 rounded-full mix-blend-overlay filter blur-[40px] opacity-20 pointer-events-none">
+                            </div>
+                            <div
+                                class="w-12 h-12 rounded-xl bg-brand-500/20 border border-brand-500/30 flex items-center justify-center shrink-0 relative z-10">
+                                <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="relative z-10">
+                                <h2 class="text-2xl font-display font-bold text-white">Syarat & Ketentuan Layanan</h2>
+                                <p class="text-slate-400 text-xs md:text-sm mt-1">Pembaruan Terakhir: Juni 2026</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="p-6 md:p-10 card-content overflow-y-auto grow bg-white/50 backdrop-blur-sm text-slate-600 text-sm md:text-base leading-relaxed">
+                            <p class="mb-6">Selamat datang di <strong class="text-slate-800">Skygraph Aerial
+                                    Solutions</strong>. Dengan menggunakan layanan jasa dokumentasi udara, pemetaan,
+                                dan/atau penyewaan drone dari kami, Anda menyetujui untuk terikat oleh Syarat dan
+                                Ketentuan berikut. Mohon membacanya dengan saksama sebelum menggunakan layanan kami.</p>
+
+                            <h3
+                                class="text-lg md:text-xl font-bold text-slate-800 border-b border-slate-200 pb-2 mb-4 mt-8">
+                                1. Ruang Lingkup Layanan</h3>
+                            <p class="mb-4">Skygraph menyediakan layanan jasa profesional yang mencakup namun tidak
+                                terbatas pada:</p>
+                            <ul class="list-disc pl-5 space-y-2 mb-6">
+                                <li>Dokumentasi acara (Wedding, Corporate Event, dll).</li>
+                                <li>Pemetaan udara (Topografi, Kontur, Orthomosaic, Volume).</li>
+                                <li>Inspeksi aset industri dan konstruksi.</li>
+                                <li>Penyewaan unit drone (Sewa Unit Drone).</li>
+                            </ul>
+
+                            <h3
+                                class="text-lg md:text-xl font-bold text-slate-800 border-b border-slate-200 pb-2 mb-4 mt-8">
+                                2. Prosedur Pemesanan & Pembayaran</h3>
+                            <ul class="list-disc pl-5 space-y-2 mb-6">
+                                <li>Setiap pemesanan jasa atau sewa wajib dikonfirmasi melalui <em
+                                        class="italic text-slate-500">Down Payment</em> (DP) minimal sebesar <strong
+                                        class="text-slate-800">50%</strong> dari total nilai invoice atau penawaran
+                                    harga.</li>
+                                <li>Jadwal penerbangan baru akan dikunci (*lock schedule*) setelah pembayaran DP kami
+                                    terima.</li>
+                                <li>Sisa pelunasan (50%) wajib dibayarkan maksimal H-1 sebelum penyerahan hasil akhir
+                                    (*final handover*) file atau sebelum unit drone dikembalikan (untuk sewa unit).</li>
+                                <li>Pembayaran dapat dilakukan melalui transfer bank resmi ke rekening yang tertera di
+                                    invoice Skygraph.</li>
+                            </ul>
+
+                            <h3
+                                class="text-lg md:text-xl font-bold text-slate-800 border-b border-slate-200 pb-2 mb-4 mt-8">
+                                3. Pembatalan dan Penjadwalan Ulang (Reschedule)</h3>
+                            <ul class="list-disc pl-5 space-y-2 mb-6">
+                                <li><strong class="text-slate-800">Pembatalan oleh Klien:</strong> Jika klien
+                                    membatalkan proyek secara sepihak setelah DP dibayarkan, maka DP dinyatakan hangus
+                                    (<em class="italic text-slate-500">non-refundable</em>).</li>
+                                <li><strong class="text-slate-800">Reschedule:</strong> Klien dapat mengajukan perubahan
+                                    jadwal selambat-lambatnya <strong class="text-slate-800">3 (tiga) hari
+                                        kerja</strong> sebelum hari-H pelaksanaan, menyesuaikan ketersediaan jadwal tim
+                                    Skygraph.</li>
+                                <li><strong class="text-slate-800">Kondisi Force Majeure:</strong> Dalam hal terjadi
+                                    cuaca buruk ekstrim (hujan lebat, angin kencang di luar batas aman drone), larangan
+                                    terbang dadakan dari pihak berwenang, atau insiden di luar kendali teknis, jadwal
+                                    dapat di-reschedule tanpa biaya tambahan. Jika klien memilih untuk membatalkan
+                                    sepenuhnya, DP akan dikembalikan dengan potongan biaya operasional yang mungkin
+                                    telah terjadi.</li>
+                            </ul>
+
+                            <h3
+                                class="text-lg md:text-xl font-bold text-slate-800 border-b border-slate-200 pb-2 mb-4 mt-8">
+                                4. Perizinan Terbang (Clearance)</h3>
+                            <p class="mb-4">Sesuai dengan regulasi CASR 107 tentang pengoperasian pesawat udara tanpa
+                                awak di Indonesia:</p>
+                            <ul class="list-disc pl-5 space-y-2 mb-6">
+                                <li>Tim Skygraph akan membantu proses administrasi izin terbang (SIDOPI/AirNav) jika
+                                    diperlukan. Namun, surat rekomendasi/izin kawasan khusus (misal: area ring 1,
+                                    instalasi militer, bandara, kawasan industri tertutup) <strong
+                                        class="text-slate-800">merupakan tanggung jawab klien</strong> untuk diurus ke
+                                    pihak berwenang setempat.</li>
+                                <li>Skygraph berhak penuh <strong class="text-slate-800">menolak atau
+                                        menghentikan</strong> penerbangan apabila dirasa membahayakan keselamatan umum,
+                                    properti, penerbangan sipil, atau jika tidak mendapat izin dari aparat keamanan
+                                    setempat.</li>
+                            </ul>
+
+                            <h3
+                                class="text-lg md:text-xl font-bold text-slate-800 border-b border-slate-200 pb-2 mb-4 mt-8">
+                                5. Syarat Khusus Sewa Unit Drone (Rental)</h3>
+                            <p class="mb-4">Bagi klien yang menyewa unit drone tanpa pilot, berlaku ketentuan berikut:
+                            </p>
+                            <ul class="list-disc pl-5 space-y-2 mb-6">
+                                <li>Penyewa wajib menjaminkan <strong class="text-slate-800">2 (dua) buah identitas
+                                        asli</strong> (misal: E-KTP, SIM, NPWP, Paspor) yang namanya harus sama dengan
+                                    identitas yang menandatangani Surat Perjanjian Sewa.</li>
+                                <li>Unit akan diuji coba (<em class="italic text-slate-500">test flight</em>) dan dicek
+                                    kelengkapannya bersama-sama saat serah terima awal. Segala cacat atau kekurangan
+                                    wajib dicatat di awal.</li>
+                                <li><strong class="text-slate-800">Tanggung Jawab Penuh:</strong> Segala bentuk
+                                    kerusakan (<em class="italic text-slate-500">crash/water damage</em>), kehilangan,
+                                    hingga jatuhnya korban fisik maupun materil kepada pihak ketiga selama masa sewa
+                                    adalah <strong class="text-slate-800">100% tanggung jawab penyewa</strong>. Skygraph
+                                    dibebaskan dari segala tuntutan hukum.</li>
+                                <li>Jika unit rusak, penyewa wajib mengganti biaya perbaikan <em
+                                        class="italic text-slate-500">sparepart</em> ke DJI Authorized Service Center
+                                    beserta biaya kompensasi hilangnya potensi pemasukan per hari selama unit
+                                    di-service. Jika hilang, penyewa wajib mengganti dengan unit baru bertipe sama.</li>
+                                <li>Keterlambatan pengembalian unit dikenakan denda keterlambatan (<em
+                                        class="italic text-slate-500">overtime charge</em>) proporsional sesuai hitungan
+                                    per jam/per hari.</li>
+                            </ul>
+
+                            <h3
+                                class="text-lg md:text-xl font-bold text-slate-800 border-b border-slate-200 pb-2 mb-4 mt-8">
+                                6. Hak Cipta dan Penggunaan Media</h3>
+                            <ul class="list-disc pl-5 space-y-2 mb-6">
+                                <li>Kecuali disepakati lain dalam kontrak atau perjanjian NDA (<em
+                                        class="italic text-slate-500">Non-Disclosure Agreement</em>), hak cipta seluruh
+                                    raw footage tetap menjadi milik Skygraph. Klien memiliki lisensi penggunaan tak
+                                    terbatas untuk kepentingan komersial dan internal klien.</li>
+                                <li>Skygraph berhak menggunakan potongan video/foto hasil karya sebagai bagian dari
+                                    <strong class="text-slate-800">Portofolio, Showreel, atau materi promosi
+                                        Skygraph</strong> (Website/Instagram/TikTok), asalkan tidak membocorkan data
+                                    konfidensial klien.</li>
+                            </ul>
+
+                            <h3
+                                class="text-lg md:text-xl font-bold text-slate-800 border-b border-slate-200 pb-2 mb-4 mt-8">
+                                7. Amandemen Syarat & Ketentuan</h3>
+                            <p class="mb-6">Skygraph berhak untuk mengubah, memodifikasi, atau memperbarui Syarat dan
+                                Ketentuan ini kapan saja tanpa pemberitahuan sebelumnya. Perubahan akan berlaku segera
+                                setelah dipublikasikan di halaman ini.</p>
+
+                            <div class="mt-8 pt-6 border-t border-slate-200">
+                                <p class="text-sm text-slate-500 italic">Jika Anda memiliki pertanyaan seputar Syarat
+                                    dan Ketentuan ini, silakan hubungi kami di <a href="mailto:info@skygraph.web.id"
+                                        class="text-brand-500 hover:text-brand-600 font-medium transition-colors">info@skygraph.web.id</a>
+                                    atau WhatsApp di <a href="https://wa.me/6285155377210" target="_blank" class="text-brand-500 hover:text-brand-600 font-medium transition-colors">+62 851 5537 7210</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('astro:page-load', () => {
+            const btnPrivacy = document.getElementById('btn-privacy');
+            const btnTerms = document.getElementById('btn-terms');
+            const activeBg = document.getElementById('active-bg');
+            const flipContainer = document.getElementById('flip-container');
+
+            if (btnPrivacy && btnTerms && activeBg && flipContainer) {
+                
+                function checkHash() {
+                    if (window.location.hash === '#terms') {
+                        switchToTerms();
+                    } else {
+                        switchToPrivacy();
+                    }
+                }
+
+                // Check URL hash on load
+                checkHash();
+
+                // Intercept clicks on legal links to flip the card directly (since Astro intercepts hash changes via pushState)
+                const privacyLinks = document.querySelectorAll('a[href="/legal#privacy"], a[href="#privacy"]');
+                const termsLinks = document.querySelectorAll('a[href="/legal#terms"], a[href="#terms"]');
+
+                privacyLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        switchToPrivacy();
+                    });
+                });
+
+                termsLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        switchToTerms();
+                    });
+                });
+
+                function switchToTerms() {
+                    activeBg.style.transform = 'translateX(100%)';
+                    btnTerms.classList.remove('text-slate-500');
+                    btnTerms.classList.add('text-white');
+                    btnPrivacy.classList.remove('text-white');
+                    btnPrivacy.classList.add('text-slate-500');
+                    flipContainer.classList.add('active-flip');
+                }
+
+                function switchToPrivacy() {
+                    activeBg.style.transform = 'translateX(0)';
+                    btnPrivacy.classList.remove('text-slate-500');
+                    btnPrivacy.classList.add('text-white');
+                    btnTerms.classList.remove('text-white');
+                    btnTerms.classList.add('text-slate-500');
+                    flipContainer.classList.remove('active-flip');
+                }
+
+                btnPrivacy.addEventListener('click', () => {
+                    history.pushState(null, null, '#privacy');
+                    switchToPrivacy();
+                });
+
+                btnTerms.addEventListener('click', () => {
+                    history.pushState(null, null, '#terms');
+                    switchToTerms();
+                });
+            }
+        });
+    </script>
+</BaseLayout>

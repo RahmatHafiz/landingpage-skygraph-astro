@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Menghindari crawling aset internal jika tidak diperlukan
+Disallow: /assets/raw/
+
+Sitemap: https://skygraph.id/sitemap.xml
