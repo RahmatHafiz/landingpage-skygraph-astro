@@ -29,11 +29,14 @@ document.addEventListener("astro:page-load", () => {
         if (nav) {
             const isSolid = nav.dataset.navstyle === 'solid';
             if (lastScrollY > 20) {
-                nav.classList.add('glass-dark', 'shadow-sm');
-                if (isSolid) nav.classList.remove('bg-slate-900', 'border-slate-800');
+                nav.classList.add('bg-slate-900', 'border-slate-800', 'shadow-sm', 'backdrop-blur-md', 'bg-opacity-95');
+                if (!isSolid) nav.classList.remove('border-transparent');
             } else {
-                nav.classList.remove('glass-dark', 'shadow-sm');
-                if (isSolid) nav.classList.add('bg-slate-900', 'border-slate-800');
+                nav.classList.remove('shadow-sm', 'backdrop-blur-md', 'bg-opacity-95');
+                if (!isSolid) {
+                    nav.classList.remove('bg-slate-900', 'border-slate-800');
+                    nav.classList.add('border-transparent');
+                }
             }
         }
 
@@ -333,10 +336,10 @@ document.addEventListener("astro:page-load", () => {
     const heroVideo = document.getElementById('hero-video');
     if (heroVideo) {
         const playlist = [
-            '/assets/tugu-songket.webm',
-            '/assets/pacu-jalur.webm',
-            '/assets/istana-siak.webm',
-            '/assets/sunset.webm'
+            '/assets/homepage-vid/tugu-songket.webm',
+            '/assets/homepage-vid/pacu-jalur.webm',
+            '/assets/homepage-vid/istana-siak.webm',
+            '/assets/homepage-vid/sunset.webm'
         ];
         let currentVideoIndex = 0;
         
@@ -368,4 +371,60 @@ document.addEventListener("astro:page-load", () => {
         }, { passive: true });
         isGlobalEventAttached = true;
     }
+
+    // Drone Video Hover/Touch Interaction
+    const droneWrappers = document.querySelectorAll('.drone-card-wrapper');
+    droneWrappers.forEach(wrapper => {
+        const vid = wrapper.querySelector('.drone-video');
+        if (!vid) return;
+
+        // Pause on initialization
+        vid.pause();
+
+        // Disable loop to play once until the end
+        vid.loop = false;
+
+        // Play on hover over the card (will play until end)
+        wrapper.addEventListener('mouseenter', () => {
+            vid.style.opacity = ''; // reset opacity in case interrupted
+            if (vid.ended) {
+                vid.currentTime = 0;
+            }
+            vid.play().catch(e => console.log('Play on hover blocked:', e));
+        });
+
+        // Play on mobile tap on the card
+        wrapper.addEventListener('touchstart', () => {
+            vid.style.opacity = ''; // reset opacity in case interrupted
+            if (vid.ended) {
+                vid.currentTime = 0;
+            }
+            if (vid.paused) {
+                vid.play().catch(e => console.log('Play on tap blocked:', e));
+            }
+        }, { passive: true });
+
+        // Ensure video is reset to the first frame smoothly when ended
+        vid.addEventListener('ended', () => {
+            // Apply a guaranteed smooth CSS transition for opacity
+            vid.style.transition = 'opacity 0.6s ease-in-out';
+            
+            // Fade out the video
+            vid.style.opacity = '0';
+            
+            // Wait for fade out to complete (600ms)
+            setTimeout(() => {
+                vid.currentTime = 0;
+                vid.pause();
+                
+                // Fade back in
+                vid.style.opacity = ''; 
+                
+                // Clean up the inline transition style after fade in completes
+                setTimeout(() => {
+                    vid.style.transition = '';
+                }, 600);
+            }, 600);
+        });
+    });
 });
