@@ -28,7 +28,7 @@ document.addEventListener("astro:page-load", () => {
         const nav = document.getElementById('navbar');
         if (nav) {
             const isSolid = nav.dataset.navstyle === 'solid';
-            if (lastScrollY > 20) {
+            if (lastScrollY > 20 || isMenuOpen) {
                 nav.classList.add('bg-slate-900', 'border-slate-800', 'shadow-sm', 'backdrop-blur-md', 'bg-opacity-95');
                 if (!isSolid) nav.classList.remove('border-transparent');
             } else {
@@ -126,9 +126,9 @@ document.addEventListener("astro:page-load", () => {
                 if(mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'false');
             }
         }
+        window.updateNavbar();
     };
 
-    if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', window.toggleMenu);
     document.querySelectorAll('.mobile-link').forEach(link => {
         link.addEventListener('click', () => { if (isMenuOpen) window.toggleMenu(); });
     });

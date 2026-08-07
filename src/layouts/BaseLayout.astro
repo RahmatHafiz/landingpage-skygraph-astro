@@ -99,7 +99,7 @@ const {
                     <div class="xl:hidden flex items-center">
                         <button id="mobile-menu-btn" onclick="toggleMenu()" class="text-white hover:text-brand-500 focus:outline-none transition-colors" aria-label="Buka menu navigasi">
                             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                                <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                             </svg>
                         </button>
                     </div>
@@ -111,13 +111,13 @@ const {
                 <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3">
                     <slot name="mobile-nav-links">
                         <!-- Default mobile navigation links for index -->
-                        <a href="/#layanan" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Layanan</a>
-                        <a href="/#armada" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Armada</a>
-                        <a href="/#tim" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Tim</a>
-                        <a href="/#paket" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Paket & Sewa</a>
-                        <a href="/#portofolio" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Portofolio</a>
-                        <a href="/#faq" class="block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">FAQ</a>
-                        <a href="/#kontak" class="block mt-4 px-3 py-2 text-center rounded-lg text-base font-bold bg-brand-500 text-white hover:bg-brand-600">Konsultasi Gratis</a>
+                        <a href="/#layanan" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Layanan</a>
+                        <a href="/#armada" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Armada</a>
+                        <a href="/#tim" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Tim</a>
+                        <a href="/#paket" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Paket & Sewa</a>
+                        <a href="/#portofolio" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">Portofolio</a>
+                        <a href="/#faq" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800">FAQ</a>
+                        <a href="/#kontak" class="mobile-link block mt-4 px-3 py-2 text-center rounded-lg text-base font-bold bg-brand-500 text-white hover:bg-brand-600">Konsultasi Gratis</a>
                     </slot>
                 </div>
             </div>
@@ -144,7 +144,7 @@ const {
                     </p>
                     <div class="flex space-x-4">
                         <!-- Instagram -->
-                        <a href="https://instagram.com/skygraph.id" target="_blank" rel="noopener noreferrer"
+                        <a href="https://instagram.com/skygraph.id" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
                             class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-500 hover:text-white transition-all duration-300">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                 <path
@@ -152,14 +152,14 @@ const {
                             </svg>
                         </a>
                         <!-- Threads / At Symbol -->
-                        <a href="https://threads.net/@skygraph.id" target="_blank" rel="noopener noreferrer"
+                        <a href="https://threads.net/@skygraph.id" target="_blank" rel="noopener noreferrer" aria-label="Threads"
                             class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-500 hover:text-white transition-all duration-300">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
                             </svg>
                         </a>
                         <!-- Email -->
-                        <a href="mailto:halo@skygraph.id"
+                        <a href="mailto:halo@skygraph.id" aria-label="Email"
                             class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-500 hover:text-white transition-all duration-300">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
