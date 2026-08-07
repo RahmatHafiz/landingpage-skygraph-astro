@@ -332,9 +332,10 @@ document.addEventListener("astro:page-load", () => {
         }
     }
 
-    // Hero Background Video Rotation
-    const heroVideo = document.getElementById('hero-video');
-    if (heroVideo) {
+    // Hero Background Video Rotation (Seamless Dual Video)
+    const video1 = document.getElementById('hero-video-1');
+    const video2 = document.getElementById('hero-video-2');
+    if (video1 && video2) {
         const playlist = [
             '/assets/homepage-vid/tugu-songket.webm',
             '/assets/homepage-vid/pacu-jalur.webm',
@@ -342,22 +343,33 @@ document.addEventListener("astro:page-load", () => {
             '/assets/homepage-vid/sunset.webm'
         ];
         let currentVideoIndex = 0;
-        
-        heroVideo.style.transition = 'opacity 0.8s ease-in-out';
+        let activeVideo = 1;
 
-        heroVideo.addEventListener('ended', () => {
-            heroVideo.style.opacity = '0';
+        const handleVideoEnd = () => {
+            currentVideoIndex = (currentVideoIndex + 1) % playlist.length;
+            const nextSrc = playlist[currentVideoIndex];
             
-            setTimeout(() => {
-                currentVideoIndex = (currentVideoIndex + 1) % playlist.length;
-                heroVideo.src = playlist[currentVideoIndex];
-                heroVideo.load();
-                
-                heroVideo.play().then(() => {
-                    heroVideo.style.opacity = '0.6';
+            if (activeVideo === 1) {
+                video2.src = nextSrc;
+                video2.load();
+                video2.play().then(() => {
+                    video1.style.opacity = '0';
+                    video2.style.opacity = '0.6';
+                    activeVideo = 2;
                 }).catch(e => console.log('Auto-play failed:', e));
-            }, 800);
-        });
+            } else {
+                video1.src = nextSrc;
+                video1.load();
+                video1.play().then(() => {
+                    video2.style.opacity = '0';
+                    video1.style.opacity = '0.6';
+                    activeVideo = 1;
+                }).catch(e => console.log('Auto-play failed:', e));
+            }
+        };
+
+        video1.addEventListener('ended', () => { if (activeVideo === 1) handleVideoEnd(); });
+        video2.addEventListener('ended', () => { if (activeVideo === 2) handleVideoEnd(); });
     }
 
     // Global Scroll Listener
