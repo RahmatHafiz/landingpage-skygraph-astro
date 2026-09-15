@@ -1179,12 +1179,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                     <div
                         class="w-full h-48 md:h-40 bg-white relative overflow-hidden flex-shrink-0 flex items-center justify-center p-4"
                     >
-                        <!-- Mobile Tap Hint -->
-                        <div
-                            class="absolute top-2 right-2 sm:hidden bg-slate-900/60 backdrop-blur-md text-white text-[9px] font-bold px-2 py-1 rounded-full flex items-center gap-1 z-20 pointer-events-none animate-pulse border border-white/20 shadow-sm"
-                        >
-                            Tap
-                        </div>
+
                         <video
                             loop
                             muted
@@ -1252,12 +1247,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                     <div
                         class="w-full h-48 md:h-40 bg-white relative overflow-hidden flex-shrink-0 flex items-center justify-center p-4"
                     >
-                        <!-- Mobile Tap Hint -->
-                        <div
-                            class="absolute top-2 right-2 sm:hidden bg-slate-900/60 backdrop-blur-md text-white text-[9px] font-bold px-2 py-1 rounded-full flex items-center gap-1 z-20 pointer-events-none animate-pulse border border-white/20 shadow-sm"
-                        >
-                            Tap
-                        </div>
+
                         <video
                             loop
                             muted
@@ -1325,12 +1315,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                     <div
                         class="w-full h-48 md:h-40 bg-white relative overflow-hidden flex-shrink-0 flex items-center justify-center p-4"
                     >
-                        <!-- Mobile Tap Hint -->
-                        <div
-                            class="absolute top-2 right-2 sm:hidden bg-slate-900/60 backdrop-blur-md text-white text-[9px] font-bold px-2 py-1 rounded-full flex items-center gap-1 z-20 pointer-events-none animate-pulse border border-white/20 shadow-sm"
-                        >
-                            Tap
-                        </div>
+
                         <video
                             loop
                             muted
@@ -1398,12 +1383,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                     <div
                         class="w-full h-48 md:h-40 bg-white relative overflow-hidden flex-shrink-0 flex items-center justify-center p-4"
                     >
-                        <!-- Mobile Tap Hint -->
-                        <div
-                            class="absolute top-2 right-2 sm:hidden bg-slate-900/60 backdrop-blur-md text-white text-[9px] font-bold px-2 py-1 rounded-full flex items-center gap-1 z-20 pointer-events-none animate-pulse border border-white/20 shadow-sm"
-                        >
-                            Tap
-                        </div>
+
                         <video
                             loop
                             muted
@@ -1471,12 +1451,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                     <div
                         class="w-full h-48 md:h-40 bg-white relative overflow-hidden flex-shrink-0 flex items-center justify-center p-4"
                     >
-                        <!-- Mobile Tap Hint -->
-                        <div
-                            class="absolute top-2 right-2 sm:hidden bg-slate-900/60 backdrop-blur-md text-white text-[9px] font-bold px-2 py-1 rounded-full flex items-center gap-1 z-20 pointer-events-none animate-pulse border border-white/20 shadow-sm"
-                        >
-                            Tap
-                        </div>
+
                         <video
                             loop
                             muted
@@ -2320,12 +2295,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                             >
                                 Coming Soon
                             </div>
-                            <!-- Mobile Tap Hint -->
-                            <div
-                                class="absolute bottom-2 left-2 sm:hidden bg-slate-900/60 backdrop-blur-md text-white text-[9px] font-bold px-2 py-1 rounded-full flex items-center gap-1 z-20 pointer-events-none animate-pulse border border-white/20 shadow-sm"
-                            >
-                                Tap
-                            </div>
+
                             <video
                                 loop
                                 muted
@@ -2444,12 +2414,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                             >
                                 Coming Soon
                             </div>
-                            <!-- Mobile Tap Hint -->
-                            <div
-                                class="absolute bottom-2 left-2 sm:hidden bg-slate-900/60 backdrop-blur-md text-white text-[9px] font-bold px-2 py-1 rounded-full flex items-center gap-1 z-20 pointer-events-none animate-pulse border border-white/20 shadow-sm"
-                            >
-                                Tap
-                            </div>
+
                             <video
                                 loop
                                 muted
@@ -3901,4 +3866,35 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             </div>
         </div>
     </section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Only run autoplay observer on mobile/tablet (less than 1024px)
+        if (window.innerWidth < 1024) {
+            const droneVideos = document.querySelectorAll('.drone-video');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const video = entry.target;
+                    if (entry.isIntersecting) {
+                        const playPromise = video.play();
+                        if (playPromise !== undefined) {
+                            playPromise.catch(error => {
+                                // Autoplay was prevented
+                                console.log("Autoplay prevented by browser:", error);
+                            });
+                        }
+                    } else {
+                        video.pause();
+                    }
+                });
+            }, {
+                threshold: 0.5
+            });
+
+            droneVideos.forEach(video => {
+                observer.observe(video);
+            });
+        }
+    });
+</script>
 </BaseLayout>
