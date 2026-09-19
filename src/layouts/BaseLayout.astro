@@ -3,8 +3,8 @@ import { ClientRouter } from "astro:transitions";
 import "../styles/global.css";
 
 const {
-    title = "SKYGRAPH | Jasa Drone Profesional & Pemetaan Udara Pekanbaru, Riau",
-    description = "Layanan jasa drone komersial profesional di Pekanbaru, Riau. Spesialis pemetaan topografi, videografi udara 4K, inspeksi aset, dokumentasi wedding/event, dan sewa unit drone. Armada DJI Air 3S, Potensic Atom & FPV.",
+    title = "SKYGRAPH | Jasa Drone Profesional, Videografi & Sewa Drone Pekanbaru, Riau",
+    description = "Layanan jasa drone komersial profesional di Pekanbaru, Riau. Spesialis videografi udara 4K, inspeksi aset, dokumentasi event/wedding, sewa unit drone, dan pemetaan (mapping). Armada: DJI Air 3S, DJI Mini 5 Pro, DJI Avata 360, DJI Neo 2, dan Potensic Atom.",
     navStyle = "transparent",
 } = Astro.props;
 ---
@@ -26,12 +26,14 @@ const {
 
         <title>{title}</title>
         <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+        <link rel="apple-touch-icon" href="/assets/favicon.svg" />
+        <link rel="manifest" href="/site.webmanifest" />
 
         <!-- SEO & Marketing Meta Tags -->
         <meta name="description" content={description} />
         <meta
             name="keywords"
-            content="Jasa Drone Pekanbaru, Sewa Drone Pekanbaru, Pemetaan Drone Riau, Videografi Udara Pekanbaru, Inspeksi Drone Riau, Drone Wedding Pekanbaru, Potensic Atom, DJI Air 3S, Orthomosaic, Topografi Drone"
+            content="Jasa Drone Pekanbaru, Sewa Drone Pekanbaru, Videografi Udara Riau, Drone Wedding Pekanbaru, Inspeksi Aset Drone, Pemetaan Drone Riau, DJI Air 3S, DJI Mini 5 Pro, DJI Avata 360, DJI Neo 2, Potensic Atom"
         />
         <meta name="author" content="SKYGRAPH" />
         <meta
@@ -39,8 +41,8 @@ const {
             content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
         />
         <meta name="theme-color" content="#0ea5e9" />
-        <link rel="canonical" href="https://skygraph.id/" />
-        <link rel="alternate" hreflang="id" href="https://skygraph.id/" />
+        <link rel="canonical" href="https://skygraph.web.id/" />
+        <link rel="alternate" hreflang="id" href="https://skygraph.web.id/" />
 
         <!-- GEO Tags for Local SEO (Pekanbaru, Riau) -->
         <meta name="geo.region" content="ID-RI" />
@@ -52,14 +54,95 @@ const {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://skygraph.id/" />
+        <meta property="og:url" content="https://skygraph.web.id/" />
         <meta property="og:locale" content="id_ID" />
         <meta property="og:site_name" content="SKYGRAPH" />
+        <meta property="og:image" content="https://skygraph.web.id/assets/hero-bg.webp" />
 
         <!-- Twitter Card -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content="https://skygraph.web.id/assets/hero-bg.webp" />
+
+        <!-- Structured Data for SEO, AEO, and GEO -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "ProfessionalService",
+                "name": "SKYGRAPH",
+                "image": "https://skygraph.web.id/assets/favicon.svg",
+                "description": "Layanan jasa drone komersial profesional di Pekanbaru, Riau. Spesialis videografi udara 4K, inspeksi aset, dokumentasi event/wedding, sewa unit drone, dan pemetaan (mapping). Armada: DJI Air 3S, DJI Mini 5 Pro, DJI Avata 360, DJI Neo 2, dan Potensic Atom.",
+                "url": "https://skygraph.web.id/",
+                "telephone": "+6285365557009",
+                "email": "skygraph.idn@gmail.com",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Pekanbaru",
+                    "addressRegion": "Riau",
+                    "addressCountry": "ID"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "0.507068",
+                    "longitude": "101.447779"
+                },
+                "areaServed": "Pekanbaru, Riau",
+                "priceRange": "$$"
+            }
+        </script>
+        
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "SKYGRAPH",
+                "url": "https://skygraph.web.id/",
+                "description": "Layanan jasa drone profesional, videografi & sewa drone di Pekanbaru, Riau.",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "SKYGRAPH",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://skygraph.web.id/assets/favicon.svg"
+                    }
+                }
+            }
+        </script>
+
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "Apakah saya perlu mengurus izin terbang (clearance)?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Tidak perlu. Anda cukup terima beres. Segala perizinan operasional (SIDOPI, AirNav) akan kami tangani sepenuhnya sebelum eksekusi, terutama untuk penerbangan di area Red Zone atau objek vital."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Bagaimana jika cuaca buruk pada hari eksekusi?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Kami menerapkan protokol Zero Accident. Jika cuaca ekstrem (hujan/angin kencang), pilot berhak menunda operasi demi keselamatan. Kami menjamin Reschedule tanpa biaya tambahan."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Apakah drone aman diterbangkan di dalam ruangan (Indoor)?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Sangat aman. Untuk kebutuhan indoor, kami menggunakan armada spesifik (ringan, stabil, dan manuver gesit) atau armada khusus indoor lainnya sehingga terhindar dari risiko besar."
+                        }
+                    }
+                ]
+            }
+        </script>
+
         <slot name="head" />
 
         <!-- Fonts -->
