@@ -157,15 +157,22 @@ document.addEventListener("astro:page-load", () => {
         button.setAttribute('aria-expanded', isActive);
     };
 
-    // Contact Form
-    window.submitFormToWhatsApp = function () {
+    // Contact Form (Web3Forms Email Integration)
+    window.submitFormToEmail = function () {
         const name = document.getElementById('form-name')?.value.trim() || '';
         const company = document.getElementById('form-company')?.value.trim() || '';
         const phone = document.getElementById('form-phone')?.value.trim() || '';
         const service = document.getElementById('form-service')?.value || '';
         const detail = document.getElementById('form-detail')?.value.trim() || '';
-
         if (!name || !phone || !service) return;
+
+        // Rate Limiting (Mencegah spam dari user manusia)
+        const lastSubmitTime = localStorage.getItem('lastFormSubmit');
+        const now = new Date().getTime();
+        if (lastSubmitTime && now - parseInt(lastSubmitTime) < 60000) { // 60 detik cooldown
+            alert("Anda telah mengirim pesan belum lama ini. Harap tunggu sekitar 1 menit sebelum mengirim pesan lagi.");
+            return;
+        }
 
         const formBtn = document.querySelector('#contact-form button[type="submit"]');
         const msg = document.getElementById('success-msg');
@@ -178,29 +185,81 @@ document.addEventListener("astro:page-load", () => {
         formBtn.disabled = true;
         formBtn.classList.add('opacity-80', 'cursor-not-allowed');
 
-        let waMessage = `Halo SKYGRAPH! 👋\n\n`;
-        waMessage += `*Nama:* ${name}\n`;
-        if (company) waMessage += `*Perusahaan:* ${company}\n`;
-        waMessage += `*No. WA:* ${phone}\n`;
-        waMessage += `*Layanan:* ${service}\n`;
-        if (detail) waMessage += `*Detail:* ${detail}\n`;
-        waMessage += `\n_Pesan dikirim dari website skygraph.id_`;
-
-        const waUrl = `https://wa.me/6285365557009?text=${encodeURIComponent(waMessage)}`;
-
-        setTimeout(() => {
-            window.open(waUrl, '_blank');
-            formBtn.innerHTML = 'Berhasil! ✓';
-            if (msg) msg.classList.remove('hidden');
-            if (formEl) formEl.reset();
-
+        // Honeypot Anti-Spam Check
+        const botcheck = document.getElementById('form-botcheck');
+        if (botcheck && botcheck.checked) {
+            // Fake success response for bots
             setTimeout(() => {
-                formBtn.innerHTML = originalContent;
-                formBtn.disabled = false;
-                formBtn.classList.remove('opacity-80', 'cursor-not-allowed');
-                if (msg) msg.classList.add('hidden');
-            }, 4000);
-        }, 600);
+                formBtn.innerHTML = 'Berhasil Terkirim! ✓';
+                if (msg) {
+                    msg.classList.remove('hidden', 'bg-red-50', 'text-red-700', 'border-red-200');
+                    msg.classList.add('bg-emerald-50', 'text-emerald-700', 'border-emerald-200');
+                    msg.innerHTML = '✓ Pesan terkirim ke email SKYGRAPH. Tim kami akan segera menghubungi Anda.';
+                }
+                if (formEl) formEl.reset();
+
+                setTimeout(() => {
+                    formBtn.innerHTML = originalContent;
+                    formBtn.disabled = false;
+                    formBtn.classList.remove('opacity-80', 'cursor-not-allowed');
+                    if (msg) msg.classList.add('hidden');
+                }, 5000);
+            }, 1000);
+            return;
+        }
+        // TODO: Dapatkan Access Key gratis dari https://web3forms.com 
+        // dengan memasukkan email skygraph.idn@gmail.com di website tersebut.
+        // Ganti teks "GANTI_DENGAN_ACCESS_KEY_WEB3FORMS_ANDA" dengan key yang dikirim ke email.
+        const accessKey = "8e519141-1557-4e80-b571-b1b22f5a5a99";
+
+        // Access Key berhasil disetel
+        const formData = new FormData();
+        formData.append('access_key', accessKey);
+        formData.append('subject', `Permintaan Layanan Baru: ${service} dari ${name}`);
+        formData.append('from_name', 'SKYGRAPH Website');
+        formData.append('Nama Lengkap', name);
+        if (company) formData.append('Perusahaan', company);
+        formData.append('No WhatsApp', phone);
+        formData.append('Kebutuhan Layanan', service);
+        if (detail) formData.append('Detail Request', detail);
+
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        })
+            .then(async (response) => {
+                if (response.status == 200) {
+                // Catat waktu pengiriman untuk Rate Limiting
+                localStorage.setItem('lastFormSubmit', new Date().getTime().toString());
+                
+                formBtn.innerHTML = 'Berhasil Terkirim! ✓';
+                    if (msg) {
+                        msg.classList.remove('hidden', 'bg-red-50', 'text-red-700', 'border-red-200');
+                        msg.classList.add('bg-emerald-50', 'text-emerald-700', 'border-emerald-200');
+                        msg.innerHTML = '✓ Pesan terkirim ke email SKYGRAPH. Tim kami akan segera menghubungi Anda.';
+                    }
+                    if (formEl) formEl.reset();
+                } else {
+                    throw new Error('Gagal mengirim');
+                }
+            })
+            .catch(error => {
+                console.error(error);
+                formBtn.innerHTML = 'Gagal Mengirim ✕';
+                if (msg) {
+                    msg.classList.remove('hidden', 'bg-emerald-50', 'text-emerald-700', 'border-emerald-200');
+                    msg.classList.add('bg-red-50', 'text-red-700', 'border-red-200');
+                    msg.innerHTML = '✕ Terjadi kesalahan sistem. Silakan hubungi kami via WhatsApp secara manual.';
+                }
+            })
+            .finally(() => {
+                setTimeout(() => {
+                    formBtn.innerHTML = originalContent;
+                    formBtn.disabled = false;
+                    formBtn.classList.remove('opacity-80', 'cursor-not-allowed');
+                    if (msg) msg.classList.add('hidden');
+                }, 5000);
+            });
     };
 
     // Portfolio Carousel: Auto-clone Content for Infinite Loop
@@ -243,7 +302,7 @@ document.addEventListener("astro:page-load", () => {
         const modal = document.getElementById('sewa-modal');
         const modalContent = document.getElementById('sewa-modal-content');
         const modalBackdrop = document.getElementById('sewa-modal-backdrop');
-        
+
         if (modal && modalContent && modalBackdrop) {
             if (modal.classList.contains('hidden')) {
                 // Open modal
@@ -270,7 +329,7 @@ document.addEventListener("astro:page-load", () => {
     };
 
     // Close Modal on Escape key
-    document.addEventListener('keydown', function(event) {
+    document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
             const modal = document.getElementById('sewa-modal');
             if (modal && !modal.classList.contains('hidden')) {
