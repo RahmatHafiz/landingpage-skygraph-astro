@@ -186,7 +186,7 @@ document.addEventListener("astro:page-load", () => {
         if (detail) waMessage += `*Detail:* ${detail}\n`;
         waMessage += `\n_Pesan dikirim dari website skygraph.id_`;
 
-        const waUrl = `https://wa.me/6285155377210?text=${encodeURIComponent(waMessage)}`;
+        const waUrl = `https://wa.me/6285365557009?text=${encodeURIComponent(waMessage)}`;
 
         setTimeout(() => {
             window.open(waUrl, '_blank');
@@ -230,13 +230,54 @@ document.addEventListener("astro:page-load", () => {
         if (input) {
             const msg = input.value.trim();
             if (msg !== "") {
-                const waUrl = `https://wa.me/6285155377210?text=${encodeURIComponent(msg)}`;
+                const waUrl = `https://wa.me/6285365557009?text=${encodeURIComponent(msg)}`;
                 window.open(waUrl, '_blank');
                 input.value = "";
                 window.toggleChat();
             }
         }
     };
+
+    // Sewa Modal Controls
+    window.toggleSewaModal = function () {
+        const modal = document.getElementById('sewa-modal');
+        const modalContent = document.getElementById('sewa-modal-content');
+        const modalBackdrop = document.getElementById('sewa-modal-backdrop');
+        
+        if (modal && modalContent && modalBackdrop) {
+            if (modal.classList.contains('hidden')) {
+                // Open modal
+                modal.classList.remove('hidden');
+                // Trigger reflow
+                void modal.offsetWidth;
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+                modalBackdrop.classList.remove('opacity-0');
+                modalBackdrop.classList.add('opacity-100');
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Close modal
+                modalContent.classList.remove('scale-100', 'opacity-100');
+                modalContent.classList.add('scale-95', 'opacity-0');
+                modalBackdrop.classList.remove('opacity-100');
+                modalBackdrop.classList.add('opacity-0');
+                document.body.style.overflow = '';
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            }
+        }
+    };
+
+    // Close Modal on Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            const modal = document.getElementById('sewa-modal');
+            if (modal && !modal.classList.contains('hidden')) {
+                window.toggleSewaModal();
+            }
+        }
+    });
 
     // Auto-clone Marquee Content for Infinite Loop
     const marquee = document.getElementById('client-marquee');

@@ -50,7 +50,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                     "opens": "08:00",
                     "closes": "18:00"
                 },
-                "sameAs": ["https://instagram.com/skygraph.id"],
+                "sameAs": ["https://www.instagram.com/skygraph.idn/"],
                 "hasOfferCatalog": {
                     "@type": "OfferCatalog",
                     "name": "Layanan Drone Profesional",
@@ -126,7 +126,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                         "name": "Apakah drone aman diterbangkan di dalam ruangan (Indoor)?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "Sangat aman. Untuk kebutuhan indoor, kami menggunakan armada spesifik Potensic Atom (ringan, stabil, dan manuver gesit) atau armada khusus indoor lainnya sehingga terhindar dari risiko besar."
+                            "text": "Sangat aman. Untuk kebutuhan indoor, kami menggunakan armada spesifik (ringan, stabil, dan manuver gesit) atau armada khusus indoor lainnya sehingga terhindar dari risiko besar."
                         }
                     },
                     {
@@ -1185,7 +1185,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 <h2
                     class="text-3xl md:text-4xl font-display font-bold text-white"
                 >
-                    Langkah Kerja.
+                    Alur Kerja Kami.
                 </h2>
                 <p class="text-slate-500 text-sm mt-3">
                     Alur layanan terstruktur dari awal konsultasi hingga serah
@@ -2065,7 +2065,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                         </li>
                     </ul>
                     <a
-                        href="https://wa.me/6285155377210?text=Halo%20SKYGRAPH%2C%20saya%20tertarik%20dengan%20Paket%20Per%20Baterai.%20Bisa%20berikan%20informasi%20lebih%20lanjut%3F"
+                        href="https://wa.me/6285365557009?text=Halo%20SKYGRAPH%2C%20saya%20tertarik%20dengan%20Paket%20Per%20Baterai.%20Bisa%20berikan%20informasi%20lebih%20lanjut%3F"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="w-full mt-auto py-2.5 sm:py-3 rounded-xl text-[10px] sm:text-sm bg-slate-50 text-slate-700 font-bold text-center hover:bg-slate-100 transition-colors border border-slate-200"
@@ -2172,7 +2172,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                         </li>
                     </ul>
                     <a
-                        href="https://wa.me/6285155377210?text=Halo%20SKYGRAPH%2C%20saya%20tertarik%20dengan%20Paket%20Harian.%20Bisa%20berikan%20informasi%20lebih%20lanjut%3F"
+                        href="https://wa.me/6285365557009?text=Halo%20SKYGRAPH%2C%20saya%20tertarik%20dengan%20Paket%20Harian.%20Bisa%20berikan%20informasi%20lebih%20lanjut%3F"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="w-full mt-auto py-2.5 sm:py-3.5 rounded-xl text-[10px] sm:text-sm bg-brand-500 text-white font-bold text-center hover:bg-brand-600 transition-all shadow-lg shadow-brand-500/30 animate-pulse-slow"
@@ -2755,9 +2755,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 <div
                     class="mt-8 pt-6 border-t border-slate-800 flex justify-center"
                 >
-                    <a
-                        href="#kontak"
-                        class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-brand-500 text-white font-bold rounded-xl hover:bg-brand-600 transition-colors shadow-md hover:shadow-lg w-full sm:w-auto"
+                    <button
+                        type="button"
+                        onclick="window.toggleSewaModal()"
+                        class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-brand-500 text-white font-bold rounded-xl hover:bg-brand-600 transition-colors shadow-md hover:shadow-lg w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 focus:ring-offset-slate-900"
                     >
                         Ajukan Sewa Sekarang
                         <svg
@@ -2773,7 +2774,90 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                                 stroke-width="2"
                                 d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                         </svg>
-                    </a>
+                    </button>
+                </div>
+
+                <!-- Sewa Unavailable Modal -->
+                <div
+                    id="sewa-modal"
+                    class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4"
+                >
+                    <!-- Backdrop -->
+                    <div
+                        class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-300"
+                        id="sewa-modal-backdrop"
+                        onclick="window.toggleSewaModal()"
+                    >
+                    </div>
+
+                    <!-- Modal Content -->
+                    <div
+                        class="relative bg-slate-800 border border-slate-700 rounded-2xl shadow-2xl w-full max-w-md p-6 sm:p-8 transform scale-95 opacity-0 transition-all duration-300"
+                        id="sewa-modal-content"
+                    >
+                        <div class="absolute top-4 right-4">
+                            <button
+                                type="button"
+                                onclick="window.toggleSewaModal()"
+                                class="text-slate-400 hover:text-white transition-colors focus:outline-none bg-slate-700/50 hover:bg-slate-600 rounded-full p-1.5"
+                                aria-label="Tutup"
+                            >
+                                <svg
+                                    class="w-5 h-5"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div
+                            class="flex flex-col items-center text-center mt-2"
+                        >
+                            <div
+                                class="w-16 h-16 bg-brand-500/10 text-brand-400 border border-brand-500/20 rounded-full flex items-center justify-center mb-5 shadow-inner"
+                            >
+                                <svg
+                                    class="w-8 h-8"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                    ></path>
+                                </svg>
+                            </div>
+                            <h3
+                                class="text-xl sm:text-2xl font-bold text-white mb-3"
+                            >
+                                Layanan Segera Hadir
+                            </h3>
+                            <p
+                                class="text-slate-400 text-sm mb-8 leading-relaxed"
+                            >
+                                Mohon maaf, layanan sewa unit drone saat ini
+                                belum tersedia dan masih dalam tahap persiapan.
+                                Nantikan pembaruan dari kami selanjutnya!
+                            </p>
+                            <button
+                                type="button"
+                                onclick="window.toggleSewaModal()"
+                                class="w-full py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl transition-colors shadow-lg shadow-brand-500/20 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 focus:ring-offset-slate-800"
+                            >
+                                Mengerti
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -3103,7 +3187,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                             Event Kampus
                         </div>
                         <h4 class="text-lg font-bold text-white shadow-sm">
-                            SIMATIF
+                            SIMATIF 2025
                         </h4>
                     </div>
                 </div>
@@ -3130,10 +3214,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                         <div
                             class="text-[10px] font-bold uppercase tracking-wider text-brand-400 mb-1"
                         >
-                            Commercial F&B
+                            Komunitas Roadbike
                         </div>
                         <h4 class="text-lg font-bold text-white shadow-sm">
-                            Bapow
+                            BAPOW Pekanbaru
                         </h4>
                     </div>
                 </div>
@@ -3160,7 +3244,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                         <div
                             class="text-[10px] font-bold uppercase tracking-wider text-brand-400 mb-1"
                         >
-                            Corporate Event
+                            Event Otomotif
                         </div>
                         <h4 class="text-lg font-bold text-white shadow-sm">
                             BCI Pekanbaru
@@ -3280,10 +3364,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                         <div
                             class="text-[10px] font-bold uppercase tracking-wider text-brand-400 mb-1"
                         >
-                            Event Kampus
+                            Event Alumni Kampus
                         </div>
                         <h4 class="text-lg font-bold text-white shadow-sm">
-                            TAF Unand
+                            Temu Alumni Farmasi UNAND
                         </h4>
                     </div>
                 </div>
@@ -3436,11 +3520,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                             class="pb-5 text-[14px] text-slate-300 border-t border-slate-700 pt-4 leading-relaxed"
                         >
                             Sangat aman. Untuk kebutuhan <i>indoor</i>, kami
-                            menggunakan armada spesifik <b>Potensic Atom</b> (ringan,
-                            stabil, dan manuver gesit) atau armada khusus <i
-                                >indoor</i
-                            >
-                            lainnya sehingga terhindar dari risiko besar.
+                            menggunakan armada spesifik (ringan, stabil, dan
+                            manuver gesit) atau armada khusus <i>indoor</i
+                            >&nbsp;lainnya sehingga terhindar dari risiko besar.
                         </p>
                     </div>
                 </div>
@@ -3474,7 +3556,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                             class="pb-5 text-[14px] text-slate-300 border-t border-slate-700 pt-4 leading-relaxed"
                         >
                             Kami selalu mencegah <i>downtime</i>. Tim di
-                            lapangan diwajibkan selalu membawa
+                            lapangan diwajibkan selalu membawa&nbsp;
                             <b>Backup Unit</b> (drone cadangan). Alur kerja proyek
                             Anda tidak akan terhenti hanya karena kendala pada satu
                             alat.
@@ -3831,10 +3913,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                                     </p>
                                     <p class="font-bold text-sm text-slate-900">
                                         <a
-                                            href="https://wa.me/6285155377210"
+                                            href="https://wa.me/6285365557009"
                                             target="_blank"
                                             class="hover:text-brand-600 transition-colors"
-                                            >+62 851 5537 7210</a
+                                            >+62 853 6555 7009</a
                                         >
                                     </p>
                                 </div>
