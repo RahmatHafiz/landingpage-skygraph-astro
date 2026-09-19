@@ -161,10 +161,18 @@ document.addEventListener("astro:page-load", () => {
     window.submitFormToEmail = function () {
         const name = document.getElementById('form-name')?.value.trim() || '';
         const company = document.getElementById('form-company')?.value.trim() || '';
+        const email = document.getElementById('form-email')?.value.trim() || '';
         const phone = document.getElementById('form-phone')?.value.trim() || '';
         const service = document.getElementById('form-service')?.value || '';
         const detail = document.getElementById('form-detail')?.value.trim() || '';
-        if (!name || !phone || !service) return;
+        if (!name || !email || !phone || !service) return;
+
+        // Validasi format email dengan Regex
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(email)) {
+            alert("Silakan masukkan alamat email yang valid (contoh: nama@email.com).");
+            return;
+        }
 
         // Rate Limiting (Mencegah spam dari user manusia)
         const lastSubmitTime = localStorage.getItem('lastFormSubmit');
@@ -217,9 +225,11 @@ document.addEventListener("astro:page-load", () => {
         formData.append('access_key', accessKey);
         formData.append('subject', `Permintaan Layanan Baru: ${service} dari ${name}`);
         formData.append('from_name', 'SKYGRAPH Website');
+        formData.append('replyto', email);
         formData.append('Nama Lengkap', name);
         if (company) formData.append('Perusahaan', company);
-        formData.append('No WhatsApp', phone);
+        formData.append('Alamat Email', email);
+        formData.append('No. WhatsApp', phone);
         formData.append('Kebutuhan Layanan', service);
         if (detail) formData.append('Detail Request', detail);
 
@@ -229,10 +239,10 @@ document.addEventListener("astro:page-load", () => {
         })
             .then(async (response) => {
                 if (response.status == 200) {
-                // Catat waktu pengiriman untuk Rate Limiting
-                localStorage.setItem('lastFormSubmit', new Date().getTime().toString());
-                
-                formBtn.innerHTML = 'Berhasil Terkirim! ✓';
+                    // Catat waktu pengiriman untuk Rate Limiting
+                    localStorage.setItem('lastFormSubmit', new Date().getTime().toString());
+
+                    formBtn.innerHTML = 'Berhasil Terkirim! ✓';
                     if (msg) {
                         msg.classList.remove('hidden', 'bg-red-50', 'text-red-700', 'border-red-200');
                         msg.classList.add('bg-emerald-50', 'text-emerald-700', 'border-emerald-200');

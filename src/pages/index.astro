@@ -4021,42 +4021,58 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                                 </div>
                                 <div>
                                     <label
-                                        for="form-service"
+                                        for="form-email"
                                         class="block text-xs font-bold text-slate-600 mb-1.5"
-                                        >Kebutuhan Layanan *</label
+                                        >Alamat Email *</label
                                     >
-                                    <select
-                                        id="form-service"
-                                        class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors"
+                                    <input
+                                        type="email"
+                                        id="form-email"
+                                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                        title="Silakan masukkan format email yang valid (contoh: nama@email.com)"
+                                        class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors placeholder-slate-500"
+                                        placeholder="Cth: email@perusahaan.com"
                                         required
-                                    >
-                                        <option
-                                            value=""
-                                            disabled
-                                            selected
-                                            class="text-slate-500"
-                                            >Pilih Layanan...
-                                        </option>
-                                        <option class="bg-white text-slate-900"
-                                            >Fotografi / Videografi</option
-                                        >
-                                        <option class="bg-white text-slate-900"
-                                            >Event & Wedding</option
-                                        >
-                                        <option class="bg-white text-slate-900"
-                                            >Promosi & Konten</option
-                                        >
-                                        <option class="bg-white text-slate-900"
-                                            >Monitoring & Surveilans</option
-                                        >
-                                        <option class="bg-white text-slate-900"
-                                            >Sewa Unit Drone</option
-                                        >
-                                        <option class="bg-white text-slate-900"
-                                            >Lainnya</option
-                                        >
-                                    </select>
+                                    />
                                 </div>
+                            </div>
+                            <div>
+                                <label
+                                    for="form-service"
+                                    class="block text-xs font-bold text-slate-600 mb-1.5"
+                                    >Kebutuhan Layanan *</label
+                                >
+                                <select
+                                    id="form-service"
+                                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors"
+                                    required
+                                >
+                                    <option
+                                        value=""
+                                        disabled
+                                        selected
+                                        class="text-slate-500"
+                                        >Pilih Layanan...
+                                    </option>
+                                    <option class="bg-white text-slate-900"
+                                        >Fotografi / Videografi</option
+                                    >
+                                    <option class="bg-white text-slate-900"
+                                        >Event & Wedding</option
+                                    >
+                                    <option class="bg-white text-slate-900"
+                                        >Promosi & Konten</option
+                                    >
+                                    <option class="bg-white text-slate-900"
+                                        >Monitoring & Surveilans</option
+                                    >
+                                    <option class="bg-white text-slate-900"
+                                        >Sewa Unit Drone</option
+                                    >
+                                    <option class="bg-white text-slate-900"
+                                        >Lainnya</option
+                                    >
+                                </select>
                             </div>
                             <div>
                                 <label
