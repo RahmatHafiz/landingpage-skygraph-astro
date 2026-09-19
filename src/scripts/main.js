@@ -41,15 +41,18 @@ document.addEventListener("astro:page-load", () => {
         }
 
         const waBtn = document.getElementById('wa-btn');
+        const scrollUpBtn = document.getElementById('scroll-up-btn');
         const heroEl = document.getElementById('hero');
         const chatUi = document.getElementById('chatbot-ui');
 
-        if (waBtn && heroEl) {
-            const heroHeight = heroEl.offsetHeight;
-            if (currentScrollY > heroHeight / 2) {
+        if (waBtn) {
+            const threshold = heroEl ? heroEl.offsetHeight / 2 : 200;
+            if (currentScrollY > threshold) {
                 waBtn.classList.remove('translate-y-20', 'opacity-0');
+                if (scrollUpBtn) scrollUpBtn.classList.remove('translate-y-20', 'opacity-0');
             } else {
                 waBtn.classList.add('translate-y-20', 'opacity-0');
+                if (scrollUpBtn) scrollUpBtn.classList.add('translate-y-20', 'opacity-0');
                 if (chatUi && !chatUi.classList.contains('hidden-chat')) {
                     window.toggleChat();
                 }
@@ -135,6 +138,8 @@ document.addEventListener("astro:page-load", () => {
 
     // Flip Card Click Handler
     document.querySelectorAll('.flip-container').forEach(card => {
+        if (card.id === 'flip-container') return; // Exclude legal page container
+
         card.addEventListener('click', () => {
             card.classList.toggle('active-flip');
         });
@@ -198,11 +203,11 @@ document.addEventListener("astro:page-load", () => {
         if (botcheck && botcheck.checked) {
             // Fake success response for bots
             setTimeout(() => {
-                formBtn.innerHTML = 'Berhasil Terkirim! ✓';
+                formBtn.innerHTML = 'Berhasil Terkirim!';
                 if (msg) {
                     msg.classList.remove('hidden', 'bg-red-50', 'text-red-700', 'border-red-200');
                     msg.classList.add('bg-emerald-50', 'text-emerald-700', 'border-emerald-200');
-                    msg.innerHTML = '✓ Pesan terkirim ke email SKYGRAPH. Tim kami akan segera menghubungi Anda.';
+                    msg.innerHTML = 'Pesan terkirim ke email SKYGRAPH. Tim kami akan segera menghubungi Anda.';
                 }
                 if (formEl) formEl.reset();
 
@@ -242,11 +247,11 @@ document.addEventListener("astro:page-load", () => {
                     // Catat waktu pengiriman untuk Rate Limiting
                     localStorage.setItem('lastFormSubmit', new Date().getTime().toString());
 
-                    formBtn.innerHTML = 'Berhasil Terkirim! ✓';
+                    formBtn.innerHTML = 'Berhasil Terkirim!';
                     if (msg) {
                         msg.classList.remove('hidden', 'bg-red-50', 'text-red-700', 'border-red-200');
                         msg.classList.add('bg-emerald-50', 'text-emerald-700', 'border-emerald-200');
-                        msg.innerHTML = '✓ Pesan terkirim ke email SKYGRAPH. Tim kami akan segera menghubungi Anda.';
+                        msg.innerHTML = 'Pesan terkirim ke email SKYGRAPH. Tim kami akan segera menghubungi Anda.';
                     }
                     if (formEl) formEl.reset();
                 } else {

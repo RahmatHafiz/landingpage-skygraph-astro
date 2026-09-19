@@ -542,6 +542,28 @@ const {
                     ></path>
                 </svg>
             </button>
+
+            <!-- Scroll Up Button -->
+            <button
+                id="scroll-up-btn"
+                onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+                aria-label="Kembali ke atas"
+                class="group w-10 h-10 bg-white/90 backdrop-blur-md border border-slate-200 text-slate-500 rounded-full flex items-center justify-center shadow-md hover:shadow-xl hover:bg-brand-500 hover:text-white hover:border-brand-500 hover:scale-110 hover:-translate-y-1 transition-all duration-500 pointer-events-auto relative transform translate-y-20 opacity-0"
+            >
+                <svg
+                    class="w-4 h-4 group-hover:animate-bounce"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                        d="M5 10l7-7m0 0l7 7m-7-7v18"
+                    ></path>
+                </svg>
+            </button>
         </div>
 
         <!-- Include main scripts -->
