@@ -146,24 +146,21 @@ body {
     transition-delay: 300ms;
 }
 
-/* Carousel Scroll/Drag */
+/* Carousel Infinite Auto-Scroll */
 .carousel-track {
     display: flex;
     gap: 1.5rem;
-    cursor: grab;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 1.5rem;
-    -webkit-overflow-scrolling: touch;
+    width: max-content;
+    animation: carouselScroll 40s linear infinite;
 }
 
-.carousel-track:active {
-    cursor: grabbing;
-    scroll-snap-type: none;
+.carousel-track:hover {
+    animation-play-state: paused;
 }
 
-.carousel-item {
-    scroll-snap-align: center;
+@keyframes carouselScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 0.75rem)); }
 }
 
 /* HIDDEN SCROLLBAR TRICKS */

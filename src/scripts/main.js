@@ -1,4 +1,5 @@
 let isGlobalEventAttached = false;
+let ticking = false;
 
 document.addEventListener("astro:page-load", () => {
     // Setup Date
@@ -21,14 +22,13 @@ document.addEventListener("astro:page-load", () => {
     }
 
     // Navbar & FAB Interaction (passive scroll for performance)
-    let lastScrollY = 0;
-    let ticking = false;
 
-    window.updateNavbar = function() {
+    window.updateNavbar = function () {
+        const currentScrollY = window.scrollY;
         const nav = document.getElementById('navbar');
         if (nav) {
             const isSolid = nav.dataset.navstyle === 'solid';
-            if (lastScrollY > 20 || isMenuOpen) {
+            if (currentScrollY > 20 || isMenuOpen) {
                 nav.classList.add('bg-slate-900', 'border-slate-800', 'shadow-sm', 'backdrop-blur-md', 'bg-opacity-95');
                 if (!isSolid) nav.classList.remove('border-transparent');
             } else {
@@ -46,7 +46,7 @@ document.addEventListener("astro:page-load", () => {
 
         if (waBtn && heroEl) {
             const heroHeight = heroEl.offsetHeight;
-            if (lastScrollY > heroHeight / 2) {
+            if (currentScrollY > heroHeight / 2) {
                 waBtn.classList.remove('translate-y-20', 'opacity-0');
             } else {
                 waBtn.classList.add('translate-y-20', 'opacity-0');
@@ -64,7 +64,7 @@ document.addEventListener("astro:page-load", () => {
     const progressLine = document.getElementById('step-progress-line');
     let currentStep = 0;
 
-    window.animateSteps = function() {
+    window.animateSteps = function () {
         if (steps.length === 0 || stepCircles.length === 0) return;
 
         stepCircles.forEach(circle => {
@@ -113,17 +113,17 @@ document.addEventListener("astro:page-load", () => {
     const menuIcon = document.getElementById('menu-icon');
     let isMenuOpen = false;
 
-    window.toggleMenu = function() {
+    window.toggleMenu = function () {
         isMenuOpen = !isMenuOpen;
         if (mobileMenu && menuIcon) {
             if (isMenuOpen) {
                 mobileMenu.classList.remove('hidden');
                 menuIcon.setAttribute('d', 'M6 18L18 6M6 6l12 12');
-                if(mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'true');
+                if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'true');
             } else {
                 mobileMenu.classList.add('hidden');
                 menuIcon.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
-                if(mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'false');
+                if (mobileMenuBtn) mobileMenuBtn.setAttribute('aria-expanded', 'false');
             }
         }
         window.updateNavbar();
@@ -147,7 +147,7 @@ document.addEventListener("astro:page-load", () => {
     });
 
     // FAQ Toggle
-    window.toggleFaq = function(button) {
+    window.toggleFaq = function (button) {
         if (!button || !button.parentElement) return;
         const faqItem = button.parentElement;
         document.querySelectorAll('.faq-item').forEach(item => {
@@ -158,7 +158,7 @@ document.addEventListener("astro:page-load", () => {
     };
 
     // Contact Form
-    window.submitFormToWhatsApp = function() {
+    window.submitFormToWhatsApp = function () {
         const name = document.getElementById('form-name')?.value.trim() || '';
         const company = document.getElementById('form-company')?.value.trim() || '';
         const phone = document.getElementById('form-phone')?.value.trim() || '';
@@ -178,7 +178,7 @@ document.addEventListener("astro:page-load", () => {
         formBtn.disabled = true;
         formBtn.classList.add('opacity-80', 'cursor-not-allowed');
 
-        let waMessage = `Halo Skygraph! 👋\n\n`;
+        let waMessage = `Halo SKYGRAPH! 👋\n\n`;
         waMessage += `*Nama:* ${name}\n`;
         if (company) waMessage += `*Perusahaan:* ${company}\n`;
         waMessage += `*No. WA:* ${phone}\n`;
@@ -203,101 +203,16 @@ document.addEventListener("astro:page-load", () => {
         }, 600);
     };
 
-    // Portfolio Carousel
+    // Portfolio Carousel: Auto-clone Content for Infinite Loop
     const track = document.getElementById('carousel');
     if (track && track.dataset.cloned !== "true") {
         track.dataset.cloned = "true";
         const originalItems = Array.from(track.children);
         originalItems.forEach(item => track.appendChild(item.cloneNode(true)));
-
-        let maxScroll = track.scrollWidth / 2;
-        track.scrollLeft = 0;
-
-        let isDown = false, startX, scrollLeftPos;
-
-        track.addEventListener('scroll', () => {
-            if (isDown) return;
-            maxScroll = track.scrollWidth / 2;
-            
-            if (track.scrollLeft >= maxScroll) {
-                track.style.scrollSnapType = 'none';
-                track.scrollLeft = track.scrollLeft - maxScroll;
-                setTimeout(() => { track.style.scrollSnapType = 'x mandatory'; }, 50);
-            } else if (track.scrollLeft <= 0) {
-                track.style.scrollSnapType = 'none';
-                track.scrollLeft = maxScroll;
-                setTimeout(() => { track.style.scrollSnapType = 'x mandatory'; }, 50);
-            }
-        }, { passive: true });
-
-        track.addEventListener('mousedown', (e) => {
-            isDown = true;
-            track.style.scrollSnapType = 'none';
-            startX = e.pageX - track.offsetLeft;
-            scrollLeftPos = track.scrollLeft;
-        });
-
-        track.addEventListener('mouseleave', () => {
-            isDown = false;
-            track.style.scrollSnapType = 'x mandatory';
-        });
-
-        track.addEventListener('mouseup', () => {
-            isDown = false;
-            track.style.scrollSnapType = 'x mandatory';
-        });
-
-        track.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - track.offsetLeft;
-            const walk = (x - startX) * 2;
-            track.scrollLeft = scrollLeftPos - walk;
-        });
-
-        let autoScrollTimer;
-        
-        window.playCarousel = function() {
-            clearInterval(autoScrollTimer);
-            autoScrollTimer = setInterval(() => {
-                if (!isDown) {
-                    const item = track.querySelector('.carousel-item');
-                    if(item) {
-                        const style = window.getComputedStyle(track);
-                        const gap = parseInt(style.gap) || 24;
-                        const scrollStep = item.offsetWidth + gap;
-                        
-                        const maxScrollLeft = track.scrollWidth - track.clientWidth;
-                        
-                        if (track.scrollLeft >= maxScrollLeft - 10) {
-                            track.scrollTo({ left: 0, behavior: 'smooth' });
-                        } else {
-                            track.scrollBy({ left: scrollStep, behavior: 'smooth' });
-                        }
-                    }
-                }
-            }, 1500);
-        };
-        
-        setTimeout(window.playCarousel, 1500);
-        
-        track.addEventListener('mouseenter', () => clearInterval(autoScrollTimer));
-        track.addEventListener('mouseleave', () => {
-            isDown = false;
-            track.style.scrollSnapType = 'x mandatory';
-            window.playCarousel();
-        });
-        
-        track.addEventListener('touchstart', () => clearInterval(autoScrollTimer), {passive: true});
-        track.addEventListener('touchend', () => {
-            isDown = false;
-            track.style.scrollSnapType = 'x mandatory';
-            setTimeout(window.playCarousel, 1500);
-        }, {passive: true});
     }
 
     // Chatbot Controls
-    window.toggleChat = function() {
+    window.toggleChat = function () {
         const chatUI = document.getElementById('chatbot-ui');
         const chatInput = document.getElementById('chat-input');
         if (chatUI) {
@@ -306,11 +221,11 @@ document.addEventListener("astro:page-load", () => {
         }
     };
 
-    window.handleChatSubmit = function(e) {
+    window.handleChatSubmit = function (e) {
         if (e.key === 'Enter') window.sendChat();
     };
 
-    window.sendChat = function() {
+    window.sendChat = function () {
         const input = document.getElementById('chat-input');
         if (input) {
             const msg = input.value.trim();
@@ -348,7 +263,7 @@ document.addEventListener("astro:page-load", () => {
         const handleVideoEnd = () => {
             currentVideoIndex = (currentVideoIndex + 1) % playlist.length;
             const nextSrc = playlist[currentVideoIndex];
-            
+
             if (activeVideo === 1) {
                 video2.src = nextSrc;
                 video2.load();
@@ -375,14 +290,16 @@ document.addEventListener("astro:page-load", () => {
     // Global Scroll Listener
     if (!isGlobalEventAttached) {
         window.addEventListener("scroll", () => {
-            lastScrollY = window.scrollY;
-            if (!ticking) { 
-                requestAnimationFrame(window.updateNavbar); 
-                ticking = true; 
+            if (!ticking) {
+                requestAnimationFrame(window.updateNavbar);
+                ticking = true;
             }
         }, { passive: true });
         isGlobalEventAttached = true;
     }
+
+    // Ensure navbar is updated on load in case of non-zero scroll position after navigation
+    window.updateNavbar();
 
     // Drone Video Hover/Touch Interaction
     const droneWrappers = document.querySelectorAll('.drone-card-wrapper');
@@ -420,18 +337,18 @@ document.addEventListener("astro:page-load", () => {
         vid.addEventListener('ended', () => {
             // Apply a guaranteed smooth CSS transition for opacity
             vid.style.transition = 'opacity 0.6s ease-in-out';
-            
+
             // Fade out the video
             vid.style.opacity = '0';
-            
+
             // Wait for fade out to complete (600ms)
             setTimeout(() => {
                 vid.currentTime = 0;
                 vid.pause();
-                
+
                 // Fade back in
-                vid.style.opacity = ''; 
-                
+                vid.style.opacity = '';
+
                 // Clean up the inline transition style after fade in completes
                 setTimeout(() => {
                     vid.style.transition = '';
