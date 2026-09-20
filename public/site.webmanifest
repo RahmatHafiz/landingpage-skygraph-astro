@@ -1,7 +1,7 @@
 {
   "name": "SKYGRAPH",
   "short_name": "SKYGRAPH",
-  "description": "Layanan jasa drone komersial profesional di Pekanbaru, Riau. Spesialis videografi udara 4K, inspeksi aset, dokumentasi event/wedding, sewa unit drone, dan pemetaan (mapping). Armada: DJI Air 3S, DJI Mini 5 Pro, DJI Avata 360, DJI Neo 2, dan Potensic Atom.",
+  "description": "Layanan jasa drone komersial profesional di Pekanbaru, Riau. Spesialis videografi udara 4K, inspeksi aset, dokumentasi event/wedding, sewa unit drone, dan pemetaan (mapping).",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

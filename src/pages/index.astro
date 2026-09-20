@@ -13,7 +13,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 "@id": "https://skygraph.web.id/",
                 "alternateName": "Skygraph",
                 "logo": "https://skygraph.web.id/assets/favicon.svg",
-                "description": "Layanan jasa drone komersial profesional di Pekanbaru, Riau. Spesialis videografi udara 4K, inspeksi aset, dokumentasi event/wedding, sewa unit drone, dan pemetaan (mapping). Armada: DJI Air 3S, DJI Mini 5 Pro, DJI Avata 360, DJI Neo 2, dan Potensic Atom.",
+                "description": "Layanan jasa drone komersial profesional di Pekanbaru, Riau. Spesialis videografi udara 4K, inspeksi aset, dokumentasi event/wedding, sewa unit drone, dan pemetaan (mapping).",
                 "url": "https://skygraph.web.id/",
                 "telephone": "+6285365557009",
                 "email": "skygraph.idn@gmail.com",
@@ -2776,89 +2776,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                         </svg>
                     </button>
                 </div>
-
-                <!-- Sewa Unavailable Modal -->
-                <div
-                    id="sewa-modal"
-                    class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4"
-                >
-                    <!-- Backdrop -->
-                    <div
-                        class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-300"
-                        id="sewa-modal-backdrop"
-                        onclick="window.toggleSewaModal()"
-                    >
-                    </div>
-
-                    <!-- Modal Content -->
-                    <div
-                        class="relative bg-slate-800 border border-slate-700 rounded-2xl shadow-2xl w-full max-w-md p-6 sm:p-8 transform scale-95 opacity-0 transition-all duration-300"
-                        id="sewa-modal-content"
-                    >
-                        <div class="absolute top-4 right-4">
-                            <button
-                                type="button"
-                                onclick="window.toggleSewaModal()"
-                                class="text-slate-400 hover:text-white transition-colors focus:outline-none bg-slate-700/50 hover:bg-slate-600 rounded-full p-1.5"
-                                aria-label="Tutup"
-                            >
-                                <svg
-                                    class="w-5 h-5"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M6 18L18 6M6 6l12 12"></path>
-                                </svg>
-                            </button>
-                        </div>
-
-                        <div
-                            class="flex flex-col items-center text-center mt-2"
-                        >
-                            <div
-                                class="w-16 h-16 bg-brand-500/10 text-brand-400 border border-brand-500/20 rounded-full flex items-center justify-center mb-5 shadow-inner"
-                            >
-                                <svg
-                                    class="w-8 h-8"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
-                                        d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                                    ></path>
-                                </svg>
-                            </div>
-                            <h3
-                                class="text-xl sm:text-2xl font-bold text-white mb-3"
-                            >
-                                Layanan Segera Hadir
-                            </h3>
-                            <p
-                                class="text-slate-400 text-sm mb-8 leading-relaxed"
-                            >
-                                Mohon maaf, layanan sewa unit drone saat ini
-                                belum tersedia dan masih dalam tahap persiapan.
-                                Nantikan pembaruan dari kami selanjutnya!
-                            </p>
-                            <button
-                                type="button"
-                                onclick="window.toggleSewaModal()"
-                                class="w-full py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl transition-colors shadow-lg shadow-brand-500/20 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 focus:ring-offset-slate-800"
-                            >
-                                Mengerti
-                            </button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -3277,7 +3194,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                             Real Estate
                         </div>
                         <h4 class="text-lg font-bold text-white shadow-sm">
-                            Iklan Perumahan
+                            Royal Bakti Residence
                         </h4>
                     </div>
                 </div>
@@ -3307,7 +3224,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                             Real Estate
                         </div>
                         <h4 class="text-lg font-bold text-white shadow-sm">
-                            Iklan Tanah Kavling
+                            Kavling Madani
                         </h4>
                     </div>
                 </div>
@@ -4162,4 +4079,80 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             }
         });
     </script>
+    <!-- Sewa Unavailable Modal -->
+    <div
+        id="sewa-modal"
+        class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4"
+    >
+        <!-- Backdrop -->
+        <div
+            class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-300"
+            id="sewa-modal-backdrop"
+            onclick="window.toggleSewaModal()"
+        >
+        </div>
+
+        <!-- Modal Content -->
+        <div
+            class="relative bg-slate-800 border border-slate-700 rounded-2xl shadow-2xl w-full max-w-md p-6 sm:p-8 transform scale-95 opacity-0 transition-all duration-300"
+            id="sewa-modal-content"
+        >
+            <div class="absolute top-4 right-4">
+                <button
+                    type="button"
+                    onclick="window.toggleSewaModal()"
+                    class="text-slate-400 hover:text-white transition-colors focus:outline-none bg-slate-700/50 hover:bg-slate-600 rounded-full p-1.5"
+                    aria-label="Tutup"
+                >
+                    <svg
+                        class="w-5 h-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="flex flex-col items-center text-center mt-2">
+                <div
+                    class="w-16 h-16 bg-brand-500/10 text-brand-400 border border-brand-500/20 rounded-full flex items-center justify-center mb-5 shadow-inner"
+                >
+                    <svg
+                        class="w-8 h-8"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">
+                    Layanan Segera Hadir
+                </h3>
+                <p class="text-slate-400 text-sm mb-8 leading-relaxed">
+                    Mohon maaf, layanan sewa unit drone saat ini belum tersedia
+                    dan masih dalam tahap persiapan. Nantikan pembaruan dari
+                    kami selanjutnya!
+                </p>
+                <button
+                    type="button"
+                    onclick="window.toggleSewaModal()"
+                    class="w-full py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl transition-colors shadow-lg shadow-brand-500/20 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 focus:ring-offset-slate-800"
+                >
+                    Mengerti
+                </button>
+            </div>
+        </div>
+    </div>
 </BaseLayout>

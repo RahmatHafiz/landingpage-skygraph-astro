@@ -319,7 +319,13 @@ document.addEventListener("astro:page-load", () => {
         const modalBackdrop = document.getElementById('sewa-modal-backdrop');
 
         if (modal && modalContent && modalBackdrop) {
+            const navbar = document.getElementById('navbar');
+            const floatingWidgets = document.getElementById('floating-widgets');
+            
             if (modal.classList.contains('hidden')) {
+                // Calculate scrollbar width
+                const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+                
                 // Open modal
                 modal.classList.remove('hidden');
                 // Trigger reflow
@@ -328,6 +334,11 @@ document.addEventListener("astro:page-load", () => {
                 modalContent.classList.add('scale-100', 'opacity-100');
                 modalBackdrop.classList.remove('opacity-0');
                 modalBackdrop.classList.add('opacity-100');
+                
+                // Prevent layout shift
+                document.body.style.paddingRight = `${scrollbarWidth}px`;
+                if (navbar) navbar.style.paddingRight = `${scrollbarWidth}px`;
+                if (floatingWidgets) floatingWidgets.style.marginRight = `${scrollbarWidth}px`;
                 document.body.style.overflow = 'hidden';
             } else {
                 // Close modal
@@ -335,7 +346,13 @@ document.addEventListener("astro:page-load", () => {
                 modalContent.classList.add('scale-95', 'opacity-0');
                 modalBackdrop.classList.remove('opacity-100');
                 modalBackdrop.classList.add('opacity-0');
+                
+                // Restore layout
                 document.body.style.overflow = '';
+                document.body.style.paddingRight = '';
+                if (navbar) navbar.style.paddingRight = '';
+                if (floatingWidgets) floatingWidgets.style.marginRight = '';
+                
                 setTimeout(() => {
                     modal.classList.add('hidden');
                 }, 300);
