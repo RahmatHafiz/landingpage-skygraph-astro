@@ -245,7 +245,7 @@ const {
                         </div>
 
                         <div class="xl:hidden flex items-center">
-                            <button
+                            <button type="button"
                                 id="mobile-menu-btn"
                                 onclick="toggleMenu()"
                                 class="text-slate-300 hover:text-white focus:outline-none p-2 rounded-lg hover:text-brand-400 bg-transparent border border-transparent hover:bg-white/10 transition-colors"
@@ -556,7 +556,7 @@ const {
                             <p class="text-[10px] text-brand-400">Online</p>
                         </div>
                     </div>
-                    <button
+                    <button type="button"
                         onclick="toggleChat()"
                         aria-label="Tutup Obrolan Chatbot"
                         class="text-slate-400 hover:text-white"
@@ -600,7 +600,7 @@ const {
                         class="w-full text-sm outline-none px-3 py-2 bg-slate-50 border border-slate-200 rounded-full focus:border-brand-500"
                         onkeypress="handleChatSubmit(event)"
                     />
-                    <button
+                    <button type="button"
                         onclick="sendChat()"
                         aria-label="Kirim Pesan Chatbot"
                         class="bg-brand-500 hover:bg-brand-600 text-white w-9 h-9 rounded-full flex items-center justify-center shrink-0 transition-colors shadow-md"
@@ -618,7 +618,7 @@ const {
                 </div>
             </div>
 
-            <button
+            <button type="button"
                 id="wa-btn"
                 onclick="toggleChat()"
                 aria-label="Buka Chatbot WhatsApp"
@@ -637,7 +637,7 @@ const {
             </button>
 
             <!-- Scroll Up Button -->
-            <button
+            <button type="button"
                 id="scroll-up-btn"
                 onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
                 aria-label="Kembali ke atas"
