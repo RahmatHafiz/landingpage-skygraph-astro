@@ -221,7 +221,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </script>
     </Fragment>
     <section
-        class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-slate-900 min-h-screen flex items-center"
+        class="relative pt-20 overflow-hidden bg-slate-900 h-[100dvh] w-full flex items-center justify-center"
         id="hero"
     >
         <div class="video-bg-container">
@@ -255,7 +255,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         >
 
             <h1
-                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-extrabold leading-[1.3] sm:leading-[1.2] tracking-tight text-white reveal delay-100 max-w-4xl mx-auto my-24 sm:my-28 md:my-32 lg:my-40 px-2 sm:px-0 flex flex-col items-center"
+                class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-extrabold leading-[1.3] sm:leading-[1.2] tracking-tight text-white reveal delay-100 max-w-4xl mx-auto my-8 sm:my-12 px-2 sm:px-0 flex flex-col items-center"
             >
                 <span>Jasa Drone Profesional</span>
                 <span
@@ -279,6 +279,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 >
                     Jelajahi Layanan
                 </a>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60 hover:opacity-100 transition-opacity animate-bounce z-10 hidden sm:flex">
+            <span class="text-white text-[10px] font-bold tracking-widest uppercase drop-shadow-sm">Scroll</span>
+            <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-1 shadow-sm">
+                <div class="w-1.5 h-2 bg-brand-400 rounded-full animate-scroll-mouse"></div>
             </div>
         </div>
     </section>
