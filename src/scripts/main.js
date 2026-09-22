@@ -384,10 +384,9 @@ document.addEventListener("astro:page-load", () => {
     const video2 = document.getElementById('hero-video-2');
     if (video1 && video2) {
         const playlist = [
-            '/assets/homepage-vid/tugu-songket.webm',
-            '/assets/homepage-vid/pacu-jalur.webm',
-            '/assets/homepage-vid/istana-siak.webm',
-            '/assets/homepage-vid/sunset.webm'
+            '/assets/homepage-vid/tugu.webm',
+            '/assets/homepage-vid/elnur.mp4',
+            '/assets/homepage-vid/night.webm'
         ];
         let currentVideoIndex = 0;
         let activeVideo = 1;
