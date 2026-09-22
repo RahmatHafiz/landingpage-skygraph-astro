@@ -9,7 +9,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 "@context": "https://schema.org",
                 "@type": "LocalBusiness",
                 "name": "SKYGRAPH",
-                "image": "https://skygraph.web.id/assets/hero-bg.webp",
+                "image": "https://skygraph.web.id/assets/skygraph-thumbnail.webp",
                 "@id": "https://skygraph.web.id/",
                 "alternateName": "Skygraph",
                 "logo": "https://skygraph.web.id/assets/favicon.svg",
@@ -219,12 +219,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 ]
             }
         </script>
-        <link
-            rel="preload"
-            as="image"
-            href="/assets/homepage-vid/tugu-songket-poster.jpg"
-            fetchpriority="high"
-        />
     </Fragment>
     <section
         class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-slate-900 min-h-screen flex items-center"
@@ -234,7 +228,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <video
                 id="hero-video-1"
                 src="/assets/homepage-vid/tugu-songket.webm"
-                poster="/assets/homepage-vid/tugu-songket-poster.jpg"
                 autoplay
                 muted
                 playsinline
@@ -413,6 +406,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 <img
                     src="/assets/logo/taf-unand.webp"
                     alt="TAF Unand oleh SKYGRAPH"
+                    width="200"
+                    height="100"
+                    class="h-12 sm:h-16 md:h-20 w-auto object-contain shrink-0 transition-all duration-300"
+                />
+                <img
+                    src="/assets/logo/ra-studio.webp"
+                    alt="RA Studio oleh SKYGRAPH"
                     width="200"
                     height="100"
                     class="h-12 sm:h-16 md:h-20 w-auto object-contain shrink-0 transition-all duration-300"
@@ -3167,7 +3167,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                         width="800"
                         height="600"
                         src="/assets/portfolio/iklan-tanah.avif"
-                        alt="Iklan Tanah oleh SKYGRAPH"
+                        alt="Iklan Aset Tanah oleh SKYGRAPH"
                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 pointer-events-none"
                     />
                     <div
@@ -3183,7 +3183,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                             Real Estate
                         </div>
                         <h4 class="text-lg font-bold text-white shadow-sm">
-                            Iklan Tanah
+                            Iklan Aset Tanah
                         </h4>
                     </div>
                 </div>
@@ -3240,6 +3240,34 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                         </div>
                         <h4 class="text-lg font-bold text-white shadow-sm">
                             Temu Alumni Farmasi UNAND
+                        </h4>
+                    </div>
+                </div>
+
+                <div
+                    class="carousel-item shrink-0 w-[80vw] md:w-[400px] h-[250px] md:h-[300px] rounded-2xl overflow-hidden relative group shadow-lg border border-slate-200"
+                >
+                    <img
+                        width="800"
+                        height="600"
+                        src="/assets/portfolio/mapping-lahan.avif"
+                        alt="Pemetaan Lahan oleh SKYGRAPH"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 pointer-events-none"
+                    />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent opacity-90 transition-opacity"
+                    >
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-300"
+                    >
+                        <div
+                            class="text-[10px] font-bold uppercase tracking-wider text-brand-400 mb-1"
+                        >
+                            Pemetaan Lahan
+                        </div>
+                        <h4 class="text-lg font-bold text-white shadow-sm">
+                            Pemetaan Lahan Bangunan
                         </h4>
                     </div>
                 </div>
