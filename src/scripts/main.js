@@ -385,8 +385,8 @@ document.addEventListener("astro:page-load", () => {
     if (video1 && video2) {
         const playlist = [
             '/assets/homepage-vid/tugu.webm',
-            '/assets/homepage-vid/tongkang.webm',
-            '/assets/homepage-vid/night.webm'
+            '/assets/homepage-vid/sawah.webm',
+            '/assets/homepage-vid/leighton.webm'
         ];
         let currentVideoIndex = 0;
         let activeVideo = 1;
