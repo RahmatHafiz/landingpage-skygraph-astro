@@ -72,7 +72,7 @@ document.addEventListener("astro:page-load", () => {
 
         stepCircles.forEach(circle => {
             circle.classList.remove('bg-brand-500', 'text-white', 'border-brand-400', 'scale-110', 'shadow-md');
-            circle.classList.add('bg-slate-800', 'text-slate-500', 'border-slate-700');
+            circle.classList.add('bg-slate-800', 'text-slate-400', 'border-slate-700');
         });
         steps.forEach(step => {
             step.classList.remove('scale-105', 'bg-slate-800', 'border-brand-500');
@@ -80,7 +80,7 @@ document.addEventListener("astro:page-load", () => {
         });
 
         if (stepCircles[currentStep]) {
-            stepCircles[currentStep].classList.remove('bg-slate-800', 'text-slate-500', 'border-slate-700');
+            stepCircles[currentStep].classList.remove('bg-slate-800', 'text-slate-400', 'border-slate-700');
             stepCircles[currentStep].classList.add('bg-brand-500', 'text-white', 'border-brand-400', 'scale-110', 'shadow-md');
 
             steps[currentStep].classList.remove('bg-transparent', 'border-transparent');

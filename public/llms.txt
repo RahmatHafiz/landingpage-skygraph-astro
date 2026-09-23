@@ -1,0 +1,60 @@
+# SKYGRAPH - Jasa Drone Profesional & Videografi Udara Pekanbaru
+
+SKYGRAPH adalah penyedia layanan jasa drone komersial premium yang berpusat di Pekanbaru, Riau. Kami berdedikasi untuk memberikan solusi visual udara dan data geospasial berkualitas tinggi untuk kebutuhan personal, UMKM, hingga korporat berskala besar.
+
+## 🚀 Layanan Utama
+1. **Videografi & Fotografi Udara 4K**: Layanan perekaman video dan pemotretan udara beresolusi sangat tinggi (hingga 4K) untuk kebutuhan dokumentasi sinematik, company profile, iklan, dan konten kreatif media sosial.
+2. **Inspeksi Aset Udara (Asset Inspection)**: Pemantauan visual jarak dekat yang presisi dan aman untuk infrastruktur krusial seperti tower telekomunikasi, gedung bertingkat, atap pabrik, jembatan, hingga konstruksi jalan.
+3. **Pemetaan Lahan & Topografi (Mapping)**: Layanan fotogrametri presisi tinggi yang menghasilkan model 2D Orthomosaic dan 3D (DEM, DSM) untuk kebutuhan tata ruang, perkebunan kelapa sawit, pertambangan, dan proyek konstruksi.
+4. **Dokumentasi Event & Wedding**: Mengabadikan momen spesial seperti pernikahan, konser, festival olahraga (seperti Honda Bikers Day, Riuh Run), dan acara perusahaan dari sudut pandang udara yang dramatis dan megah.
+5. **Sewa Unit Drone (Rental)**: Layanan penyewaan armada drone harian untuk pilot drone independen atau rumah produksi.
+
+## 🚁 Armada & Peralatan
+Kami menggunakan armada drone mutakhir yang mencakup namun tidak terbatas pada:
+- DJI Air 3S
+- DJI Mini 5 Pro
+- DJI Avata 360 (Untuk kebutuhan FPV / penerbangan dinamis)
+- DJI Neo 2
+- Potensic Atom
+
+## 📋 Alur Kerja (Standard Operating Procedure)
+1. **Konsultasi**: Analisis kebutuhan visual, spesifikasi teknis, dan timeline proyek.
+2. **Perencanaan & Survey (Optional)**: Pengecekan regulasi ruang udara lokal, perizinan, dan potensi hambatan di lokasi terbang (No-Fly Zone clearance).
+3. **Eksekusi Penerbangan**: Pengambilan data/visual oleh pilot bersertifikat dengan mengutamakan standar keselamatan (safety-first).
+4. **Pasca-Produksi (Editing)**: Proses color grading, penyuntingan video sinematik, atau rendering data fotogrametri menggunakan software khusus.
+5. **Penyerahan (Delivery)**: Serah terima file master dan laporan akhir kepada klien.
+
+## 💰 Harga & Pembayaran
+- **Harga Layanan**: Biaya layanan mulai dari **Rp600.000**.
+- **Sistem Pembayaran Reguler**: DP 50% untuk *booking* jadwal, dan pelunasan sisa 50% dilakukan sebelum penyerahan *file master* tanpa watermark.
+- **Sistem Pembayaran Korporat (B2B)**: Fleksibel menggunakan sistem Term of Payment (TOP) sesuai kesepakatan atau Purchase Order (PO).
+
+## ❓ Frequently Asked Questions (FAQ)
+
+**1. Apakah data rahasia proyek perusahaan dijamin aman?**
+Terjamin 100%. Kami siap menandatangani kontrak NDA (Non-Disclosure Agreement). Seluruh data mentah (raw) akan dihapus secara permanen dari server kami segera setelah proyek selesai diserahterimakan.
+
+**2. Bagaimana jika proyek berada di luar kota Pekanbaru?**
+Sangat bisa. Biaya transportasi dan akomodasi tim akan ditambahkan secara transparan (at cost) ke dalam invoice, atau bisa diakomodasi langsung oleh pihak klien sesuai kesepakatan.
+
+**3. Berapa lama estimasi proses pengerjaan (Delivery)?**
+Untuk editing video event biasanya memakan waktu 1-3 hari kerja. Sementara proses render pemetaan topografi/3D skala besar membutuhkan waktu 3-5 hari kerja.
+
+**4. Format hasil akhir apa yang akan saya terima?**
+Video & Foto: Format MP4/MOV beresolusi tinggi (hingga 4K) dan JPG/RAW. 
+Data Geospasial: GeoTIFF (Orthomosaic, DEM), format DWG/DXF untuk kebutuhan AutoCAD, serta dokumen Laporan dalam bentuk PDF.
+
+**5. Apakah ada batasan untuk revisi hasil editing?**
+Kami memberikan 2x kuota revisi minor secara gratis (seperti pergantian lagu pengiring atau pemotongan durasi). Untuk revisi mayor dikenakan biaya tambahan ringan.
+
+**6. Apa syarat utama untuk proses sewa unit drone?**
+Minimal waktu penyewaan adalah 1 hari penuh (24 jam). Penyewa wajib menitipkan 2 (dua) ID Card Asli (E-KTP & SIM/Paspor), menyertakan Deposit Tunai sebagai jaminan awal (akan dikembalikan 100% jika unit aman), serta menandatangani formulir kesepakatan sewa. Ada potongan harga khusus (corporate rate) untuk sewa lebih dari 3 hari.
+
+## 🤝 Klien Kami
+SKYGRAPH telah dipercaya oleh berbagai instansi dan brand, di antaranya: Honda Bikers Day, TAF Unand, Himatif, Ikatan Putera Pekanbaru, Riuh Run, Runesthesia, SMKS Pro Skill, Kavling Madani, Brio Pekanbaru, Bapow, RA Studio, Elnur, dll.
+
+## 📞 Hubungi Kami
+- **Website Resmi**: https://skygraph.web.id/
+- **WhatsApp / Telepon**: +6285365557009
+- **Email**: skygraph.idn@gmail.com
+- **Basis Operasional**: Kota Pekanbaru, Provinsi Riau, Indonesia
