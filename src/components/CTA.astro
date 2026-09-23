@@ -1,0 +1,390 @@
+---
+---
+
+<section
+        id="kontak"
+        class="py-16 md:py-24 bg-slate-50 border-t border-slate-200"
+    >
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+                class="bg-white rounded-3xl p-8 md:p-12 shadow-lg border border-slate-200 reveal"
+            >
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+                    <div class="lg:col-span-2 flex flex-col justify-center">
+                        <div
+                            class="inline-block px-3 py-1 bg-brand-50 text-brand-600 text-xs font-bold rounded-full mb-4 w-max border border-brand-200"
+                        >
+                            Mari Berkolaborasi
+                        </div>
+                        <h2
+                            class="text-3xl md:text-4xl font-display font-bold mb-4 text-slate-900"
+                        >
+                            Diskusikan Proyek Anda.
+                        </h2>
+                        <p class="text-slate-600 text-sm mb-8 leading-relaxed">
+                            Kirimkan rincian kebutuhan Anda melalui formulir di
+                            samping. Representatif kami akan merespons dengan
+                            penawaran secepatnya.
+                        </p>
+
+                        <div class="space-y-6">
+                            <div
+                                class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200 shadow-sm"
+                            >
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-600 flex-shrink-0 border border-slate-200"
+                                >
+                                    <svg
+                                        aria-hidden="true"
+                                        class="w-5 h-5"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                        >
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p
+                                        class="text-xs text-slate-600 font-semibold mb-1"
+                                    >
+                                        WhatsApp
+                                    </p>
+                                    <p class="font-bold text-sm text-slate-900">
+                                        <a
+                                            href="https://wa.me/6285365557009"
+                                            target="_blank"
+                                            class="hover:text-brand-600 transition-colors"
+                                            >+62 853 6555 7009</a
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200 shadow-sm"
+                            >
+                                <div
+                                    class="w-10 h-10 rounded-xl bg-white flex items-center justify-center text-brand-600 flex-shrink-0 border border-slate-200"
+                                >
+                                    <svg
+                                        aria-hidden="true"
+                                        class="w-5 h-5"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                        >
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p
+                                        class="text-xs text-slate-600 font-semibold mb-1"
+                                    >
+                                        Email
+                                    </p>
+                                    <p class="font-bold text-sm text-slate-900">
+                                        <a
+                                            href="mailto:skygraph.idn@gmail.com"
+                                            class="hover:text-brand-600 transition-colors"
+                                            >skygraph.idn@gmail.com</a
+                                        >
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-3">
+                        <form
+                            id="contact-form"
+                            class="space-y-5"
+                            onsubmit="event.preventDefault(); window.submitFormToEmail();"
+                        >
+                            <!-- Honeypot Spam Protection -->
+                            <input
+                                type="checkbox"
+                                name="botcheck"
+                                id="form-botcheck"
+                                class="hidden"
+                                style="display: none;"
+                            />
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div>
+                                    <label
+                                        for="form-name"
+                                        class="block text-xs font-bold text-slate-600 mb-1.5"
+                                        >Nama Lengkap *</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="form-name"
+                                        class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors placeholder-slate-500"
+                                        placeholder="Cth: Budi Santoso"
+                                        required
+                                    />
+                                </div>
+                                <div>
+                                    <label
+                                        for="form-company"
+                                        class="block text-xs font-bold text-slate-600 mb-1.5"
+                                        >Nama Perusahaan</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="form-company"
+                                        class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors placeholder-slate-500"
+                                        placeholder="Cth: PT Maju Bersama"
+                                    />
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                <div>
+                                    <label
+                                        for="form-phone"
+                                        class="block text-xs font-bold text-slate-600 mb-1.5"
+                                        >No. WhatsApp *</label
+                                    >
+                                    <input
+                                        type="tel"
+                                        id="form-phone"
+                                        inputmode="tel"
+                                        pattern="(\+62|62|0)8[1-9][0-9]{6,11}"
+                                        minlength="10"
+                                        maxlength="15"
+                                        title="Masukkan nomor handphone yang valid (contoh: 081234567890 atau +6281234567890)"
+                                        oninput="this.value = this.value.replace(/[^0-9+]/g, '').replace(/(?!^)\+/g, '')"
+                                        class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors placeholder-slate-500"
+                                        placeholder="08xxxxxxxxxx"
+                                        required
+                                    />
+                                </div>
+                                <div>
+                                    <label
+                                        for="form-email"
+                                        class="block text-xs font-bold text-slate-600 mb-1.5"
+                                        >Alamat Email *</label
+                                    >
+                                    <input
+                                        type="email"
+                                        id="form-email"
+                                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                        title="Silakan masukkan format email yang valid (contoh: nama@email.com)"
+                                        class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors placeholder-slate-500"
+                                        placeholder="Cth: email@perusahaan.com"
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <div>
+                                <label
+                                    for="form-service"
+                                    class="block text-xs font-bold text-slate-600 mb-1.5"
+                                    >Kebutuhan Layanan *</label
+                                >
+                                <select
+                                    id="form-service"
+                                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors"
+                                    required
+                                >
+                                    <option
+                                        value=""
+                                        disabled
+                                        selected
+                                        class="text-slate-600"
+                                        >Pilih Layanan...
+                                    </option>
+                                    <option class="bg-white text-slate-900"
+                                        >Fotografi / Videografi</option
+                                    >
+                                    <option class="bg-white text-slate-900"
+                                        >Event & Wedding</option
+                                    >
+                                    <option class="bg-white text-slate-900"
+                                        >Promosi & Konten</option
+                                    >
+                                    <option class="bg-white text-slate-900"
+                                        >Monitoring & Surveilans</option
+                                    >
+                                    <option class="bg-white text-slate-900"
+                                        >Sewa Unit Drone</option
+                                    >
+                                    <option class="bg-white text-slate-900"
+                                        >Lainnya</option
+                                    >
+                                </select>
+                            </div>
+                            <div>
+                                <label
+                                    for="form-detail"
+                                    class="block text-xs font-bold text-slate-600 mb-1.5"
+                                    >Detail Request Khusus</label
+                                >
+                                <textarea
+                                    rows="4"
+                                    id="form-detail"
+                                    class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors resize-none placeholder-slate-500"
+                                    placeholder="Tuliskan estimasi lokasi dan deskripsi pekerjaan..."
+                                ></textarea>
+                            </div>
+                            <button
+                                type="submit"
+                                class="w-full bg-brand-500 text-white font-bold rounded-xl py-4 mt-2 hover:bg-brand-600 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 focus:ring-offset-white transition-all shadow-lg group flex items-center justify-center gap-2"
+                            >
+                                <span>Kirim Permintaan</span>
+                                <svg
+                                    aria-hidden="true"
+                                    class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                </svg>
+                            </button>
+                            <div
+                                id="success-msg"
+                                class="hidden bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-xl p-4 text-sm text-center font-medium"
+                            >
+                                Pesan terkirim. Tim kami akan segera menghubungi
+                                Anda.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script>
+    document.addEventListener("astro:page-load", () => {
+    window.submitFormToEmail = function () {
+        const name = document.getElementById('form-name')?.value.trim() || '';
+        const company = document.getElementById('form-company')?.value.trim() || '';
+        const email = document.getElementById('form-email')?.value.trim() || '';
+        const phone = document.getElementById('form-phone')?.value.trim() || '';
+        const service = document.getElementById('form-service')?.value || '';
+        const detail = document.getElementById('form-detail')?.value.trim() || '';
+        if (!name || !email || !phone || !service) return;
+
+        // Validasi format email dengan Regex
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!emailRegex.test(email)) {
+            alert("Silakan masukkan alamat email yang valid (contoh: nama@email.com).");
+            return;
+        }
+
+        // Rate Limiting (Mencegah spam dari user manusia)
+        const lastSubmitTime = localStorage.getItem('lastFormSubmit');
+        const now = new Date().getTime();
+        if (lastSubmitTime && now - parseInt(lastSubmitTime) < 60000) { // 60 detik cooldown
+            alert("Anda telah mengirim pesan belum lama ini. Harap tunggu sekitar 1 menit sebelum mengirim pesan lagi.");
+            return;
+        }
+
+        const formBtn = document.querySelector('#contact-form button[type="submit"]');
+        const msg = document.getElementById('success-msg');
+        const formEl = document.getElementById('contact-form');
+
+        if (!formBtn) return;
+
+        const originalContent = formBtn.innerHTML;
+        formBtn.innerHTML = 'Mengirim...';
+        formBtn.disabled = true;
+        formBtn.classList.add('opacity-80', 'cursor-not-allowed');
+
+        // Honeypot Anti-Spam Check
+        const botcheck = document.getElementById('form-botcheck');
+        if (botcheck && botcheck.checked) {
+            // Fake success response for bots
+            setTimeout(() => {
+                formBtn.innerHTML = 'Berhasil Terkirim!';
+                if (msg) {
+                    msg.classList.remove('hidden', 'bg-red-50', 'text-red-700', 'border-red-200');
+                    msg.classList.add('bg-emerald-50', 'text-emerald-700', 'border-emerald-200');
+                    msg.innerHTML = 'Pesan terkirim ke email SKYGRAPH. Tim kami akan segera menghubungi Anda.';
+                }
+                if (formEl) formEl.reset();
+
+                setTimeout(() => {
+                    formBtn.innerHTML = originalContent;
+                    formBtn.disabled = false;
+                    formBtn.classList.remove('opacity-80', 'cursor-not-allowed');
+                    if (msg) msg.classList.add('hidden');
+                }, 5000);
+            }, 1000);
+            return;
+        }
+        // TODO: Dapatkan Access Key gratis dari https://web3forms.com 
+        // dengan memasukkan email skygraph.idn@gmail.com di website tersebut.
+        // Ganti teks "GANTI_DENGAN_ACCESS_KEY_WEB3FORMS_ANDA" dengan key yang dikirim ke email.
+        const accessKey = "8e519141-1557-4e80-b571-b1b22f5a5a99";
+
+        // Access Key berhasil disetel
+        const formData = new FormData();
+        formData.append('access_key', accessKey);
+        formData.append('subject', `Permintaan Layanan Baru: ${service} dari ${name}`);
+        formData.append('from_name', 'SKYGRAPH Website');
+        formData.append('replyto', email);
+        formData.append('Nama Lengkap', name);
+        if (company) formData.append('Perusahaan', company);
+        formData.append('Alamat Email', email);
+        formData.append('No. WhatsApp', phone);
+        formData.append('Kebutuhan Layanan', service);
+        if (detail) formData.append('Detail Request', detail);
+
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        })
+            .then(async (response) => {
+                if (response.status == 200) {
+                    // Catat waktu pengiriman untuk Rate Limiting
+                    localStorage.setItem('lastFormSubmit', new Date().getTime().toString());
+
+                    formBtn.innerHTML = 'Berhasil Terkirim!';
+                    if (msg) {
+                        msg.classList.remove('hidden', 'bg-red-50', 'text-red-700', 'border-red-200');
+                        msg.classList.add('bg-emerald-50', 'text-emerald-700', 'border-emerald-200');
+                        msg.innerHTML = 'Pesan terkirim ke email SKYGRAPH. Tim kami akan segera menghubungi Anda.';
+                    }
+                    if (formEl) formEl.reset();
+                } else {
+                    throw new Error('Gagal mengirim');
+                }
+            })
+            .catch(error => {
+                console.error(error);
+                formBtn.innerHTML = 'Gagal Mengirim ✕';
+                if (msg) {
+                    msg.classList.remove('hidden', 'bg-emerald-50', 'text-emerald-700', 'border-emerald-200');
+                    msg.classList.add('bg-red-50', 'text-red-700', 'border-red-200');
+                    msg.innerHTML = '✕ Terjadi kesalahan sistem. Silakan hubungi kami via WhatsApp secara manual.';
+                }
+            })
+            .finally(() => {
+                setTimeout(() => {
+                    formBtn.innerHTML = originalContent;
+                    formBtn.disabled = false;
+                    formBtn.classList.remove('opacity-80', 'cursor-not-allowed');
+                    if (msg) msg.classList.add('hidden');
+                }, 5000);
+            });
+    };
+    });
+</script>

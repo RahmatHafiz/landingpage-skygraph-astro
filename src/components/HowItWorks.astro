@@ -1,0 +1,170 @@
+---
+---
+
+<section
+        class="py-16 md:py-24 bg-slate-900 border-b border-slate-800 overflow-hidden"
+    >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span
+                    class="text-brand-400 font-bold tracking-widest uppercase text-xs mb-2 block"
+                    >Proses Transparan</span
+                >
+                <h2
+                    class="text-3xl md:text-4xl font-display font-bold text-white"
+                >
+                    Alur Kerja Kami.
+                </h2>
+                <p class="text-slate-600 text-sm mt-3">
+                    Alur layanan terstruktur dari awal konsultasi hingga serah
+                    terima data akhir.
+                </p>
+            </div>
+
+            <div class="relative w-full max-w-5xl mx-auto">
+                <div
+                    class="absolute top-[44px] left-0 w-full h-1 bg-slate-800 -translate-y-1/2 z-0 hidden md:block rounded-full"
+                >
+                </div>
+                <div
+                    id="step-progress-line"
+                    class="absolute top-[44px] left-0 h-1 bg-brand-500 -translate-y-1/2 z-0 hidden md:block rounded-full transition-all duration-[1000ms] ease-in-out w-0"
+                >
+                </div>
+
+                <!-- On mobile, this will act as a swipeable row that JS auto-scrolls -->
+                <div
+                    id="steps-container"
+                    class="flex overflow-x-auto md:overflow-visible md:grid md:grid-cols-5 snap-x snap-mandatory hide-scrollbar pt-6 pb-8 md:py-0 gap-4 md:gap-8 relative z-10 scroll-smooth px-6 md:px-0 after:content-[''] after:shrink-0 after:w-6 md:after:hidden"
+                >
+                    <div
+                        class="step-item shrink-0 w-[75vw] sm:w-[45vw] md:w-auto snap-center flex flex-col items-center text-center transition-all duration-300 p-4 rounded-2xl bg-transparent border border-transparent"
+                    >
+                        <div
+                            class="step-circle w-14 h-14 rounded-full bg-slate-800 border-4 border-slate-800 flex items-center justify-center text-slate-600 font-bold text-lg mb-4 transition-all duration-300 z-10 shadow-sm"
+                        >
+                            1
+                        </div>
+                        <h3 class="font-bold text-white mb-1.5 text-sm">
+                            Konsultasi
+                        </h3>
+                        <p class="text-xs text-slate-600">
+                            Diskusi kebutuhan visual, lokasi, & luasan area.
+                        </p>
+                    </div>
+                    <div
+                        class="step-item shrink-0 w-[75vw] sm:w-[45vw] md:w-auto snap-center flex flex-col items-center text-center transition-all duration-300 p-4 rounded-2xl bg-transparent border border-transparent"
+                    >
+                        <div
+                            class="step-circle w-14 h-14 rounded-full bg-slate-800 border-4 border-slate-800 flex items-center justify-center text-slate-600 font-bold text-lg mb-4 transition-all duration-300 z-10 shadow-sm"
+                        >
+                            2
+                        </div>
+                        <h3 class="font-bold text-white mb-1.5 text-sm">
+                            Perizinan
+                        </h3>
+                        <p class="text-xs text-slate-600">
+                            Pengurusan clearance & perizinan otoritas.
+                        </p>
+                    </div>
+                    <div
+                        class="step-item shrink-0 w-[75vw] sm:w-[45vw] md:w-auto snap-center flex flex-col items-center text-center transition-all duration-300 p-4 rounded-2xl bg-transparent border border-transparent"
+                    >
+                        <div
+                            class="step-circle w-14 h-14 rounded-full bg-slate-800 border-4 border-slate-800 flex items-center justify-center text-slate-600 font-bold text-lg mb-4 transition-all duration-300 z-10 shadow-sm"
+                        >
+                            3
+                        </div>
+                        <h3 class="font-bold text-white mb-1.5 text-sm">
+                            Eksekusi
+                        </h3>
+                        <p class="text-xs text-slate-600">
+                            Penerbangan di lokasi oleh pilot tersertifikasi.
+                        </p>
+                    </div>
+                    <div
+                        class="step-item shrink-0 w-[75vw] sm:w-[45vw] md:w-auto snap-center flex flex-col items-center text-center transition-all duration-300 p-4 rounded-2xl bg-transparent border border-transparent"
+                    >
+                        <div
+                            class="step-circle w-14 h-14 rounded-full bg-slate-800 border-4 border-slate-800 flex items-center justify-center text-slate-600 font-bold text-lg mb-4 transition-all duration-300 z-10 shadow-sm"
+                        >
+                            4
+                        </div>
+                        <h3 class="font-bold text-white mb-1.5 text-sm">
+                            Processing
+                        </h3>
+                        <p class="text-xs text-slate-600">
+                            Editing video/foto atau rendering data spasial.
+                        </p>
+                    </div>
+                    <div
+                        class="step-item shrink-0 w-[75vw] sm:w-[45vw] md:w-auto snap-center flex flex-col items-center text-center transition-all duration-300 p-4 rounded-2xl bg-transparent border border-transparent"
+                    >
+                        <div
+                            class="step-circle w-14 h-14 rounded-full bg-slate-800 border-4 border-slate-800 flex items-center justify-center text-slate-600 font-bold text-lg mb-4 transition-all duration-300 z-10 shadow-sm"
+                        >
+                            5
+                        </div>
+                        <h3 class="font-bold text-white mb-1.5 text-sm">
+                            Penyerahan
+                        </h3>
+                        <p class="text-xs text-slate-600">
+                            Data final siap pakai diserahkan via Cloud.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script>
+    document.addEventListener("astro:page-load", () => {
+    const steps = document.querySelectorAll('.step-item');
+    const stepCircles = document.querySelectorAll('.step-circle');
+    const progressLine = document.getElementById('step-progress-line');
+    let currentStep = 0;
+
+    window.animateSteps = function () {
+        if (steps.length === 0 || stepCircles.length === 0) return;
+
+        stepCircles.forEach(circle => {
+            circle.classList.remove('bg-brand-500', 'text-white', 'border-brand-400', 'scale-110', 'shadow-md');
+            circle.classList.add('bg-slate-800', 'text-slate-400', 'border-slate-700');
+        });
+        steps.forEach(step => {
+            step.classList.remove('scale-105', 'bg-slate-800', 'border-brand-500');
+            step.classList.add('bg-transparent', 'border-transparent');
+        });
+
+        if (stepCircles[currentStep]) {
+            stepCircles[currentStep].classList.remove('bg-slate-800', 'text-slate-400', 'border-slate-700');
+            stepCircles[currentStep].classList.add('bg-brand-500', 'text-white', 'border-brand-400', 'scale-110', 'shadow-md');
+
+            steps[currentStep].classList.remove('bg-transparent', 'border-transparent');
+            steps[currentStep].classList.add('scale-105', 'bg-slate-800', 'border-brand-500');
+
+            // Mobile auto-scroll to current step
+            if (window.innerWidth < 768) {
+                const container = document.getElementById('steps-container');
+                if (container && steps[currentStep]) {
+                    const step = steps[currentStep];
+                    const scrollPos = step.offsetLeft - (container.clientWidth / 2) + (step.clientWidth / 2);
+                    container.scrollTo({ left: scrollPos, behavior: 'smooth' });
+                }
+            }
+        }
+
+        if (progressLine) {
+            const widthPercent = (currentStep / (steps.length - 1)) * 100;
+            progressLine.style.width = `${widthPercent}%`;
+        }
+
+        currentStep = (currentStep + 1) % steps.length;
+    };
+
+    if (steps.length > 0) {
+        setInterval(window.animateSteps, 2000);
+        window.animateSteps();
+    }
+    });
+</script>

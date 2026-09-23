@@ -1,0 +1,462 @@
+---
+const droneVideos = import.meta.glob('../assets/drone/*.webm', { eager: true });
+const getDroneVideo = (name) => droneVideos[`../assets/drone/${name}.webm`]?.default;
+---
+
+<section
+        id="armada"
+        class="py-16 md:py-24 bg-slate-50 border-b border-slate-200"
+    >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span
+                    class="text-brand-600 font-bold tracking-widest uppercase text-xs mb-2 block"
+                    >Armada Drone</span
+                >
+                <h2
+                    class="text-3xl md:text-4xl font-display font-bold text-slate-900"
+                >
+                    Armada Andalan Kami.
+                </h2>
+                <p class="text-slate-600 text-sm mt-3">
+                    Setiap unit drone dipilih secara spesifik untuk memenuhi
+                    kebutuhan teknis dan kondisi lapangan proyek Anda.
+                </p>
+            </div>
+
+            <!-- Compact Grid Layout for efficiency -->
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 md:gap-5 justify-center max-w-6xl mx-auto"
+            >
+                <!-- DJI Air 3S -->
+                <div
+                    class="bento-card bg-white border border-slate-200 overflow-hidden flex flex-col group reveal hover:border-brand-500 hover:shadow-xl hover:shadow-brand-500/10 transition-all drone-card-wrapper sm:col-span-1 lg:col-span-2"
+                >
+                    <div
+                        class="w-full h-48 md:h-40 bg-white relative overflow-hidden flex-shrink-0 flex items-center justify-center p-4"
+                    >
+                        <video
+                            loop
+                            muted
+                            playsinline
+                            width="400"
+                            height="300"
+                            src={getDroneVideo('dji-air3s')}
+                            class="drone-video mix-blend-multiply w-full h-full object-contain hover:scale-110 hover:-translate-y-3 hover:rotate-3 active:scale-90 active:-translate-y-1 active:rotate-0 transition-all duration-300 cursor-pointer opacity-90 hover:opacity-100 relative z-10"
+                        ></video>
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <div
+                            class="inline-block px-2 py-1 bg-brand-50 text-brand-600 text-[9px] font-bold rounded mb-2 w-max border border-brand-500/30"
+                        >
+                            Professional
+                        </div>
+                        <h3 class="text-sm font-bold text-slate-900 mb-2">
+                            DJI Air 3S
+                        </h3>
+                        <ul class="grid grid-cols-2 gap-x-2 gap-y-1.5 mt-auto">
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-brand-600 mt-0.5">•</span> Kamera
+                                Dual Lensa
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-brand-600 mt-0.5">•</span> Sensor
+                                Rintangan 360°
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-brand-600 mt-0.5">•</span> Tahan
+                                Angin Ekstrem
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-brand-600 mt-0.5">•</span> Resolusi
+                                Video 4K
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-brand-600 mt-0.5">•</span> Baterai
+                                Tahan Lama
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-brand-600 mt-0.5">•</span> Terbang
+                                Lebih Stabil
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- DJI Mini 5 Pro -->
+                <div
+                    class="bento-card bg-white border border-slate-200 overflow-hidden flex flex-col group reveal delay-200 hover:border-purple-500 hover:shadow-xl hover:shadow-purple-500/10 transition-all drone-card-wrapper sm:col-span-1 lg:col-span-2"
+                >
+                    <div
+                        class="w-full h-48 md:h-40 bg-white relative overflow-hidden flex-shrink-0 flex items-center justify-center p-4"
+                    >
+                        <video
+                            loop
+                            muted
+                            playsinline
+                            width="400"
+                            height="300"
+                            src={getDroneVideo('dji-mini5pro')}
+                            class="drone-video mix-blend-multiply w-full h-full object-contain hover:scale-110 hover:-translate-y-3 hover:rotate-3 active:scale-90 active:-translate-y-1 active:rotate-0 transition-all duration-300 cursor-pointer opacity-90 hover:opacity-100 relative z-10"
+                        ></video>
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <div
+                            class="inline-block px-2 py-1 bg-purple-50 text-purple-600 text-[9px] font-bold rounded mb-2 w-max border border-purple-200"
+                        >
+                            All-Rounder
+                        </div>
+                        <h3 class="text-sm font-bold text-slate-900 mb-2">
+                            DJI Mini 5 Pro
+                        </h3>
+                        <ul class="grid grid-cols-2 gap-x-2 gap-y-1.5 mt-auto">
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-purple-600 mt-0.5">•</span> True
+                                Vertical Video
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-purple-600 mt-0.5">•</span> Resolusi
+                                4K HDR
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-purple-600 mt-0.5">•</span> Sangat
+                                Ringan (<249g)
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-purple-600 mt-0.5">•</span> Cocok
+                                Untuk Reels
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-purple-600 mt-0.5">•</span> Manuver
+                                Area Sempit
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-purple-600 mt-0.5">•</span> Baterai
+                                Lebih Awet
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- DJI Avata 360 -->
+                <div
+                    class="bento-card bg-white border border-slate-200 overflow-hidden flex flex-col group reveal delay-100 hover:border-amber-500 hover:shadow-xl hover:shadow-amber-500/10 transition-all drone-card-wrapper sm:col-span-1 lg:col-span-2"
+                >
+                    <div
+                        class="w-full h-48 md:h-40 bg-white relative overflow-hidden flex-shrink-0 flex items-center justify-center p-4"
+                    >
+                        <video
+                            loop
+                            muted
+                            playsinline
+                            width="400"
+                            height="300"
+                            src={getDroneVideo('dji-avata360')}
+                            class="drone-video mix-blend-multiply w-full h-full object-contain hover:scale-110 hover:-translate-y-3 hover:rotate-3 active:scale-90 active:-translate-y-1 active:rotate-0 transition-all duration-300 cursor-pointer opacity-90 hover:opacity-100 relative z-10"
+                        ></video>
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <div
+                            class="inline-block px-2 py-1 bg-amber-50 text-amber-600 text-[9px] font-bold rounded mb-2 w-max border border-amber-200"
+                        >
+                            Unique Content
+                        </div>
+                        <h3 class="text-sm font-bold text-slate-900 mb-2">
+                            DJI Avata 360
+                        </h3>
+                        <ul class="grid grid-cols-2 gap-x-2 gap-y-1.5 mt-auto">
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-amber-600 mt-0.5">•</span> Video
+                                360° Spherical
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-amber-600 mt-0.5">•</span> Efek
+                                Invisible Drone
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-amber-600 mt-0.5">•</span> Pelindung
+                                Baling Bawaan
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-amber-600 mt-0.5">•</span> Manuver
+                                Super Gesit
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-amber-600 mt-0.5">•</span> Transmisi
+                                Low Latency
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-amber-600 mt-0.5">•</span> Tampilan
+                                Sangat Immersive
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- DJI Neo 2 -->
+                <div
+                    class="bento-card bg-white border border-slate-200 overflow-hidden flex flex-col group reveal hover:border-pink-500 hover:shadow-xl hover:shadow-pink-500/10 transition-all drone-card-wrapper sm:col-span-1 lg:col-start-2 lg:col-span-2"
+                >
+                    <div
+                        class="w-full h-48 md:h-40 bg-white relative overflow-hidden flex-shrink-0 flex items-center justify-center p-4"
+                    >
+                        <video
+                            loop
+                            muted
+                            playsinline
+                            width="400"
+                            height="300"
+                            src={getDroneVideo('dji-neo2')}
+                            class="drone-video mix-blend-multiply w-full h-full object-contain hover:scale-110 hover:-translate-y-3 hover:rotate-3 active:scale-90 active:-translate-y-1 active:rotate-0 transition-all duration-300 cursor-pointer opacity-90 hover:opacity-100 relative z-10"
+                        ></video>
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <div
+                            class="inline-block px-2 py-1 bg-pink-50 text-pink-600 text-[9px] font-bold rounded mb-2 w-max border border-pink-200"
+                        >
+                            Vlog Content
+                        </div>
+                        <h3 class="text-sm font-bold text-slate-900 mb-2">
+                            DJI Neo 2
+                        </h3>
+                        <ul class="grid grid-cols-2 gap-x-2 gap-y-1.5 mt-auto">
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-pink-600 mt-0.5">•</span> AI Subject
+                                Tracking
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-pink-600 mt-0.5">•</span> Mode Sinematik
+                                Auto
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-pink-600 mt-0.5">•</span> Bobot
+                                Super Ringan
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-pink-600 mt-0.5">•</span> Lepas
+                                Landas Tangan
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-pink-600 mt-0.5">•</span> Fitur
+                                Kontrol Suara
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-pink-600 mt-0.5">•</span> Terbang
+                                Tanpa Remote
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Potensic Atom -->
+                <div
+                    class="bento-card bg-white border border-slate-200 overflow-hidden flex flex-col group reveal delay-100 hover:border-emerald-500 hover:shadow-xl hover:shadow-emerald-500/10 transition-all drone-card-wrapper sm:col-span-1 lg:col-span-2"
+                >
+                    <div
+                        class="w-full h-48 md:h-40 bg-white relative overflow-hidden flex-shrink-0 flex items-center justify-center p-4"
+                    >
+                        <video
+                            loop
+                            muted
+                            playsinline
+                            width="400"
+                            height="300"
+                            src={getDroneVideo('potensic-atom')}
+                            class="drone-video mix-blend-multiply w-full h-full object-contain hover:scale-110 hover:-translate-y-3 hover:rotate-3 active:scale-90 active:-translate-y-1 active:rotate-0 transition-all duration-300 cursor-pointer opacity-90 hover:opacity-100 relative z-10"
+                        ></video>
+                    </div>
+                    <div class="p-4 flex flex-col flex-grow">
+                        <div
+                            class="inline-block px-2 py-1 bg-emerald-50 text-emerald-600 text-[9px] font-bold rounded mb-2 w-max border border-emerald-200"
+                        >
+                            Basic Drone
+                        </div>
+                        <h3 class="text-sm font-bold text-slate-900 mb-2">
+                            Potensic Atom
+                        </h3>
+                        <ul class="grid grid-cols-2 gap-x-2 gap-y-1.5 mt-auto">
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-emerald-600 mt-0.5">•</span> Video
+                                4K Stabil
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-emerald-600 mt-0.5">•</span> Gimbal
+                                3-Axis Mulus
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-emerald-600 mt-0.5">•</span> Bobot
+                                Sub-250 Gram
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-emerald-600 mt-0.5">•</span> Visual
+                                Tracking Pintar
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-emerald-600 mt-0.5">•</span> Jarak
+                                Transmisi Jauh
+                            </li>
+                            <li
+                                class="flex items-start gap-1 text-[9px] sm:text-[10px] text-slate-600 leading-tight"
+                            >
+                                <span class="text-emerald-600 mt-0.5">•</span> Baterai
+                                Cukup Awet
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Only run autoplay observer on mobile/tablet (less than 1024px)
+            if (window.innerWidth < 1024) {
+                const droneVideos = document.querySelectorAll(".drone-video");
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            const video = entry.target;
+                            if (entry.isIntersecting) {
+                                const playPromise = video.play();
+                                if (playPromise !== undefined) {
+                                    playPromise.catch((error) => {
+                                        // Autoplay was prevented
+                                        console.log(
+                                            "Autoplay prevented by browser:",
+                                            error,
+                                        );
+                                    });
+                                }
+                            } else {
+                                video.pause();
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.5,
+                    },
+                );
+
+                droneVideos.forEach((video) => {
+                    observer.observe(video);
+                });
+            }
+        });
+    </script>
+<script>
+    document.addEventListener("astro:page-load", () => {
+    const droneWrappers = document.querySelectorAll('.drone-card-wrapper');
+    droneWrappers.forEach(wrapper => {
+        const vid = wrapper.querySelector('.drone-video');
+        if (!vid) return;
+
+        // Pause on initialization
+        vid.pause();
+
+        // Disable loop to play once until the end
+        vid.loop = false;
+
+        // Play on hover over the card (will play until end)
+        wrapper.addEventListener('mouseenter', () => {
+            vid.style.opacity = ''; // reset opacity in case interrupted
+            if (vid.ended) {
+                vid.currentTime = 0;
+            }
+            vid.play().catch(e => console.log('Play on hover blocked:', e));
+        });
+
+        // Play on mobile tap on the card
+        wrapper.addEventListener('touchstart', () => {
+            vid.style.opacity = ''; // reset opacity in case interrupted
+            if (vid.ended) {
+                vid.currentTime = 0;
+            }
+            if (vid.paused) {
+                vid.play().catch(e => console.log('Play on tap blocked:', e));
+            }
+        }, { passive: true });
+
+        // Ensure video is reset to the first frame smoothly when ended
+        vid.addEventListener('ended', () => {
+            // Apply a guaranteed smooth CSS transition for opacity
+            vid.style.transition = 'opacity 0.6s ease-in-out';
+
+            // Fade out the video
+            vid.style.opacity = '0';
+
+            // Wait for fade out to complete (600ms)
+            setTimeout(() => {
+                vid.currentTime = 0;
+                vid.pause();
+
+                // Fade back in
+                vid.style.opacity = '';
+
+                // Clean up the inline transition style after fade in completes
+                setTimeout(() => {
+                    vid.style.transition = '';
+                }, 600);
+            }, 600);
+        });
+    });
+    });
+</script>

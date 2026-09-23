@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+const logoFiles = import.meta.glob('../assets/logo/*.webp', { eager: true });
+const getLogo = (name) => logoFiles[`../assets/logo/${name}.webp`]?.default;
+---
+
+<section
+        class="py-5 md:py-8 border-b border-slate-200 bg-white overflow-hidden flex relative z-10"
+        aria-label="Klien industri kami"
+        role="marquee"
+    >
+        <div
+            class="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"
+        >
+        </div>
+        <div
+            class="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"
+        >
+        </div>
+
+        <div
+            class="flex whitespace-nowrap items-center w-full relative"
+            id="client-marquee"
+        >
+            <div
+                class="flex items-center shrink-0 gap-12 sm:gap-20 md:gap-32 pr-12 sm:pr-20 md:pr-32 animate-marquee"
+                style="will-change: transform;"
+            >
+                {Object.keys(logoFiles).map(key => key.split('/').pop().replace('.webp', '')).map(logo => {
+                    const altText = logo.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') + " oleh SKYGRAPH";
+                    return (
+                        <Image loading="lazy" decoding="async"
+                            src={getLogo(logo)}
+                            alt={altText}
+                            height={90}
+                            class="h-12 sm:h-16 md:h-20 w-auto object-contain shrink-0 transition-all duration-300"
+                        />
+                    );
+                })}
+            </div>
+        </div>
+    </section>

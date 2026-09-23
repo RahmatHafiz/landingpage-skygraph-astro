@@ -1,0 +1,529 @@
+---
+const droneVideos = import.meta.glob('../assets/drone/*.webm', { eager: true });
+const getDroneVideo = (name) => droneVideos[`../assets/drone/${name}.webm`]?.default;
+---
+
+<section
+        id="sewa"
+        class="py-16 md:py-24 bg-slate-900 border-b border-slate-800"
+    >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span
+                    class="text-brand-400 font-bold tracking-widest uppercase text-xs mb-2 block"
+                    >Bisa Terbang Sendiri?</span
+                >
+                <h2
+                    class="text-3xl md:text-4xl font-display font-bold text-white"
+                >
+                    Sewa Unit Drone.
+                </h2>
+                <p class="text-slate-600 text-sm mt-3">
+                    Opsi penyewaan armada (tanpa pilot) untuk kebutuhan
+                    personal/harian. Diperuntukkan khusus bagi pelanggan
+                    terverifikasi.
+                </p>
+            </div>
+            <!-- Row 1: Units and their accessories -->
+            <div
+                class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 mb-8 lg:mb-12"
+            >
+                <!-- Column 1: Potensic Atom -->
+                <div class="flex flex-col gap-6 reveal">
+                    <!-- Unit Card -->
+                    <div
+                        class="bento-card bg-slate-900 border border-slate-800 p-6 pt-16 sm:pt-20 sm:p-8 flex flex-col justify-center items-center relative rounded-3xl overflow-hidden h-max drone-card-wrapper group w-full"
+                    >
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-brand-100/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                        >
+                        </div>
+                        <div
+                            class="relative z-10 mb-6 sm:mb-8 bg-white p-4 sm:p-6 rounded-3xl shadow-xl flex items-center justify-center w-full max-w-[280px] lg:max-w-[340px] border border-slate-200 overflow-hidden"
+                        >
+                            <div
+                                class="absolute top-3 right-3 bg-brand-500/90 backdrop-blur-sm text-white text-[9px] sm:text-[10px] font-bold px-2 py-1 rounded-md shadow z-20"
+                            >
+                                Coming Soon
+                            </div>
+
+                            <video
+                                loop
+                                muted
+                                playsinline
+                                width="600"
+                                height="400"
+                                src={getDroneVideo('potensic-atom')}
+                                class="drone-video mix-blend-multiply w-full h-auto object-contain transition-transform duration-500 cursor-pointer group-hover:scale-110 group-hover:-translate-y-2 group-hover:rotate-2"
+                            ></video>
+                        </div>
+                        <div
+                            class="text-center w-full relative z-10 bg-slate-800 p-4 sm:p-5 rounded-2xl shadow-sm border border-slate-700 mt-auto"
+                        >
+                            <h3
+                                class="text-base sm:text-lg font-bold text-white mb-3"
+                            >
+                                Potensic Atom
+                            </h3>
+                            <div
+                                class="flex flex-wrap justify-center gap-1.5 sm:gap-2"
+                            >
+                                <span
+                                    class="text-[9px] sm:text-[10px] bg-slate-900 border border-slate-800 px-2 sm:px-3 py-1 rounded-lg text-slate-400 font-semibold"
+                                    >Resolusi 4K</span
+                                >
+                                <span
+                                    class="text-[9px] sm:text-[10px] bg-slate-900 border border-slate-800 px-2 sm:px-3 py-1 rounded-lg text-slate-400 font-semibold"
+                                    >Sub-250g</span
+                                >
+                                <span
+                                    class="text-[9px] sm:text-[10px] bg-slate-900 border border-slate-800 px-2 sm:px-3 py-1 rounded-lg text-slate-400 font-semibold"
+                                    >3-Axis Gimbal</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kelengkapan Potensic -->
+                    <div
+                        class="bg-slate-800 border border-slate-700 rounded-3xl p-6 md:p-8 shadow-sm flex-grow"
+                    >
+                        <h4
+                            class="text-sm sm:text-base font-bold text-white mb-5 flex items-center gap-2.5"
+                        >
+                            <div
+                                class="w-8 h-8 rounded-lg bg-slate-700 flex items-center justify-center text-brand-400 shrink-0"
+                            >
+                                <svg
+                                    aria-hidden="true"
+                                    class="w-4 h-4"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            Kelengkapan Potensic Atom
+                        </h4>
+                        <ul
+                            class="space-y-3.5 text-xs sm:text-sm text-slate-300"
+                        >
+                            <li class="flex items-center gap-3">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0"
+                                ></span> Unit Potensic Atom
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0"
+                                ></span> 2x Baterai (±50 Menit)
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0"
+                                ></span> Remote Controller
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0"
+                                ></span> SD Card 32GB
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0"
+                                ></span> Tas Selempang Drone
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0"
+                                ></span> Kabel & Charger Set
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Column 2: DJI Neo 2 -->
+                <div class="flex flex-col gap-6 reveal delay-100">
+                    <!-- Unit Card -->
+                    <div
+                        class="bento-card bg-slate-900 border border-slate-800 p-6 pt-16 sm:pt-20 sm:p-8 flex flex-col justify-center items-center relative rounded-3xl overflow-hidden h-max drone-card-wrapper group w-full"
+                    >
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-brand-100/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                        >
+                        </div>
+                        <div
+                            class="relative z-10 mb-6 sm:mb-8 bg-white p-4 sm:p-6 rounded-3xl shadow-xl flex items-center justify-center w-full max-w-[280px] lg:max-w-[340px] border border-slate-200 overflow-hidden"
+                        >
+                            <div
+                                class="absolute top-3 right-3 bg-brand-500/90 backdrop-blur-sm text-white text-[9px] sm:text-[10px] font-bold px-2 py-1 rounded-md shadow z-20"
+                            >
+                                Coming Soon
+                            </div>
+
+                            <video
+                                loop
+                                muted
+                                playsinline
+                                width="600"
+                                height="400"
+                                src={getDroneVideo('dji-neo2')}
+                                class="drone-video mix-blend-multiply w-full h-auto object-contain transition-transform duration-500 cursor-pointer group-hover:scale-110 group-hover:-translate-y-2 group-hover:rotate-2"
+                            ></video>
+                        </div>
+                        <div
+                            class="text-center w-full relative z-10 bg-slate-800 p-4 sm:p-5 rounded-2xl shadow-sm border border-slate-700 mt-auto"
+                        >
+                            <h3
+                                class="text-base sm:text-lg font-bold text-white mb-3"
+                            >
+                                DJI Neo 2
+                            </h3>
+                            <div
+                                class="flex flex-wrap justify-center gap-1.5 sm:gap-2"
+                            >
+                                <span
+                                    class="text-[9px] sm:text-[10px] bg-slate-900 border border-slate-800 px-2 sm:px-3 py-1 rounded-lg text-slate-400 font-semibold"
+                                    >4K Video</span
+                                >
+                                <span
+                                    class="text-[9px] sm:text-[10px] bg-slate-900 border border-slate-800 px-2 sm:px-3 py-1 rounded-lg text-slate-400 font-semibold"
+                                    >Sub-135g</span
+                                >
+                                <span
+                                    class="text-[9px] sm:text-[10px] bg-slate-900 border border-slate-800 px-2 sm:px-3 py-1 rounded-lg text-slate-400 font-semibold"
+                                    >AI Tracking</span
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kelengkapan DJI Neo 2 -->
+                    <div
+                        class="bg-slate-800 border border-slate-700 rounded-3xl p-6 md:p-8 shadow-sm flex-grow"
+                    >
+                        <h4
+                            class="text-sm sm:text-base font-bold text-white mb-5 flex items-center gap-2.5"
+                        >
+                            <div
+                                class="w-8 h-8 rounded-lg bg-slate-700 flex items-center justify-center text-brand-400 shrink-0"
+                            >
+                                <svg
+                                    aria-hidden="true"
+                                    class="w-4 h-4"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                            </div>
+                            Kelengkapan DJI Neo 2
+                        </h4>
+                        <ul
+                            class="space-y-3.5 text-xs sm:text-sm text-slate-300"
+                        >
+                            <li class="flex items-center gap-3">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0"
+                                ></span> Unit DJI Neo 2
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0"
+                                ></span> 2x Baterai (±36 Menit)
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0"
+                                ></span> RC-N3 Controller
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0"
+                                ></span> Internal 22GB + SD Card 32GB
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0"
+                                ></span> Tas / Hardcase Drone
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span
+                                    class="w-1.5 h-1.5 rounded-full bg-brand-400 shrink-0"
+                                ></span> Charging Hub & Kabel
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2: Persyaratan -->
+            <div
+                class="bg-slate-900 border border-slate-800 rounded-3xl p-6 md:p-8 max-w-4xl mx-auto mb-8 relative z-10 reveal delay-100"
+            >
+                <h4
+                    class="text-base sm:text-lg font-bold text-white mb-6 flex items-center gap-3"
+                >
+                    <div
+                        class="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center text-amber-400 border border-amber-500/20 shrink-0"
+                    >
+                        <svg
+                            aria-hidden="true"
+                            class="w-5 h-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                            ></path>
+                        </svg>
+                    </div>
+                    Syarat & Ketentuan Sewa
+                </h4>
+                <ul
+                    class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 text-sm text-slate-400"
+                >
+                    <li class="flex items-start gap-3">
+                        <span class="font-bold text-slate-300 mt-0.5">01.</span>
+                        <span
+                            ><b>Identitas Asli:</b> Wajib menitipkan 2 (dua) ID Card
+                            Asli yang masih berlaku (E-KTP & SIM/Paspor).</span
+                        >
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="font-bold text-slate-300 mt-0.5">02.</span>
+                        <span
+                            ><b>Deposit Tunai:</b> Uang jaminan dibayarkan di awal
+                            (dikembalikan 100% jika unit kembali aman tanpa cacat).</span
+                        >
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="font-bold text-slate-300 mt-0.5">03.</span>
+                        <span
+                            ><b>Formulir Peminjaman:</b> Mengisi dan menandatangani
+                            nota kesepakatan sewa standar saat serah terima unit.</span
+                        >
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="font-bold text-slate-300 mt-0.5">04.</span>
+                        <span
+                            ><b>Batas Cuaca & Baterai:</b> Dilarang terbang saat hujan
+                            atau angin kencang. Segera daratkan unit saat peringatan
+                            baterai mencapai 25%.</span
+                        >
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="font-bold text-slate-300 mt-0.5">05.</span>
+                        <span
+                            ><b>Area Terlarang:</b> Dilarang keras menerbangkan unit
+                            di area objek vital, bandara, pangkalan militer, atau
+                            larangan terbang (No-Fly Zone).</span
+                        >
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="font-bold text-slate-300 mt-0.5">06.</span>
+                        <span
+                            ><b>Risiko Pihak Ketiga:</b> Segala tuntutan hukum atau
+                            ganti rugi akibat kelalaian terbang yang mengenai orang
+                            lain atau properti pihak ketiga adalah tanggung jawab
+                            penuh penyewa.</span
+                        >
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="font-bold text-slate-300 mt-0.5">07.</span>
+                        <span
+                            ><b>Serah Terima & Denda:</b> Kondisi unit dicek bersama
+                            sebelum dibawa. Keterlambatan pengembalian akan dikenakan
+                            denda harian proporsional.</span
+                        >
+                    </li>
+                    <li class="flex items-start gap-3 text-rose-700">
+                        <span class="font-bold text-rose-400 mt-0.5">08.</span>
+                        <span
+                            ><b>Tanggung Jawab Penuh:</b> Kerusakan akibat kelalaian
+                            (crash/masuk air), hilang (flyaway), atau ketahuan membongkar
+                            segel unit secara sepihak, wajib diganti sesuai harga
+                            komponen/unit baru.</span
+                        >
+                    </li>
+                </ul>
+
+                <div
+                    class="mt-8 pt-6 border-t border-slate-800 flex justify-center"
+                >
+                    <button
+                        type="button"
+                        onclick="window.toggleSewaModal()"
+                        class="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-brand-500 text-white font-bold rounded-xl hover:bg-brand-600 transition-colors shadow-md hover:shadow-lg w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                    >
+                        Ajukan Sewa Sekarang
+                        <svg
+                            aria-hidden="true"
+                            class="w-4 h-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Sewa Unavailable Modal -->
+    <div
+        id="sewa-modal"
+        class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4"
+    >
+        <!-- Backdrop -->
+        <div
+            class="absolute inset-0 bg-slate-900/60 backdrop-blur-sm opacity-0 transition-opacity duration-300"
+            id="sewa-modal-backdrop"
+            onclick="window.toggleSewaModal()"
+        >
+        </div>
+
+        <!-- Modal Content -->
+        <div
+            class="relative bg-slate-800 border border-slate-700 rounded-2xl shadow-2xl w-full max-w-md p-6 sm:p-8 transform scale-95 opacity-0 transition-all duration-300"
+            id="sewa-modal-content"
+        >
+            <div class="absolute top-4 right-4">
+                <button
+                    type="button"
+                    onclick="window.toggleSewaModal()"
+                    class="text-slate-400 hover:text-white transition-colors focus:outline-none bg-slate-700/50 hover:bg-slate-600 rounded-full p-1.5"
+                    aria-label="Tutup"
+                >
+                    <svg
+                        class="w-5 h-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="flex flex-col items-center text-center mt-2">
+                <div
+                    class="w-16 h-16 bg-brand-500/10 text-brand-400 border border-brand-500/20 rounded-full flex items-center justify-center mb-5 shadow-inner"
+                >
+                    <svg
+                        class="w-8 h-8"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        ></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl sm:text-2xl font-bold text-white mb-3">
+                    Layanan Segera Hadir
+                </h3>
+                <p class="text-slate-400 text-sm mb-8 leading-relaxed">
+                    Mohon maaf, layanan sewa unit drone saat ini belum tersedia
+                    dan masih dalam tahap persiapan. Nantikan pembaruan dari
+                    kami selanjutnya!
+                </p>
+                <button
+                    type="button"
+                    onclick="window.toggleSewaModal()"
+                    class="w-full py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl transition-colors shadow-lg shadow-brand-500/20 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 focus:ring-offset-slate-800"
+                >
+                    Mengerti
+                </button>
+            </div>
+        </div>
+    </div>
+
+<script>
+    document.addEventListener("astro:page-load", () => {
+    window.toggleSewaModal = function () {
+        const modal = document.getElementById('sewa-modal');
+        const modalContent = document.getElementById('sewa-modal-content');
+        const modalBackdrop = document.getElementById('sewa-modal-backdrop');
+
+        if (modal && modalContent && modalBackdrop) {
+            const navbar = document.getElementById('navbar');
+            const floatingWidgets = document.getElementById('floating-widgets');
+            
+            if (modal.classList.contains('hidden')) {
+                // Calculate scrollbar width
+                const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+                
+                // Open modal
+                modal.classList.remove('hidden');
+                // Trigger reflow
+                void modal.offsetWidth;
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+                modalBackdrop.classList.remove('opacity-0');
+                modalBackdrop.classList.add('opacity-100');
+                
+                // Prevent layout shift
+                document.body.style.paddingRight = `${scrollbarWidth}px`;
+                if (navbar) navbar.style.paddingRight = `${scrollbarWidth}px`;
+                if (floatingWidgets) floatingWidgets.style.marginRight = `${scrollbarWidth}px`;
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Close modal
+                modalContent.classList.remove('scale-100', 'opacity-100');
+                modalContent.classList.add('scale-95', 'opacity-0');
+                modalBackdrop.classList.remove('opacity-100');
+                modalBackdrop.classList.add('opacity-0');
+                
+                // Restore layout
+                document.body.style.overflow = '';
+                document.body.style.paddingRight = '';
+                if (navbar) navbar.style.paddingRight = '';
+                if (floatingWidgets) floatingWidgets.style.marginRight = '';
+                
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 300);
+            }
+        }
+    };
+
+    // Close Modal on Escape key
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            const modal = document.getElementById('sewa-modal');
+            if (modal && !modal.classList.contains('hidden')) {
+                window.toggleSewaModal();
+            }
+        }
+    });
+    });
+</script>

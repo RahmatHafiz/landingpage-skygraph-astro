@@ -1,0 +1,303 @@
+---
+import { Image } from "astro:assets";
+import profilAfni from "../assets/profil/nur-afni.webp";
+import profilHafiz from "../assets/profil/rahmat-hafiz.webp";
+---
+
+<section
+        id="tim"
+        class="py-16 md:py-24 bg-slate-900 border-b border-slate-800"
+    >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <span
+                    class="text-brand-400 font-bold tracking-widest uppercase text-xs mb-2 block"
+                    >Pilot Drone</span
+                >
+                <h2
+                    class="text-3xl md:text-4xl font-display font-bold text-white"
+                >
+                    Kru Pilot Drone Kami.
+                </h2>
+                <p class="mt-3 text-slate-600 text-sm">
+                    Siap menyelesaikan misi proyek Anda dengan keahlian
+                    spesifik, mulai dari estetika visual hingga akurasi teknis.
+                </p>
+            </div>
+
+            <!-- Highly efficient 220px height for flip cards on mobile, scaling up for desktop -->
+            <div
+                class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 lg:gap-8 max-w-[280px] sm:max-w-2xl mx-auto"
+            >
+                <!-- Card Pilot 1 -->
+                <div
+                    class="h-[250px] sm:h-[280px] md:h-[320px] w-full flip-container reveal group cursor-pointer"
+                >
+                    <div class="flip-inner shadow-lg rounded-2xl">
+                        <!-- FRONT -->
+                        <div
+                            class="flip-front bg-slate-800 border border-slate-700 p-4 sm:p-5 flex flex-col justify-center items-center text-center"
+                        >
+                            <div
+                                class="w-20 h-20 sm:w-24 sm:h-24 bg-slate-700 rounded-2xl p-0.5 border border-slate-600 mb-3 sm:mb-4 overflow-hidden shadow-inner"
+                            >
+                                <Image loading="lazy" decoding="async" src={profilAfni} alt="Nur Afni - SKYGRAPH" class="w-full h-full object-cover" width={600} />
+                            </div>
+                            <h3
+                                class="text-base sm:text-lg font-bold text-white mb-1 leading-tight"
+                            >
+                                Nur Afni
+                            </h3>
+                            <p
+                                class="text-brand-400 text-[10px] sm:text-xs font-semibold mb-3 sm:mb-4 leading-tight px-1"
+                            >
+                                Drone Pilot & Content Creator
+                            </p>
+
+                            <div
+                                class="flex justify-center gap-2 sm:gap-3 mb-3 sm:mb-4"
+                            >
+                                <a
+                                    href="https://www.instagram.com/nur_afni.15/"
+                                    target="_blank"
+                                    onclick="event.stopPropagation();"
+                                    class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-900 flex items-center justify-center hover:bg-gradient-to-tr hover:from-orange-500 hover:via-pink-500 hover:to-purple-600 hover:text-white hover:border-transparent transition-all border border-slate-800 text-slate-600"
+                                    title="Instagram"
+                                    aria-label="Instagram"
+                                >
+                                    <svg
+                                        aria-hidden="true"
+                                        class="w-4 h-4 sm:w-4 sm:h-4"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                                        ></path>
+                                    </svg>
+                                </a>
+                                <a
+                                    href="https://www.tiktok.com/@nurafni_al.a_qhaddar?_r=1&_t=ZS-97HwQx0sPDR"
+                                    target="_blank"
+                                    onclick="event.stopPropagation();"
+                                    class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-900 flex items-center justify-center hover:bg-black hover:text-white hover:border-transparent transition-colors border border-slate-800 text-slate-600"
+                                    title="TikTok"
+                                    aria-label="TikTok"
+                                >
+                                    <svg
+                                        aria-hidden="true"
+                                        class="w-4 h-4 sm:w-4 sm:h-4"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"
+                                        ></path>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <div
+                                class="mt-auto flex items-center justify-center gap-1 sm:gap-1.5 text-slate-600 text-[9px] sm:text-[10px] uppercase tracking-wider font-bold group-hover:text-brand-500 transition-colors"
+                            >
+                                <svg
+                                    aria-hidden="true"
+                                    class="w-4 h-4 sm:w-4 sm:h-4"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                                    >
+                                    </path>
+                                </svg>
+                                <span>Tap Profil</span>
+                            </div>
+                        </div>
+                        <!-- BACK -->
+                        <div
+                            class="flip-back bg-slate-900 text-white flex flex-col justify-center items-center p-3 sm:p-6 text-center border border-slate-700"
+                        >
+                            <h3
+                                class="text-sm sm:text-base font-bold mb-2 text-brand-400"
+                            >
+                                Nur Afni
+                            </h3>
+                            <p
+                                class="text-slate-300 text-[10px] sm:text-xs leading-relaxed"
+                            >
+                                Pilot dengan sentuhan super kreatif. Punya
+                                insting sinematik yang kuat buat menghaslikan
+                                video udara yang memanjakan mata.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card Pilot 2 -->
+                <div
+                    class="h-[250px] sm:h-[280px] md:h-[320px] w-full flip-container reveal delay-100 group cursor-pointer"
+                >
+                    <div class="flip-inner shadow-lg rounded-2xl">
+                        <!-- FRONT -->
+                        <div
+                            class="flip-front bg-slate-800 border border-slate-700 p-4 sm:p-5 flex flex-col justify-center items-center text-center"
+                        >
+                            <div
+                                class="w-20 h-20 sm:w-24 sm:h-24 bg-slate-700 rounded-2xl p-0.5 border border-slate-600 mb-3 sm:mb-4 overflow-hidden shadow-inner"
+                            >
+                                <Image loading="lazy" decoding="async" src={profilHafiz} alt="Rahmat Hafiz - SKYGRAPH" class="w-full h-full object-cover" width={600} />
+                            </div>
+                            <h3
+                                class="text-base sm:text-lg font-bold text-white mb-1 leading-tight"
+                            >
+                                Rahmat Hafiz
+                            </h3>
+                            <p
+                                class="text-brand-400 text-[10px] sm:text-xs font-semibold mb-3 sm:mb-4 leading-tight px-1"
+                            >
+                                Drone Pilot
+                            </p>
+
+                            <div
+                                class="flex justify-center gap-2 sm:gap-3 mb-3 sm:mb-4"
+                            >
+                                <a
+                                    href="https://www.instagram.com/rahmathafiz/"
+                                    target="_blank"
+                                    onclick="event.stopPropagation();"
+                                    class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-900 flex items-center justify-center hover:bg-gradient-to-tr hover:from-orange-500 hover:via-pink-500 hover:to-purple-600 hover:text-white hover:border-transparent transition-all border border-slate-800 text-slate-600"
+                                    title="Instagram"
+                                    aria-label="Instagram"
+                                >
+                                    <svg
+                                        aria-hidden="true"
+                                        class="w-4 h-4 sm:w-4 sm:h-4"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                                        ></path>
+                                    </svg>
+                                </a>
+                                <a
+                                    href="https://www.tiktok.com/@rahmathafizj?_r=1&_t=ZS-979UBFGxArF"
+                                    target="_blank"
+                                    onclick="event.stopPropagation();"
+                                    class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-900 flex items-center justify-center hover:bg-black hover:text-white hover:border-transparent transition-colors border border-slate-800 text-slate-600"
+                                    title="TikTok"
+                                    aria-label="TikTok"
+                                >
+                                    <svg
+                                        aria-hidden="true"
+                                        class="w-4 h-4 sm:w-4 sm:h-4"
+                                        fill="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path
+                                            d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"
+                                        ></path>
+                                    </svg>
+                                </a>
+                                <a
+                                    href="https://rahmathafiz.github.io/"
+                                    target="_blank"
+                                    onclick="event.stopPropagation();"
+                                    class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-900 flex items-center justify-center hover:bg-blue-600 hover:text-white hover:border-transparent transition-colors border border-slate-800 text-slate-600"
+                                    title="Website Pribadi"
+                                    aria-label="Website Pribadi"
+                                >
+                                    <svg
+                                        aria-hidden="true"
+                                        class="w-4 h-4 sm:w-4 sm:h-4"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
+                                        >
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <div
+                                class="mt-auto flex items-center justify-center gap-1 sm:gap-1.5 text-slate-600 text-[9px] sm:text-[10px] uppercase tracking-wider font-bold group-hover:text-brand-500 transition-colors"
+                            >
+                                <svg
+                                    aria-hidden="true"
+                                    class="w-4 h-4 sm:w-4 sm:h-4"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                                    >
+                                    </path>
+                                </svg>
+                                <span>Tap Profil</span>
+                            </div>
+                        </div>
+                        <!-- BACK -->
+                        <div
+                            class="flip-back bg-slate-900 text-white flex flex-col justify-center items-center p-3 sm:p-6 text-center border border-slate-700"
+                        >
+                            <h3
+                                class="text-sm sm:text-base font-bold mb-2 text-brand-400"
+                            >
+                                Rahmat Hafiz
+                            </h3>
+                            <div
+                                class="relative overflow-hidden inline-block mb-1 sm:mb-3 px-1.5 sm:px-3 py-0.5 sm:py-1 bg-brand-900/40 text-brand-400 text-[7px] sm:text-[10px] font-bold uppercase tracking-widest border border-brand-500/50 rounded-full"
+                            >
+                                <span class="relative z-10">APDI Certified</span
+                                >
+                                <div
+                                    class="absolute top-0 bottom-0 w-1/2 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-20deg] animate-badge-shine"
+                                >
+                                </div>
+                            </div>
+                            <p
+                                class="text-slate-300 text-[10px] sm:text-xs leading-relaxed mt-1"
+                            >
+                                Andalan buat berbagai skenario lapangan. Selalu
+                                siap dan sigap mengeksekusi kebutuhan liputan,
+                                pemetaan, hingga inspeksi teknis.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script>
+    document.addEventListener("astro:page-load", () => {
+    document.querySelectorAll('.flip-container').forEach(card => {
+        if (card.id === 'flip-container') return; // Exclude legal page container
+
+        card.addEventListener('click', () => {
+            card.classList.toggle('active-flip');
+        });
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                card.classList.toggle('active-flip');
+            }
+        });
+    });
+    });
+</script>

@@ -1,0 +1,50 @@
+[
+    {
+        "question": "Apakah saya perlu mengurus izin terbang (clearance)?",
+        "answer": "Tidak perlu. Anda cukup terima beres. Segala perizinan operasional (SIDOPI, AirNav) akan kami tangani sepenuhnya sebelum eksekusi, terutama untuk penerbangan di area Red Zone atau objek vital."
+    },
+    {
+        "question": "Bagaimana jika cuaca buruk pada hari eksekusi?",
+        "answer": "Kami menerapkan protokol Zero Accident. Jika cuaca ekstrem (hujan/angin kencang), pilot berhak menunda operasi demi keselamatan. Kami menjamin Reschedule tanpa biaya tambahan."
+    },
+    {
+        "question": "Apakah drone aman diterbangkan di dalam ruangan (Indoor)?",
+        "answer": "Sangat aman. Untuk kebutuhan indoor, kami menggunakan armada spesifik (ringan, stabil, dan manuver gesit) atau armada khusus indoor lainnya sehingga terhindar dari risiko besar."
+    },
+    {
+        "question": "Apa solusi jika drone terkendala teknis di tengah proyek?",
+        "answer": "Kami selalu mencegah downtime. Tim di lapangan diwajibkan selalu membawa Backup Unit (drone cadangan). Alur kerja proyek Anda tidak akan terhenti hanya karena kendala pada satu alat."
+    },
+    {
+        "question": "Apakah data rahasia proyek perusahaan dijamin aman?",
+        "answer": "Terjamin 100%. Kami siap menandatangani kontrak NDA (Non-Disclosure Agreement). Seluruh data mentah (raw) akan dihapus secara permanen dari server kami segera setelah proyek selesai diserahterimakan."
+    },
+    {
+        "question": "Bagaimana jika proyek berada di luar kota Pekanbaru?",
+        "answer": "Sangat bisa. Biaya transportasi dan akomodasi tim akan ditambahkan secara transparan (at cost) ke dalam invoice, atau bisa diakomodasi langsung oleh pihak klien sesuai kesepakatan."
+    },
+    {
+        "question": "Berapa lama estimasi proses pengerjaan (Delivery)?",
+        "answer": "Estimasi sangat bergantung pada volume pekerjaan. Untuk editing video event biasanya memakan waktu 1-3 hari kerja. Sementara proses render pemetaan topografi/3D skala besar membutuhkan waktu 3-5 hari kerja."
+    },
+    {
+        "question": "Format hasil akhir apa yang akan saya terima?",
+        "answer": "Video & Foto: Format MP4/MOV beresolusi tinggi (hingga 4K) dan JPG/RAW. Data Geospasial: GeoTIFF (Orthomosaic, DEM), format DWG/DXF untuk kebutuhan AutoCAD, serta dokumen Laporan dalam bentuk PDF."
+    },
+    {
+        "question": "Apakah ada batasan untuk revisi hasil editing?",
+        "answer": "Kami memberikan 2x kuota revisi minor secara gratis (seperti pergantian lagu pengiring atau pemotongan durasi). Untuk revisi mayor yang merubah struktur keseluruhan secara signifikan, akan dikenakan biaya tambahan ringan."
+    },
+    {
+        "question": "Bagaimana sistem pembayarannya?",
+        "answer": "Reguler: Pembayaran DP sebesar 50% untuk booking jadwal operasional, dan sisa 50% pelunasan diselesaikan sebelum penyerahan file master. Untuk paket korporat (B2B), sistem Term of Payment (TOP) dapat dinegosiasikan."
+    },
+    {
+        "question": "Apakah ada batasan durasi untuk sewa unit drone?",
+        "answer": "Minimal waktu penyewaan adalah 1 hari penuh (24 jam). Untuk masa penyewaan lebih dari 3 hari berturut-turut, kami secara otomatis akan memberikan potongan harga khusus (corporate rate)."
+    },
+    {
+        "question": "Apa syarat utama untuk proses sewa unit drone?",
+        "answer": "Syarat utamanya sangat mudah: Penyewa wajib menitipkan 2 (dua) ID Card Asli (E-KTP & SIM/Paspor), menyertakan Deposit Tunai sebagai jaminan awal (akan dikembalikan 100% jika unit aman), serta menandatangani formulir kesepakatan sewa saat serah terima unit."
+    }
+]
