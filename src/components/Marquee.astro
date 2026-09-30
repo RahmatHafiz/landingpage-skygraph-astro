@@ -38,5 +38,21 @@ const getLogo = (name) => logoFiles[`../assets/logo/${name}.webp`]?.default;
                     );
                 })}
             </div>
+            <div aria-hidden="true"
+                class="flex items-center shrink-0 gap-12 sm:gap-20 md:gap-32 pr-12 sm:pr-20 md:pr-32 animate-marquee"
+                style="will-change: transform;"
+            >
+                {Object.keys(logoFiles).map(key => key.split('/').pop().replace('.webp', '')).map(logo => {
+                    const altText = logo.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') + " oleh SKYGRAPH";
+                    return (
+                        <Image loading="lazy" decoding="async"
+                            src={getLogo(logo)}
+                            alt={altText}
+                            height={90}
+                            class="h-12 sm:h-16 md:h-20 w-auto object-contain shrink-0 transition-all duration-300"
+                        />
+                    );
+                })}
+            </div>
         </div>
     </section>
