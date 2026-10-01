@@ -15,14 +15,18 @@ import CTA from "../components/CTA.astro";
 import { Image } from "astro:assets";
 import FAQ from "../components/FAQ.astro";
 
-const logoFiles = import.meta.glob('../assets/logo/*.webp', { eager: true });
+const logoFiles = import.meta.glob("../assets/logo/*.webp", { eager: true });
 const getLogo = (name) => logoFiles[`../assets/logo/${name}.webp`]?.default;
 
-const portfolioFiles = import.meta.glob('../assets/portfolio/*.{webp,avif,jpg,png}', { eager: true });
+const portfolioFiles = import.meta.glob(
+    "../assets/portfolio/*.{webp,avif,jpg,png}",
+    { eager: true },
+);
 const getPortfolio = (path) => portfolioFiles[`../assets/${path}`]?.default;
 
-const droneVideos = import.meta.glob('../assets/drone/*.webm', { eager: true });
-const getDroneVideo = (name) => droneVideos[`../assets/drone/${name}.webm`]?.default;
+const droneVideos = import.meta.glob("../assets/drone/*.webm", { eager: true });
+const getDroneVideo = (name) =>
+    droneVideos[`../assets/drone/${name}.webm`]?.default;
 
 import profilAfni from "../assets/profil/nur-afni.webp";
 import profilHafiz from "../assets/profil/rahmat-hafiz.webp";
@@ -39,9 +43,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 "name": "SKYGRAPH",
                 "image": "https://skygraph.web.id/assets/skygraph-thumbnail.webp",
                 "@id": "https://skygraph.web.id/",
-                "alternateName": "Skygraph",
+                "alternateName": "SKYGRAPH",
                 "logo": "https://skygraph.web.id/assets/favicon.svg",
-                "description": "Tingkatkan visual proyek Anda dengan layanan drone komersial premium dari SKYGRAPH di Pekanbaru, Riau. Kami menghadirkan videografi udara 4K sinematik, pemetaan lahan presisi, inspeksi aset cerdas, hingga dokumentasi event berkelas.",
+                "description": "Layanan drone profesional Pekanbaru: videografi udara 4K sinematik, pemetaan presisi, dan dokumentasi event berkelas.",
                 "url": "https://skygraph.web.id/",
                 "telephone": "+6285365557009",
                 "email": "skygraph.idn@gmail.com",
@@ -273,6 +277,4 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <FAQ />
 
     <CTA />
-
-    
 </BaseLayout>
